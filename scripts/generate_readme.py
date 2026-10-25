@@ -81,7 +81,7 @@ def project_card(project: dict) -> str:
     title_markup = f'<a href="{h(title_target)}">{title}</a>' if title_target else title
     cover = safe_asset(project.get("cover"))
     image = (
-        f'<img src="{h(cover)}" alt="{title} — original project cover artwork" width="100%">'
+        f'<img src="{h(cover)}" alt="{title} — project cover artwork" width="100%">'
         if cover else f'<p><strong>{title}</strong></p>'
     )
     category = h(project.get("category", "Uncategorized"))

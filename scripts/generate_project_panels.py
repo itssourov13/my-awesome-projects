@@ -7,6 +7,8 @@ import json
 import textwrap
 from pathlib import Path
 
+from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
+
 ROOT = Path(__file__).resolve().parents[1]
 PALETTES = {
     "Cybersecurity": ("#0a1419", "#183e42", "#d0ff70", "#72c9c7"),
@@ -218,28 +220,181 @@ def panel_svg(project: dict, index: int, slide: int) -> str:
     return base + body + footer
 
 
+def image_font(size: int, bold: bool = False):
+    paths = (
+        ["/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf"]
+        if bold else
+        ["/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", "/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf"]
+    )
+    for path in paths:
+        if Path(path).is_file():
+            return ImageFont.truetype(path, size=size)
+    return ImageFont.load_default()
+
+
+def image_wrap(draw, text: str, fnt, max_width: int, max_lines: int = 3) -> list[str]:
+    words = textwrap.dedent(str(text or "")).strip().split()
+    lines = []
+    line = ""
+    for word in words:
+        candidate = (line + " " + word).strip()
+        if not line or draw.textlength(candidate, font=fnt) <= max_width:
+            line = candidate
+        else:
+            lines.append(line)
+            line = word
+    if line:
+        lines.append(line)
+    if len(lines) > max_lines:
+        lines = lines[:max_lines]
+        last = lines[-1]
+        while last and draw.textlength(last + "...", font=fnt) > max_width:
+            last = last[:-1].rstrip()
+        lines[-1] = last + "..."
+    return lines
+
+
+def image_source_label(meta: dict) -> str:
+    kind = meta.get("kind", "")
+    if kind == "public-live-site-screenshot":
+        return "LIVE SITE VISUAL"
+    if kind == "project-page-open-graph":
+        return "PROJECT SHARE ART"
+    if kind == "public-repository-readme-image":
+        return "REPOSITORY VISUAL"
+    if kind == "public-web-reference":
+        return "PUBLIC WEB REFERENCE"
+    return "PROJECT VISUAL"
+
+
+def raster_panel(project: dict, index: int, slide: int, source_path: Path, output: Path, meta: dict) -> None:
+    category = project.get("category", "Web Apps")
+    c1, c2, accent, accent2 = PALETTES.get(category, PALETTES["Web Apps"])
+    with Image.open(source_path) as source:
+        original = ImageOps.exif_transpose(source).convert("RGB")
+        blurred = ImageOps.fit(original, (1200, 1600), method=Image.Resampling.LANCZOS, centering=(0.5, 0.38)).filter(ImageFilter.GaussianBlur(22))
+        background = Image.new("RGB", (1200, 1600), c1)
+        background = Image.blend(background, blurred, 0.36)
+        image = background.convert("RGBA")
+        hero = ImageOps.fit(original, (1200, 900), method=Image.Resampling.LANCZOS, centering=(0.52, 0.38)).convert("RGBA")
+        overlay = Image.new("RGBA", hero.size, (0, 0, 0, 0))
+        overlay_draw = ImageDraw.Draw(overlay, "RGBA")
+        for y in range(hero.height):
+            alpha = int(45 + 135 * (y / max(1, hero.height - 1)))
+            overlay_draw.line((0, y, hero.width - 1, y), fill=(6, 10, 16, alpha), width=1)
+        hero = Image.alpha_composite(hero, overlay)
+        image.alpha_composite(hero, (0, 0))
+    fade = Image.new("RGBA", image.size, (0, 0, 0, 0))
+    fade_draw = ImageDraw.Draw(fade, "RGBA")
+    for y in range(620, 1600):
+        strength = min(235, int(75 + 175 * ((y - 620) / 980)))
+        fade_draw.line((0, y, 1199, y), fill=(7, 10, 15, strength), width=1)
+    image = Image.alpha_composite(image, fade)
+    draw = ImageDraw.Draw(image, "RGBA")
+    draw.rounded_rectangle((70, 56, 81, 67), radius=3, fill=accent)
+    draw.text((100, 52), str(project.get("eyebrow") or category).upper()[:44], font=image_font(14, True), fill=(247, 247, 241, 230))
+    label = image_source_label(meta)
+    label_font = image_font(10, True)
+    label_width = int(draw.textlength(label, font=label_font)) + 28
+    draw.rounded_rectangle((1130 - label_width, 45, 1130, 77), radius=15, fill=(6, 10, 15, 165), outline=(255, 255, 255, 60), width=1)
+    draw.text((1144 - label_width, 55), label, font=label_font, fill=(247, 247, 241, 210))
+
+    project_title = str(project.get("title") or "Project")
+    if slide == 1:
+        draw.text((74, 956), "THE PROJECT", font=image_font(14, True), fill=accent)
+        title_fnt = image_font(46 if len(project_title) < 22 else 38, True)
+        title_lines = image_wrap(draw, project_title, title_fnt, 1035, 2)
+        cy = 1010
+        for title_line in title_lines:
+            draw.text((74, cy), title_line, font=title_fnt, fill=(250, 250, 246, 255))
+            cy += title_fnt.size + 5
+        desc = str(project.get("description") or "A project in the My Awesome Projects archive.")
+        cy += 15
+        for line in image_wrap(draw, desc, image_font(18), 1035, 4):
+            draw.text((74, cy), line, font=image_font(18), fill=(231, 235, 236, 235))
+            cy += 31
+        draw.rounded_rectangle((74, 1328, 480, 1384), radius=14, fill=(7, 12, 18, 165), outline=(255, 255, 255, 65), width=1)
+        draw.text((96, 1346), str(project.get("status") or "Project archive")[:38], font=image_font(16, True), fill=accent)
+    elif slide == 2:
+        draw.text((74, 830), "KEY HIGHLIGHTS", font=image_font(14, True), fill=accent)
+        draw.text((74, 870), "What it brings together.", font=image_font(38, True), fill=(250, 250, 246, 255))
+        highlights = project.get("highlights") if isinstance(project.get("highlights"), list) else []
+        if not highlights:
+            highlights = ["Project overview", "Core workflow", "Current direction"]
+        cy = 950
+        for i, item in enumerate(highlights[:4]):
+            draw.rounded_rectangle((74, cy, 1126, cy + 82), radius=14, fill=(7, 11, 17, 192), outline=(255, 255, 255, 55), width=1)
+            draw.rounded_rectangle((74, cy, 82, cy + 82), radius=4, fill=accent)
+            draw.text((104, cy + 26), f"{i+1:02d}", font=image_font(14, True), fill=accent)
+            text_lines = image_wrap(draw, str(item), image_font(20, True), 910, 2)
+            ty = cy + (20 if len(text_lines) > 1 else 30)
+            for line in text_lines:
+                draw.text((164, ty), line, font=image_font(20, True), fill=(246, 246, 240, 245))
+                ty += 27
+            cy += 94
+    else:
+        draw.text((74, 830), "TECHNOLOGY / CURRENT STATE", font=image_font(14, True), fill=accent)
+        draw.text((74, 870), "How it is put together.", font=image_font(38, True), fill=(250, 250, 246, 255))
+        stack = project.get("stack") if isinstance(project.get("stack"), list) else []
+        chip_x, chip_y = 74, 970
+        for item in stack[:8]:
+            label_text = str(item)[:25]
+            fnt = image_font(16, True)
+            chip_w = int(draw.textlength(label_text, font=fnt)) + 34
+            if chip_x + chip_w > 1128:
+                chip_x, chip_y = 74, chip_y + 60
+            draw.rounded_rectangle((chip_x, chip_y, chip_x + chip_w, chip_y + 43), radius=13, fill=(7, 12, 18, 180), outline=(255, 255, 255, 60), width=1)
+            draw.text((chip_x + 17, chip_y + 12), label_text, font=fnt, fill=(247, 247, 241, 238))
+            chip_x += chip_w + 10
+        draw.rounded_rectangle((74, 1195, 1126, 1338), radius=18, fill=(7, 12, 18, 188), outline=(255, 255, 255, 65), width=1)
+        draw.text((104, 1225), "CURRENT STATUS", font=image_font(13, True), fill=accent)
+        for idx, line in enumerate(image_wrap(draw, str(project.get("status") or "Project archive"), image_font(29, True), 960, 2)):
+            draw.text((104, 1260 + idx * 38), line, font=image_font(29, True), fill=(250, 250, 246, 255))
+
+    draw.line((74, 1460, 1126, 1460), fill=(255, 255, 255, 78), width=1)
+    draw.text((74, 1490), "MY AWESOME PROJECTS  /  SOUROV", font=image_font(12, True), fill=(236, 240, 232, 180))
+    draw.text((74, 1530), "PUBLIC WEB ARTWORK / CURATED PROJECT VISUAL", font=image_font(10, True), fill=(236, 240, 232, 135))
+    draw.text((1125, 1490), f"{index:02d} / {slide:02d}", font=image_font(12, True), fill=accent, anchor="ra")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    image.convert("RGB").save(output, "WEBP", quality=88, method=6)
+
+
 def main() -> None:
     catalog_path = ROOT / "projects.json"
     projects = json.loads(catalog_path.read_text(encoding="utf-8"))
+    source_log_path = ROOT / "assets/artwork-sources.json"
+    source_log = {}
+    if source_log_path.exists():
+        source_log = {item["id"]: item for item in json.loads(source_log_path.read_text(encoding="utf-8"))}
     total = 0
     for index, project in enumerate(projects, 1):
         original = project.get("screenshots") or []
         if original:
             project["gallery"] = original
             continue
-        project_id = project["id"]
+        project_id = str(project["id"])
+        source = ROOT / "assets" / "projects" / project_id / "source" / "cover.jpg"
         output_dir = ROOT / "assets" / "projects" / project_id / "gallery"
         output_dir.mkdir(parents=True, exist_ok=True)
         gallery = []
-        for slide in (1, 2, 3):
-            rel = f"assets/projects/{project_id}/gallery/{slide:02d}-feature.svg"
-            (ROOT / rel).write_text(panel_svg(project, index, slide), encoding="utf-8")
-            label = ["Overview visual", "Feature highlights", "Technology and status"][slide-1]
-            gallery.append({"src": rel, "alt": f"{project['title']} — {label} promotional graphic"})
-            total += 1
+        if source.is_file() and source_log.get(project_id, {}).get("status") != "failed":
+            for slide in (1, 2, 3):
+                rel = f"assets/projects/{project_id}/gallery/{slide:02d}-feature.webp"
+                raster_panel(project, index, slide, source, ROOT / rel, source_log.get(project_id, {}))
+                (ROOT / "assets" / "projects" / project_id / "gallery" / f"{slide:02d}-feature.svg").unlink(missing_ok=True)
+                label = ["Overview visual", "Feature highlights", "Technology and status"][slide - 1]
+                gallery.append({"src": rel, "alt": f"{project['title']} — {label} artwork panel"})
+                total += 1
+        else:
+            for slide in (1, 2, 3):
+                rel = f"assets/projects/{project_id}/gallery/{slide:02d}-feature.svg"
+                (ROOT / rel).write_text(panel_svg(project, index, slide), encoding="utf-8")
+                label = ["Overview visual", "Feature highlights", "Technology and status"][slide - 1]
+                gallery.append({"src": rel, "alt": f"{project['title']} — {label} promotional graphic"})
+                total += 1
         project["gallery"] = gallery
     catalog_path.write_text(json.dumps(projects, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Generated {total} feature panels and populated gallery entries for {len(projects)} projects.")
+    print(f"Generated {total} image-backed feature panels; retained supplied screenshot galleries where present.")
 
 
 if __name__ == "__main__":

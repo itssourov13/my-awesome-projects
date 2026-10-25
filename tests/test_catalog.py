@@ -71,6 +71,38 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(project.get("liveUrl", ""), "")
         self.assertIn("deliberately vulnerable", project["description"].lower())
 
+    def test_public_artwork_provenance_matches_catalog(self):
+        source_path = ROOT / "assets/artwork-sources.json"
+        self.assertTrue(source_path.is_file())
+        sources = json.loads(source_path.read_text(encoding="utf-8"))
+        source_ids = [item["id"] for item in sources]
+        catalog_ids = [item["id"] for item in PROJECTS]
+        self.assertEqual(len(source_ids), len(set(source_ids)))
+        self.assertEqual(set(source_ids), set(catalog_ids))
+        for item in sources:
+            with self.subTest(project=item["id"]):
+                self.assertIn(item.get("status"), {"downloaded", "screenshot", "failed"})
+                if item.get("status") != "failed":
+                    image_path = item.get("imagePath", "")
+                    self.assertTrue(image_path)
+                    self.assertTrue((ROOT / image_path).is_file())
+
+    def test_image_backed_covers_and_feature_panels_are_local_webp(self):
+        for project in PROJECTS:
+            cover = project.get("cover", "")
+            if cover.endswith(".webp"):
+                with self.subTest(project=project["id"], asset="cover"):
+                    path = ROOT / cover
+                    self.assertTrue(path.is_file())
+                    self.assertGreater(path.stat().st_size, 10_000)
+            for item in project.get("gallery", []):
+                src = item.get("src", "")
+                if src.endswith(".webp"):
+                    with self.subTest(project=project["id"], asset=src):
+                        path = ROOT / src
+                        self.assertTrue(path.is_file())
+                        self.assertGreater(path.stat().st_size, 10_000)
+
     def test_catalog_is_large_enough_for_an_index(self):
         self.assertGreaterEqual(len(PROJECTS), 25)
 

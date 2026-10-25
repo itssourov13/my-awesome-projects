@@ -24,7 +24,7 @@
     "status": "Live preview listed",
     "featured": true,
     "updated": "2026-10-25",
-    "cover": "assets/projects/scholarhub/cover.svg",
+    "cover": "assets/projects/scholarhub/cover.webp",
     "screenshots": [
       {
         "src": "assets/projects/scholarhub/screenshots/01-scholarship-discovery.png",
@@ -97,20 +97,20 @@
     "status": "Active · CLI",
     "featured": true,
     "updated": "2026-09-22",
-    "cover": "assets/projects/apk-sherlock/cover.svg",
+    "cover": "assets/projects/apk-sherlock/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/apk-sherlock/gallery/01-feature.svg",
-        "alt": "APK Sherlock — Overview visual promotional graphic"
+        "src": "assets/projects/apk-sherlock/gallery/01-feature.webp",
+        "alt": "APK Sherlock — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/apk-sherlock/gallery/02-feature.svg",
-        "alt": "APK Sherlock — Feature highlights promotional graphic"
+        "src": "assets/projects/apk-sherlock/gallery/02-feature.webp",
+        "alt": "APK Sherlock — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/apk-sherlock/gallery/03-feature.svg",
-        "alt": "APK Sherlock — Technology and status promotional graphic"
+        "src": "assets/projects/apk-sherlock/gallery/03-feature.webp",
+        "alt": "APK Sherlock — Technology and status artwork panel"
       }
     ],
     "githubRepo": "apk-sherlock"
@@ -142,20 +142,20 @@
     "status": "Active development",
     "featured": true,
     "updated": "2026-08-12",
-    "cover": "assets/projects/ares/cover.svg",
+    "cover": "assets/projects/ares/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/ares/gallery/01-feature.svg",
-        "alt": "ARES — Overview visual promotional graphic"
+        "src": "assets/projects/ares/gallery/01-feature.webp",
+        "alt": "ARES — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/ares/gallery/02-feature.svg",
-        "alt": "ARES — Feature highlights promotional graphic"
+        "src": "assets/projects/ares/gallery/02-feature.webp",
+        "alt": "ARES — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/ares/gallery/03-feature.svg",
-        "alt": "ARES — Technology and status promotional graphic"
+        "src": "assets/projects/ares/gallery/03-feature.webp",
+        "alt": "ARES — Technology and status artwork panel"
       }
     ],
     "githubRepo": "ares"
@@ -187,20 +187,20 @@
     "status": "In development",
     "featured": true,
     "updated": "2026-08-30",
-    "cover": "assets/projects/cyberos/cover.svg",
+    "cover": "assets/projects/cyberos/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/cyberos/gallery/01-feature.svg",
-        "alt": "CYBEROS — Overview visual promotional graphic"
+        "src": "assets/projects/cyberos/gallery/01-feature.webp",
+        "alt": "CYBEROS — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/cyberos/gallery/02-feature.svg",
-        "alt": "CYBEROS — Feature highlights promotional graphic"
+        "src": "assets/projects/cyberos/gallery/02-feature.webp",
+        "alt": "CYBEROS — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/cyberos/gallery/03-feature.svg",
-        "alt": "CYBEROS — Technology and status promotional graphic"
+        "src": "assets/projects/cyberos/gallery/03-feature.webp",
+        "alt": "CYBEROS — Technology and status artwork panel"
       }
     ],
     "githubRepo": "cyberos"
@@ -232,20 +232,20 @@
     "status": "Active development",
     "featured": true,
     "updated": "2026-08-13",
-    "cover": "assets/projects/passhunter/cover.svg",
+    "cover": "assets/projects/passhunter/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/passhunter/gallery/01-feature.svg",
-        "alt": "PassHunter — Overview visual promotional graphic"
+        "src": "assets/projects/passhunter/gallery/01-feature.webp",
+        "alt": "PassHunter — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/passhunter/gallery/02-feature.svg",
-        "alt": "PassHunter — Feature highlights promotional graphic"
+        "src": "assets/projects/passhunter/gallery/02-feature.webp",
+        "alt": "PassHunter — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/passhunter/gallery/03-feature.svg",
-        "alt": "PassHunter — Technology and status promotional graphic"
+        "src": "assets/projects/passhunter/gallery/03-feature.webp",
+        "alt": "PassHunter — Technology and status artwork panel"
       }
     ],
     "githubRepo": "passhunter"
@@ -278,20 +278,20 @@
     "status": "Security lab · isolated use only",
     "featured": true,
     "updated": "2026-10-20",
-    "cover": "assets/projects/personal-website-pentest/cover.svg",
+    "cover": "assets/projects/personal-website-pentest/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/personal-website-pentest/gallery/01-feature.svg",
-        "alt": "Sourov Works — Pentest Lab — Overview visual promotional graphic"
+        "src": "assets/projects/personal-website-pentest/gallery/01-feature.webp",
+        "alt": "Sourov Works — Pentest Lab — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/personal-website-pentest/gallery/02-feature.svg",
-        "alt": "Sourov Works — Pentest Lab — Feature highlights promotional graphic"
+        "src": "assets/projects/personal-website-pentest/gallery/02-feature.webp",
+        "alt": "Sourov Works — Pentest Lab — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/personal-website-pentest/gallery/03-feature.svg",
-        "alt": "Sourov Works — Pentest Lab — Technology and status promotional graphic"
+        "src": "assets/projects/personal-website-pentest/gallery/03-feature.webp",
+        "alt": "Sourov Works — Pentest Lab — Technology and status artwork panel"
       }
     ],
     "githubRepo": "personal-website-pentest"
@@ -322,20 +322,20 @@
     "status": "Active development",
     "featured": false,
     "updated": "2026-08-20",
-    "cover": "assets/projects/uab/cover.svg",
+    "cover": "assets/projects/uab/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/uab/gallery/01-feature.svg",
-        "alt": "UniversalAIBridge — Overview visual promotional graphic"
+        "src": "assets/projects/uab/gallery/01-feature.webp",
+        "alt": "UniversalAIBridge — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/uab/gallery/02-feature.svg",
-        "alt": "UniversalAIBridge — Feature highlights promotional graphic"
+        "src": "assets/projects/uab/gallery/02-feature.webp",
+        "alt": "UniversalAIBridge — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/uab/gallery/03-feature.svg",
-        "alt": "UniversalAIBridge — Technology and status promotional graphic"
+        "src": "assets/projects/uab/gallery/03-feature.webp",
+        "alt": "UniversalAIBridge — Technology and status artwork panel"
       }
     ],
     "githubRepo": "uab"
@@ -364,20 +364,20 @@
     "status": "Work in progress",
     "featured": false,
     "updated": "2026-10-09",
-    "cover": "assets/projects/vercelstrike/cover.svg",
+    "cover": "assets/projects/VercelStrike/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/VercelStrike/gallery/01-feature.svg",
-        "alt": "VercelStrike — Overview visual promotional graphic"
+        "src": "assets/projects/VercelStrike/gallery/01-feature.webp",
+        "alt": "VercelStrike — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/VercelStrike/gallery/02-feature.svg",
-        "alt": "VercelStrike — Feature highlights promotional graphic"
+        "src": "assets/projects/VercelStrike/gallery/02-feature.webp",
+        "alt": "VercelStrike — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/VercelStrike/gallery/03-feature.svg",
-        "alt": "VercelStrike — Technology and status promotional graphic"
+        "src": "assets/projects/VercelStrike/gallery/03-feature.webp",
+        "alt": "VercelStrike — Technology and status artwork panel"
       }
     ],
     "githubRepo": "VercelStrike"
@@ -405,20 +405,20 @@
     "status": "Needs documentation",
     "featured": false,
     "updated": "2026-10-09",
-    "cover": "assets/projects/vercstorm/cover.svg",
+    "cover": "assets/projects/VercStorm/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/VercStorm/gallery/01-feature.svg",
-        "alt": "VercStorm — Overview visual promotional graphic"
+        "src": "assets/projects/VercStorm/gallery/01-feature.webp",
+        "alt": "VercStorm — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/VercStorm/gallery/02-feature.svg",
-        "alt": "VercStorm — Feature highlights promotional graphic"
+        "src": "assets/projects/VercStorm/gallery/02-feature.webp",
+        "alt": "VercStorm — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/VercStorm/gallery/03-feature.svg",
-        "alt": "VercStorm — Technology and status promotional graphic"
+        "src": "assets/projects/VercStorm/gallery/03-feature.webp",
+        "alt": "VercStorm — Technology and status artwork panel"
       }
     ],
     "githubRepo": "VercStorm"
@@ -449,20 +449,20 @@
     "status": "Live URL needs verification",
     "featured": false,
     "updated": "2026-10-25",
-    "cover": "assets/projects/hackerai-main/cover.svg",
+    "cover": "assets/projects/hackerai-main/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/hackerai-main/gallery/01-feature.svg",
-        "alt": "HackerAI — Overview visual promotional graphic"
+        "src": "assets/projects/hackerai-main/gallery/01-feature.webp",
+        "alt": "HackerAI — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/hackerai-main/gallery/02-feature.svg",
-        "alt": "HackerAI — Feature highlights promotional graphic"
+        "src": "assets/projects/hackerai-main/gallery/02-feature.webp",
+        "alt": "HackerAI — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/hackerai-main/gallery/03-feature.svg",
-        "alt": "HackerAI — Technology and status promotional graphic"
+        "src": "assets/projects/hackerai-main/gallery/03-feature.webp",
+        "alt": "HackerAI — Technology and status artwork panel"
       }
     ],
     "githubRepo": "hackerai-main"
@@ -493,20 +493,20 @@
     "status": "Development / concept",
     "featured": false,
     "updated": "2026-10-09",
-    "cover": "assets/projects/hackerai-base44/cover.svg",
+    "cover": "assets/projects/hackerai-base44/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/hackerai-base44/gallery/01-feature.svg",
-        "alt": "HackerAI Workspace — Overview visual promotional graphic"
+        "src": "assets/projects/hackerai-base44/gallery/01-feature.webp",
+        "alt": "HackerAI Workspace — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/hackerai-base44/gallery/02-feature.svg",
-        "alt": "HackerAI Workspace — Feature highlights promotional graphic"
+        "src": "assets/projects/hackerai-base44/gallery/02-feature.webp",
+        "alt": "HackerAI Workspace — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/hackerai-base44/gallery/03-feature.svg",
-        "alt": "HackerAI Workspace — Technology and status promotional graphic"
+        "src": "assets/projects/hackerai-base44/gallery/03-feature.webp",
+        "alt": "HackerAI Workspace — Technology and status artwork panel"
       }
     ],
     "githubRepo": "hackerai-base44"
@@ -537,20 +537,20 @@
     "status": "Demo / concept",
     "featured": false,
     "updated": "2026-10-19",
-    "cover": "assets/projects/hackergf-ai/cover.svg",
+    "cover": "assets/projects/hackergf-ai/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/hackergf-ai/gallery/01-feature.svg",
-        "alt": "Hacker gf AI — Overview visual promotional graphic"
+        "src": "assets/projects/hackergf-ai/gallery/01-feature.webp",
+        "alt": "Hacker gf AI — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/hackergf-ai/gallery/02-feature.svg",
-        "alt": "Hacker gf AI — Feature highlights promotional graphic"
+        "src": "assets/projects/hackergf-ai/gallery/02-feature.webp",
+        "alt": "Hacker gf AI — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/hackergf-ai/gallery/03-feature.svg",
-        "alt": "Hacker gf AI — Technology and status promotional graphic"
+        "src": "assets/projects/hackergf-ai/gallery/03-feature.webp",
+        "alt": "Hacker gf AI — Technology and status artwork panel"
       }
     ],
     "githubRepo": "hackergf-ai"
@@ -579,20 +579,20 @@
     "status": "Live preview listed",
     "featured": false,
     "updated": "2026-09-22",
-    "cover": "assets/projects/onyx/cover.svg",
+    "cover": "assets/projects/onyx/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/onyx/gallery/01-feature.svg",
-        "alt": "Onyx — Onion Web — Overview visual promotional graphic"
+        "src": "assets/projects/onyx/gallery/01-feature.webp",
+        "alt": "Onyx — Onion Web — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/onyx/gallery/02-feature.svg",
-        "alt": "Onyx — Onion Web — Feature highlights promotional graphic"
+        "src": "assets/projects/onyx/gallery/02-feature.webp",
+        "alt": "Onyx — Onion Web — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/onyx/gallery/03-feature.svg",
-        "alt": "Onyx — Onion Web — Technology and status promotional graphic"
+        "src": "assets/projects/onyx/gallery/03-feature.webp",
+        "alt": "Onyx — Onion Web — Technology and status artwork panel"
       }
     ],
     "githubRepo": "onyx"
@@ -624,20 +624,20 @@
     "status": "Mobile app",
     "featured": true,
     "updated": "2026-07-16",
-    "cover": "assets/projects/study-planner-apk/cover.svg",
+    "cover": "assets/projects/study-planner-apk/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/study-planner-apk/gallery/01-feature.svg",
-        "alt": "Study Planner — Overview visual promotional graphic"
+        "src": "assets/projects/study-planner-apk/gallery/01-feature.webp",
+        "alt": "Study Planner — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/study-planner-apk/gallery/02-feature.svg",
-        "alt": "Study Planner — Feature highlights promotional graphic"
+        "src": "assets/projects/study-planner-apk/gallery/02-feature.webp",
+        "alt": "Study Planner — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/study-planner-apk/gallery/03-feature.svg",
-        "alt": "Study Planner — Technology and status promotional graphic"
+        "src": "assets/projects/study-planner-apk/gallery/03-feature.webp",
+        "alt": "Study Planner — Technology and status artwork panel"
       }
     ],
     "githubRepo": "study-planner-apk"
@@ -669,20 +669,20 @@
     "status": "Live preview listed",
     "featured": true,
     "updated": "2026-10-21",
-    "cover": "assets/projects/cinematic-architecture-web/cover.svg",
+    "cover": "assets/projects/cinematic-architecture-web/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/cinematic-architecture-web/gallery/01-feature.svg",
-        "alt": "The Glass Pavilion — Overview visual promotional graphic"
+        "src": "assets/projects/cinematic-architecture-web/gallery/01-feature.webp",
+        "alt": "The Glass Pavilion — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/cinematic-architecture-web/gallery/02-feature.svg",
-        "alt": "The Glass Pavilion — Feature highlights promotional graphic"
+        "src": "assets/projects/cinematic-architecture-web/gallery/02-feature.webp",
+        "alt": "The Glass Pavilion — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/cinematic-architecture-web/gallery/03-feature.svg",
-        "alt": "The Glass Pavilion — Technology and status promotional graphic"
+        "src": "assets/projects/cinematic-architecture-web/gallery/03-feature.webp",
+        "alt": "The Glass Pavilion — Technology and status artwork panel"
       }
     ],
     "githubRepo": "cinematic-architecture-web"
@@ -714,20 +714,20 @@
     "status": "Visual concept",
     "featured": true,
     "updated": "2026-10-09",
-    "cover": "assets/projects/arven/cover.svg",
+    "cover": "assets/projects/arven/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/arven/gallery/01-feature.svg",
-        "alt": "ARVEN Residences — Overview visual promotional graphic"
+        "src": "assets/projects/arven/gallery/01-feature.webp",
+        "alt": "ARVEN Residences — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/arven/gallery/02-feature.svg",
-        "alt": "ARVEN Residences — Feature highlights promotional graphic"
+        "src": "assets/projects/arven/gallery/02-feature.webp",
+        "alt": "ARVEN Residences — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/arven/gallery/03-feature.svg",
-        "alt": "ARVEN Residences — Technology and status promotional graphic"
+        "src": "assets/projects/arven/gallery/03-feature.webp",
+        "alt": "ARVEN Residences — Technology and status artwork panel"
       }
     ],
     "githubRepo": "arven"
@@ -758,20 +758,20 @@
     "status": "Visual concept",
     "featured": false,
     "updated": "2026-10-10",
-    "cover": "assets/projects/stele-residences/cover.svg",
+    "cover": "assets/projects/stele-residences/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/stele-residences/gallery/01-feature.svg",
-        "alt": "STELE Residences — Overview visual promotional graphic"
+        "src": "assets/projects/stele-residences/gallery/01-feature.webp",
+        "alt": "STELE Residences — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/stele-residences/gallery/02-feature.svg",
-        "alt": "STELE Residences — Feature highlights promotional graphic"
+        "src": "assets/projects/stele-residences/gallery/02-feature.webp",
+        "alt": "STELE Residences — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/stele-residences/gallery/03-feature.svg",
-        "alt": "STELE Residences — Technology and status promotional graphic"
+        "src": "assets/projects/stele-residences/gallery/03-feature.webp",
+        "alt": "STELE Residences — Technology and status artwork panel"
       }
     ],
     "githubRepo": "stele-residences"
@@ -803,20 +803,20 @@
     "status": "Creative experiment",
     "featured": false,
     "updated": "2026-10-09",
-    "cover": "assets/projects/rise-of-ai/cover.svg",
+    "cover": "assets/projects/rise-of-ai/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/rise-of-ai/gallery/01-feature.svg",
-        "alt": "Rise of AI — Overview visual promotional graphic"
+        "src": "assets/projects/rise-of-ai/gallery/01-feature.webp",
+        "alt": "Rise of AI — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/rise-of-ai/gallery/02-feature.svg",
-        "alt": "Rise of AI — Feature highlights promotional graphic"
+        "src": "assets/projects/rise-of-ai/gallery/02-feature.webp",
+        "alt": "Rise of AI — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/rise-of-ai/gallery/03-feature.svg",
-        "alt": "Rise of AI — Technology and status promotional graphic"
+        "src": "assets/projects/rise-of-ai/gallery/03-feature.webp",
+        "alt": "Rise of AI — Technology and status artwork panel"
       }
     ],
     "githubRepo": "rise-of-ai"
@@ -847,20 +847,20 @@
     "status": "Research / reconstruction",
     "featured": false,
     "updated": "2026-10-12",
-    "cover": "assets/projects/active-theory/cover.svg",
+    "cover": "assets/projects/active-theory/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/active-theory/gallery/01-feature.svg",
-        "alt": "Active Theory V6 Rebuild — Overview visual promotional graphic"
+        "src": "assets/projects/active-theory/gallery/01-feature.webp",
+        "alt": "Active Theory V6 Rebuild — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/active-theory/gallery/02-feature.svg",
-        "alt": "Active Theory V6 Rebuild — Feature highlights promotional graphic"
+        "src": "assets/projects/active-theory/gallery/02-feature.webp",
+        "alt": "Active Theory V6 Rebuild — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/active-theory/gallery/03-feature.svg",
-        "alt": "Active Theory V6 Rebuild — Technology and status promotional graphic"
+        "src": "assets/projects/active-theory/gallery/03-feature.webp",
+        "alt": "Active Theory V6 Rebuild — Technology and status artwork panel"
       }
     ],
     "githubRepo": "active-theory"
@@ -891,20 +891,20 @@
     "status": "Live preview listed",
     "featured": true,
     "updated": "2026-10-09",
-    "cover": "assets/projects/sketchbook/cover.svg",
+    "cover": "assets/projects/sketchbook/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/sketchbook/gallery/01-feature.svg",
-        "alt": "Sketchbook — Overview visual promotional graphic"
+        "src": "assets/projects/sketchbook/gallery/01-feature.webp",
+        "alt": "Sketchbook — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/sketchbook/gallery/02-feature.svg",
-        "alt": "Sketchbook — Feature highlights promotional graphic"
+        "src": "assets/projects/sketchbook/gallery/02-feature.webp",
+        "alt": "Sketchbook — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/sketchbook/gallery/03-feature.svg",
-        "alt": "Sketchbook — Technology and status promotional graphic"
+        "src": "assets/projects/sketchbook/gallery/03-feature.webp",
+        "alt": "Sketchbook — Technology and status artwork panel"
       }
     ],
     "githubRepo": "sketchbook"
@@ -936,20 +936,20 @@
     "status": "Live preview listed",
     "featured": true,
     "updated": "2026-10-18",
-    "cover": "assets/projects/blog/cover.svg",
+    "cover": "assets/projects/blog/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/blog/gallery/01-feature.svg",
-        "alt": "Security & Engineering Notes — Overview visual promotional graphic"
+        "src": "assets/projects/blog/gallery/01-feature.webp",
+        "alt": "Security & Engineering Notes — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/blog/gallery/02-feature.svg",
-        "alt": "Security & Engineering Notes — Feature highlights promotional graphic"
+        "src": "assets/projects/blog/gallery/02-feature.webp",
+        "alt": "Security & Engineering Notes — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/blog/gallery/03-feature.svg",
-        "alt": "Security & Engineering Notes — Technology and status promotional graphic"
+        "src": "assets/projects/blog/gallery/03-feature.webp",
+        "alt": "Security & Engineering Notes — Technology and status artwork panel"
       }
     ],
     "githubRepo": "blog"
@@ -979,20 +979,20 @@
     "status": "Demo",
     "featured": true,
     "updated": "2026-10-22",
-    "cover": "assets/projects/personal-website-test/cover.svg",
+    "cover": "assets/projects/personal-website-test/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/personal-website-test/gallery/01-feature.svg",
-        "alt": "Personal Website Demo — Overview visual promotional graphic"
+        "src": "assets/projects/personal-website-test/gallery/01-feature.webp",
+        "alt": "Personal Website Demo — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/personal-website-test/gallery/02-feature.svg",
-        "alt": "Personal Website Demo — Feature highlights promotional graphic"
+        "src": "assets/projects/personal-website-test/gallery/02-feature.webp",
+        "alt": "Personal Website Demo — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/personal-website-test/gallery/03-feature.svg",
-        "alt": "Personal Website Demo — Technology and status promotional graphic"
+        "src": "assets/projects/personal-website-test/gallery/03-feature.webp",
+        "alt": "Personal Website Demo — Technology and status artwork panel"
       }
     ],
     "githubRepo": "personal-website-test"
@@ -1023,20 +1023,20 @@
     "status": "Design concept",
     "featured": false,
     "updated": "2026-10-16",
-    "cover": "assets/projects/claude-personal-website/cover.svg",
+    "cover": "assets/projects/claude-personal-website/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/claude-personal-website/gallery/01-feature.svg",
-        "alt": "Personal Website — Design Concept — Overview visual promotional graphic"
+        "src": "assets/projects/claude-personal-website/gallery/01-feature.webp",
+        "alt": "Personal Website — Design Concept — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/claude-personal-website/gallery/02-feature.svg",
-        "alt": "Personal Website — Design Concept — Feature highlights promotional graphic"
+        "src": "assets/projects/claude-personal-website/gallery/02-feature.webp",
+        "alt": "Personal Website — Design Concept — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/claude-personal-website/gallery/03-feature.svg",
-        "alt": "Personal Website — Design Concept — Technology and status promotional graphic"
+        "src": "assets/projects/claude-personal-website/gallery/03-feature.webp",
+        "alt": "Personal Website — Design Concept — Technology and status artwork panel"
       }
     ],
     "githubRepo": "claude-personal-website"
@@ -1067,20 +1067,20 @@
     "status": "Static demo",
     "featured": false,
     "updated": "2026-10-14",
-    "cover": "assets/projects/create-present-website/cover.svg",
+    "cover": "assets/projects/create-present-website/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/create-present-website/gallery/01-feature.svg",
-        "alt": "Create Present — Overview visual promotional graphic"
+        "src": "assets/projects/create-present-website/gallery/01-feature.webp",
+        "alt": "Create Present — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/create-present-website/gallery/02-feature.svg",
-        "alt": "Create Present — Feature highlights promotional graphic"
+        "src": "assets/projects/create-present-website/gallery/02-feature.webp",
+        "alt": "Create Present — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/create-present-website/gallery/03-feature.svg",
-        "alt": "Create Present — Technology and status promotional graphic"
+        "src": "assets/projects/create-present-website/gallery/03-feature.webp",
+        "alt": "Create Present — Technology and status artwork panel"
       }
     ],
     "githubRepo": "create-present-website"
@@ -1111,20 +1111,20 @@
     "status": "Live preview listed",
     "featured": false,
     "updated": "2026-10-14",
-    "cover": "assets/projects/birthday-present-preview/cover.svg",
+    "cover": "assets/projects/birthday-present-preview/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/birthday-present-preview/gallery/01-feature.svg",
-        "alt": "Birthday Present Preview — Overview visual promotional graphic"
+        "src": "assets/projects/birthday-present-preview/gallery/01-feature.webp",
+        "alt": "Birthday Present Preview — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/birthday-present-preview/gallery/02-feature.svg",
-        "alt": "Birthday Present Preview — Feature highlights promotional graphic"
+        "src": "assets/projects/birthday-present-preview/gallery/02-feature.webp",
+        "alt": "Birthday Present Preview — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/birthday-present-preview/gallery/03-feature.svg",
-        "alt": "Birthday Present Preview — Technology and status promotional graphic"
+        "src": "assets/projects/birthday-present-preview/gallery/03-feature.webp",
+        "alt": "Birthday Present Preview — Technology and status artwork panel"
       }
     ],
     "githubRepo": "birthday-present-preview"
@@ -1152,20 +1152,20 @@
     "status": "Utility / learning project",
     "featured": false,
     "updated": "2026-10-09",
-    "cover": "assets/projects/travel-weather-planner/cover.svg",
+    "cover": "assets/projects/travel-weather-planner/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/travel-weather-planner/gallery/01-feature.svg",
-        "alt": "Travel & Weather Planner — Overview visual promotional graphic"
+        "src": "assets/projects/travel-weather-planner/gallery/01-feature.webp",
+        "alt": "Travel & Weather Planner — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/travel-weather-planner/gallery/02-feature.svg",
-        "alt": "Travel & Weather Planner — Feature highlights promotional graphic"
+        "src": "assets/projects/travel-weather-planner/gallery/02-feature.webp",
+        "alt": "Travel & Weather Planner — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/travel-weather-planner/gallery/03-feature.svg",
-        "alt": "Travel & Weather Planner — Technology and status promotional graphic"
+        "src": "assets/projects/travel-weather-planner/gallery/03-feature.webp",
+        "alt": "Travel & Weather Planner — Technology and status artwork panel"
       }
     ],
     "githubRepo": "-Travel-Weather-Planner-Smart-Commute-Decision-System-Python-"
@@ -1193,20 +1193,20 @@
     "status": "Utility / learning project",
     "featured": false,
     "updated": "2026-05-22",
-    "cover": "assets/projects/employee-profile-generator/cover.svg",
+    "cover": "assets/projects/Employee-profile-generator/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/Employee-profile-generator/gallery/01-feature.svg",
-        "alt": "Employee Profile Generator — Overview visual promotional graphic"
+        "src": "assets/projects/Employee-profile-generator/gallery/01-feature.webp",
+        "alt": "Employee Profile Generator — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/Employee-profile-generator/gallery/02-feature.svg",
-        "alt": "Employee Profile Generator — Feature highlights promotional graphic"
+        "src": "assets/projects/Employee-profile-generator/gallery/02-feature.webp",
+        "alt": "Employee Profile Generator — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/Employee-profile-generator/gallery/03-feature.svg",
-        "alt": "Employee Profile Generator — Technology and status promotional graphic"
+        "src": "assets/projects/Employee-profile-generator/gallery/03-feature.webp",
+        "alt": "Employee Profile Generator — Technology and status artwork panel"
       }
     ],
     "githubRepo": "Employee-profile-generator"
@@ -1235,20 +1235,20 @@
     "status": "Learning project",
     "featured": false,
     "updated": "2026-05-22",
-    "cover": "assets/projects/report-card-printer/cover.svg",
+    "cover": "assets/projects/Report-card-printer/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/Report-card-printer/gallery/01-feature.svg",
-        "alt": "Report Card Printer — Overview visual promotional graphic"
+        "src": "assets/projects/Report-card-printer/gallery/01-feature.webp",
+        "alt": "Report Card Printer — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/Report-card-printer/gallery/02-feature.svg",
-        "alt": "Report Card Printer — Feature highlights promotional graphic"
+        "src": "assets/projects/Report-card-printer/gallery/02-feature.webp",
+        "alt": "Report Card Printer — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/Report-card-printer/gallery/03-feature.svg",
-        "alt": "Report Card Printer — Technology and status promotional graphic"
+        "src": "assets/projects/Report-card-printer/gallery/03-feature.webp",
+        "alt": "Report Card Printer — Technology and status artwork panel"
       }
     ],
     "githubRepo": "Report-card-printer"
@@ -1276,20 +1276,20 @@
     "status": "Learning project",
     "featured": false,
     "updated": "2026-05-22",
-    "cover": "assets/projects/movie-ticket-calculator/cover.svg",
+    "cover": "assets/projects/Movie-Ticket-Booking-Calculator-Python-/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/Movie-Ticket-Booking-Calculator-Python-/gallery/01-feature.svg",
-        "alt": "Movie Ticket Booking Calculator — Overview visual promotional graphic"
+        "src": "assets/projects/Movie-Ticket-Booking-Calculator-Python-/gallery/01-feature.webp",
+        "alt": "Movie Ticket Booking Calculator — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/Movie-Ticket-Booking-Calculator-Python-/gallery/02-feature.svg",
-        "alt": "Movie Ticket Booking Calculator — Feature highlights promotional graphic"
+        "src": "assets/projects/Movie-Ticket-Booking-Calculator-Python-/gallery/02-feature.webp",
+        "alt": "Movie Ticket Booking Calculator — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/Movie-Ticket-Booking-Calculator-Python-/gallery/03-feature.svg",
-        "alt": "Movie Ticket Booking Calculator — Technology and status promotional graphic"
+        "src": "assets/projects/Movie-Ticket-Booking-Calculator-Python-/gallery/03-feature.webp",
+        "alt": "Movie Ticket Booking Calculator — Technology and status artwork panel"
       }
     ],
     "githubRepo": "Movie-Ticket-Booking-Calculator-Python-"
@@ -1316,20 +1316,20 @@
     "status": "Curated resources",
     "featured": false,
     "updated": "2026-06-30",
-    "cover": "assets/projects/awesome/cover.svg",
+    "cover": "assets/projects/awesome/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/awesome/gallery/01-feature.svg",
-        "alt": "Awesome Lists — Overview visual promotional graphic"
+        "src": "assets/projects/awesome/gallery/01-feature.webp",
+        "alt": "Awesome Lists — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/awesome/gallery/02-feature.svg",
-        "alt": "Awesome Lists — Feature highlights promotional graphic"
+        "src": "assets/projects/awesome/gallery/02-feature.webp",
+        "alt": "Awesome Lists — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/awesome/gallery/03-feature.svg",
-        "alt": "Awesome Lists — Technology and status promotional graphic"
+        "src": "assets/projects/awesome/gallery/03-feature.webp",
+        "alt": "Awesome Lists — Technology and status artwork panel"
       }
     ],
     "githubRepo": "awesome"
@@ -1356,20 +1356,20 @@
     "status": "Community / resource",
     "featured": false,
     "updated": "2026-08-19",
-    "cover": "assets/projects/js-org/cover.svg",
+    "cover": "assets/projects/js.org/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/js.org/gallery/01-feature.svg",
-        "alt": "JS.ORG — Overview visual promotional graphic"
+        "src": "assets/projects/js.org/gallery/01-feature.webp",
+        "alt": "JS.ORG — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/js.org/gallery/02-feature.svg",
-        "alt": "JS.ORG — Feature highlights promotional graphic"
+        "src": "assets/projects/js.org/gallery/02-feature.webp",
+        "alt": "JS.ORG — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/js.org/gallery/03-feature.svg",
-        "alt": "JS.ORG — Technology and status promotional graphic"
+        "src": "assets/projects/js.org/gallery/03-feature.webp",
+        "alt": "JS.ORG — Technology and status artwork panel"
       }
     ],
     "githubRepo": "js.org"
@@ -1400,20 +1400,20 @@
     "status": "Profile infrastructure",
     "featured": false,
     "updated": "2026-10-25",
-    "cover": "assets/projects/github-profile/cover.svg",
+    "cover": "assets/projects/itssourov13/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/itssourov13/gallery/01-feature.svg",
-        "alt": "GitHub Profile & Project Index — Overview visual promotional graphic"
+        "src": "assets/projects/itssourov13/gallery/01-feature.webp",
+        "alt": "GitHub Profile & Project Index — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/itssourov13/gallery/02-feature.svg",
-        "alt": "GitHub Profile & Project Index — Feature highlights promotional graphic"
+        "src": "assets/projects/itssourov13/gallery/02-feature.webp",
+        "alt": "GitHub Profile & Project Index — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/itssourov13/gallery/03-feature.svg",
-        "alt": "GitHub Profile & Project Index — Technology and status promotional graphic"
+        "src": "assets/projects/itssourov13/gallery/03-feature.webp",
+        "alt": "GitHub Profile & Project Index — Technology and status artwork panel"
       }
     ],
     "githubRepo": "itssourov13"

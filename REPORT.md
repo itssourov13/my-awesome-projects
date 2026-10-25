@@ -4,7 +4,7 @@
 **Workspace:** /home/kali/gpt-workspace/my-awesome-projects
 **Branch:** feat/readme-first-public-sync
 **Remote:** https://github.com/itssourov13/my-awesome-projects.git
-**Publication status:** implementation is local and not pushed or merged; the existing live site remains on the current main branch until this branch is merged.
+**Publication status:** the README-first implementation is already pushed on this feature branch; the high-quality artwork refresh in this report is local and not yet pushed. The live site remains unchanged until the updated branch is pushed and merged.
 
 ## Scope implemented
 
@@ -56,3 +56,14 @@ The GitHub Pages deployment and scheduled sync workflow changes are **not live y
 - Live preview visibility is separate from source visibility. The sync never guesses a live deployment URL for a newly discovered repository.
 - Deliberately vulnerable labs remain without a public preview until isolation and deployment access controls are verified.
 - The user must still review new public-repository entries for copy quality, categories, and any live preview before manually adding those details.
+
+## High-quality artwork refresh — 25 October 2026
+
+- Replaced the placeholder-generated geometric cover art with image-backed 1200 × 700 WebP project covers using collected public page imagery, project-specific public reference art, and the existing project palette/metadata overlay.
+- Replaced all 93 generated SVG feature panels with image-backed 1200 × 1600 WebP panels across overview, highlights, and technology/status layouts. ScholarHub's five supplied promotional PNGs remain unchanged.
+- Collected one artwork source for each of the 32 catalog entries. Sources, acquisition type, and local source-image path are recorded in assets/artwork-sources.json; normalized source images are stored in assets/projects/<id>/source/cover.jpg. Source art and generated WebP assets are local, so page views do not depend on third-party image hotlinks.
+- Added scripts/collect_web_artwork.py for complete/targeted artwork collection and incremental collection for newly added entries. The scheduled workflow now installs Pillow, collects only missing artwork (falls back to local vector art when a public source is unavailable), generates covers/panels, regenerates README/catalog metadata, validates the result, and deploys.
+- Updated docs/ASSET_GUIDELINES.md to describe the image pipeline and attribution/source-provenance records.
+- Added tests for one-to-one artwork provenance and generated WebP asset existence/size.
+- Local verification after the artwork refresh: catalog validation passed with no warnings; generated README check passed; JavaScript syntax check passed; Python compile checks passed; YAML/workflow ordering checks passed; unit tests passed (20/20). Chromium smoke test rendered 38 card markers (32 catalogue cards plus six featured cards); 130/130 local cover/gallery asset requests returned HTTP 200, and the catalog did not enter its fatal fallback state. The temporary smoke-test server was stopped. The project catalog remains at 32 entries, 8 categories, 31 public-source entries, 1 source-hidden entry, 14 public preview URLs, and 98 gallery visuals.
+- These artwork and workflow changes are on the feature branch and are not yet in production. The live website will update after the branch changes are pushed and merged and the Pages workflow succeeds.
