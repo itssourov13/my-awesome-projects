@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import re
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -20,7 +21,7 @@ CATEGORY_ORDER = [
     "Cybersecurity", "AI & Developer Tools", "Web Apps", "Creative & 3D",
     "Mobile Apps", "Utilities", "Writing & Publishing", "Open Source",
 ]
-FEATURED_LIMIT = 6
+FEATURED_LIMIT = 7
 BEGIN = "<!-- GENERATED SHOWCASE:BEGIN -->"
 END = "<!-- GENERATED SHOWCASE:END -->"
 
@@ -65,50 +66,116 @@ def external_actions(project: dict) -> str:
     live = safe_https(project.get("liveUrl"))
     source = safe_source(project)
     if live:
-        links.append(f'<a href="{h(live)}">Live preview ↗</a>')
+        links.append(f'<a href="{h(live)}"><strong>Live preview ↗</strong></a>')
     if source:
         links.append(f'<a href="{h(source)}">Public source ↗</a>')
     if project.get("sourceAccess") == "hidden":
-        links.append('<span><em>Source hidden</em></span>')
+        links.append("<em>Source hidden</em>")
     if not links:
-        links.append('<span><em>No public link listed</em></span>')
+        links.append("<em>No public link listed</em>")
     return " &nbsp;·&nbsp; ".join(links)
 
 
-def project_card(project: dict) -> str:
-    title = h(project.get("title", "Untitled project"))
-    title_target = safe_https(project.get("liveUrl")) or safe_source(project)
-    title_markup = f'<a href="{h(title_target)}">{title}</a>' if title_target else title
-    cover = safe_asset(project.get("cover"))
-    image = (
-        f'<img src="{h(cover)}" alt="{title} — project cover artwork" width="100%">'
-        if cover else f'<p><strong>{title}</strong></p>'
-    )
-    category = h(project.get("category", "Uncategorized"))
-    status = h(project.get("status", "Status not listed"))
-    description = h(project.get("description", "A project in the archive."))
+def slug(text: str) -> str:
+    """Mirror GitHub's heading-anchor rules so in-page links resolve."""
+    cleaned = re.sub(r"[^\w\- ]", "", text.strip().lower())
+    return cleaned.replace(" ", "-")
+
+
+def plural(count: int, noun: str) -> str:
+    return f"{count} {noun}" if count == 1 else f"{count} {noun}s"
+
+
+def stack_chips(project: dict, limit: int = 5) -> str:
     stack = project.get("stack") if isinstance(project.get("stack"), list) else []
-    stack_text = h(" · ".join(str(item) for item in stack[:5])) or "Not specified"
+    chips = " ".join(f"<code>{h(item)}</code>" for item in stack[:limit] if str(item).strip())
+    return chips or "<sub>Stack not specified</sub>"
+
+
+def title_markup(project: dict) -> str:
+    title = h(project.get("title", "Untitled project"))
+    target = safe_https(project.get("liveUrl")) or safe_source(project)
+    return f'<a href="{h(target)}">{title}</a>' if target else title
+
+
+def cover_markup(project: dict, width: str) -> str:
+    title = h(project.get("title", "Untitled project"))
+    cover = safe_asset(project.get("cover"))
+    if not cover:
+        return f"<strong>{title}</strong>"
+    image = f'<img src="{h(cover)}" alt="{title} — project cover artwork" width="{width}">'
+    target = safe_https(project.get("liveUrl")) or safe_source(project)
+    return f'<a href="{h(target)}">{image}</a>' if target else image
+
+
+def eyebrow(project: dict) -> str:
+    label = str(project.get("eyebrow") or project.get("category") or "Project").strip()
+    return h(label.upper())
+
+
+def status_line(project: dict) -> str:
+    return f"<sub>{h(project.get('status') or 'Status not listed')}</sub>"
+
+
+def lead_card(project: dict) -> str:
+    """Full-width spotlight: artwork left, editorial copy right."""
     return (
-        '<td width="50%" valign="top" style="padding:14px;">'
-        f"{image}<h3>{title_markup}</h3>"
-        f"<p><strong>{category}</strong> &nbsp;·&nbsp; <code>{status}</code></p>"
-        f"<p>{description}</p>"
-        f"<p><sub><strong>Stack:</strong> {stack_text}</sub></p>"
-        f"<p>{external_actions(project)}</p></td>"
+        '<table width="100%">\n<tr>\n'
+        f'<td width="58%" valign="middle">{cover_markup(project, "100%")}</td>\n'
+        '<td width="42%" valign="middle">'
+        f'<sub><strong>{eyebrow(project)}</strong></sub>'
+        f'<h3>{title_markup(project)}</h3>'
+        f'<p>{h(project.get("description") or "A project in the archive.")}</p>'
+        f'<p>{stack_chips(project)}</p>'
+        f'<p>{status_line(project)}<br>{external_actions(project)}</p>'
+        "</td>\n</tr>\n</table>"
     )
 
 
-def card_table(projects: list[dict]) -> str:
+def feature_cell(project: dict) -> str:
+    return (
+        '<td width="50%" valign="top">'
+        f'{cover_markup(project, "100%")}'
+        f'<br><sub><strong>{eyebrow(project)}</strong></sub>'
+        f'<h3>{title_markup(project)}</h3>'
+        f'<p>{h(project.get("description") or "A project in the archive.")}</p>'
+        f'<p>{stack_chips(project, 4)}</p>'
+        f'<p>{status_line(project)}<br>{external_actions(project)}</p>'
+        "</td>"
+    )
+
+
+def feature_grid(projects: list[dict]) -> str:
     if not projects:
-        return "_More projects will appear here as they are added._"
+        return ""
     rows: list[str] = []
     for index in range(0, len(projects), 2):
-        pair = [project_card(p) for p in projects[index:index + 2]]
-        if len(pair) == 1:
-            pair.append('<td width="50%" valign="top"></td>')
-        rows.append("<tr>" + "".join(pair) + "</tr>")
+        cells = [feature_cell(p) for p in projects[index:index + 2]]
+        if len(cells) == 1:
+            cells.append('<td width="50%"></td>')
+        rows.append("<tr>\n" + "\n".join(cells) + "\n</tr>")
     return '<table width="100%">\n' + "\n".join(rows) + "\n</table>"
+
+
+def archive_table(projects: list[dict], featured_ids: set) -> str:
+    rows: list[str] = []
+    for project in projects:
+        star = " ★" if project.get("id") in featured_ids else ""
+        rows.append(
+            "<tr>\n"
+            f'<td width="190" valign="top">{cover_markup(project, "190")}</td>\n'
+            '<td valign="top">'
+            f'<strong>{title_markup(project)}</strong>{star}<br>{status_line(project)}'
+            f'<br>{h(project.get("description") or "A project in the archive.")}'
+            f'<br>{stack_chips(project, 4)}'
+            f'<br>{external_actions(project)}</td>\n'
+            "</tr>"
+        )
+    return '<table width="100%">\n' + "\n".join(rows) + "\n</table>"
+
+
+def stat_cell(value: int, label: str) -> str:
+    return f'<td align="center" width="25%"><strong>{value}</strong><br><sub>{label}</sub></td>'
 
 
 def build_readme(projects: list[dict]) -> str:
@@ -121,7 +188,7 @@ def build_readme(projects: list[dict]) -> str:
     categories: dict[str, list[dict]] = defaultdict(list)
     for project in projects:
         categories[str(project.get("category") or "Uncategorized")].append(project)
-    category_count = len(categories)
+    ordered = [c for c in CATEGORY_ORDER if c in categories] + sorted(c for c in categories if c not in CATEGORY_ORDER)
     public_count = sum(p.get("sourceAccess") == "public" and bool(safe_source(p)) for p in projects)
     hidden_count = sum(p.get("sourceAccess") == "hidden" for p in projects)
     live_count = sum(bool(safe_https(p.get("liveUrl"))) for p in projects)
@@ -134,53 +201,69 @@ def build_readme(projects: list[dict]) -> str:
     )[:FEATURED_LIMIT]
     featured_ids = {p["id"] for p in featured}
 
+    category_nav = " &nbsp;·&nbsp; ".join(
+        f'<a href="#{slug(c)}">{h(c)}</a>&nbsp;<sub>{len(categories[c])}</sub>' for c in ordered
+    )
+
     lines = [
         BEGIN,
         '<div align="center">',
-        '<img src="assets/brand/og-cover.svg" alt="My Awesome Projects — built to solve, made to explore" width="100%">',
+        '<img src="assets/brand/readme-banner.svg" alt="My Awesome Projects — built to solve, made to explore" width="100%">',
         "",
-        "<h1>My Awesome Projects</h1>",
-        "<p><strong>A visual archive of software, security tooling, product experiments and creative computing.</strong></p>",
-        f'<p><a href="{h(SITE_URL)}">Open the interactive showcase ↗</a> &nbsp;·&nbsp; <a href="{h(PROFILE_URL)}">GitHub profile ↗</a></p>',
+        "<p><strong>A curated archive of software, security tooling, product experiments and creative computing.</strong></p>",
+        f'<p><a href="{h(SITE_URL)}"><strong>Interactive showcase ↗</strong></a> &nbsp;·&nbsp; <a href="{h(PROFILE_URL)}">GitHub profile ↗</a></p>',
+        '<p><sub><a href="#selected-work">Selected work</a> &nbsp;·&nbsp; <a href="#the-archive">The archive</a> &nbsp;·&nbsp; <a href="#source-privacy--live-preview-policy">Source &amp; preview policy</a></sub></p>',
+        "",
+        "<table>",
+        "<tr>",
+        stat_cell(len(projects), "PROJECTS"),
+        stat_cell(len(categories), "DISCIPLINES"),
+        stat_cell(public_count, "PUBLIC SOURCES"),
+        stat_cell(live_count, "LIVE PREVIEWS"),
+        "</tr>",
+        "</table>",
         "</div>",
         "",
-        f"> **{len(projects)} projects** &nbsp;·&nbsp; **{category_count} disciplines** &nbsp;·&nbsp; **{public_count} public sources** &nbsp;·&nbsp; **{live_count} live previews**",
-        "",
-        "This README is the **main project showcase**. The companion website provides search, category filters, sorting, detail views and a visual gallery.",
-        "",
-        "## How to explore",
-        "",
-        "- **Public projects** link to their public source repository when that source is verified.",
-        "- **Private or unpublished projects** can show approved descriptions and graphics without a source link.",
-        "- **Live previews are separate from source visibility.** A preview is listed only when its HTTPS URL is approved for public visitors.",
-        "- Covers and feature panels are portfolio artwork, not claims that every feature is production-ready or real UI screenshots.",
+        "> Covers are portfolio artwork, not claims that every project is production-ready, and not always real UI screenshots. "
+        "A **live preview** and a **public source** are separate things: each link appears only when it has been approved for public visitors.",
         "",
     ]
     if featured:
-        lines.extend(["## Selected work", "", card_table(featured), ""])
-    lines.extend(["## Complete project archive", ""])
-    lines.append(
-        f"<p><sub>Public-source entries: {public_count} · Source-hidden entries: {hidden_count} · "
-        f"Latest recorded project update in the catalog: {h(updated)}.</sub></p>"
-    )
-    for category in CATEGORY_ORDER + sorted(c for c in categories if c not in CATEGORY_ORDER):
-        entries = sorted(
-            (p for p in categories[category] if p.get("id") not in featured_ids),
-            key=lambda p: str(p.get("title") or "").casefold(),
-        )
-        if entries:
-            lines.extend([f"### {category}", "", card_table(entries), ""])
+        lines.extend(["## Selected work", "", lead_card(featured[0]), ""])
+        if len(featured) > 1:
+            lines.extend([feature_grid(featured[1:]), ""])
     lines.extend([
+        "## The archive",
+        "",
+        f"<p align=\"center\">{category_nav}</p>",
+        "",
+        f"<p align=\"center\"><sub>★ marks a project also shown in Selected work. "
+        f"{plural(len(projects), 'project')} in total, {hidden_count} with source hidden. "
+        f"Latest recorded catalog update: {h(updated)}.</sub></p>",
+        "",
+    ])
+    for category in ordered:
+        entries = sorted(categories[category], key=lambda p: str(p.get("title") or "").casefold())
+        lines.extend([
+            f"### {category}", "",
+            f"<sub>{plural(len(entries), 'project')} &nbsp;·&nbsp; <a href=\"#the-archive\">Back to archive index ↑</a></sub>", "",
+            archive_table(entries, featured_ids), "",
+        ])
+    lines.extend([
+        "---",
+        "",
         "## Source privacy & live preview policy",
         "",
         "Private repository code is not mirrored here. For a source-hidden entry, the catalog keeps <code>sourceUrl</code> empty; no source button or source link is generated. Its public live URL may still be displayed independently after anonymous access and deployment safety are verified.",
         "",
         "For deliberately vulnerable labs, internal dashboards, or systems containing real data, do not publish a preview until isolation, synthetic data, access controls and exposed routes have been reviewed.",
         "",
-        f'<p align="center"><a href="{h(SITE_URL)}"><strong>Explore the full interactive showcase ↗</strong></a></p>',
+        '<p align="center">',
+        f'<a href="{h(SITE_URL)}"><strong>Explore the full interactive showcase ↗</strong></a><br>',
+        '<sub><a href="docs/PRIVATE_PROJECTS.md">Private-project policy</a> · <a href="docs/ASSET_GUIDELINES.md">Asset guidelines</a> · <a href="docs/PROJECT_CATALOG.md">Catalog notes</a></sub>',
+        "</p>",
         "",
-        "<sub>Catalog source: projects.json · README generated by scripts/generate_readme.py · Public repository sync never imports private repository metadata.</sub>",
-        '<p align="center"><sub><a href="docs/PRIVATE_PROJECTS.md">Private-project policy</a> · <a href="docs/ASSET_GUIDELINES.md">Asset guidelines</a> · <a href="docs/PROJECT_CATALOG.md">Catalog notes</a></sub></p>',
+        '<p align="center"><sub>Catalog source: projects.json · README generated by scripts/generate_readme.py · Public repository sync never imports private repository metadata.</sub></p>',
         END,
         "",
     ])
