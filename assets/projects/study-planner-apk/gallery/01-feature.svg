@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-labelledby="t d">
+<title id="t">Study Planner — feature graphic 1</title>
+<desc id="d">Original promotional composition for Study Planner. Not a live application screenshot.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#241b17"/><stop offset="1" stop-color="#70452b"/></linearGradient><radialGradient id="glow"><stop stop-color="#ffd079" stop-opacity=".28"/><stop offset="1" stop-color="#ffd079" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="1600" fill="url(#bg)"/>
+<circle cx="1020" cy="240" r="460" fill="url(#glow)"/>
+<g stroke="#ffffff" stroke-opacity=".07" stroke-width="1"><path d="M0 0 H1200"/><path d="M0 50 H1200"/><path d="M0 100 H1200"/><path d="M0 150 H1200"/><path d="M0 200 H1200"/><path d="M0 250 H1200"/><path d="M0 300 H1200"/><path d="M0 350 H1200"/><path d="M0 400 H1200"/><path d="M0 450 H1200"/><path d="M0 500 H1200"/><path d="M0 550 H1200"/><path d="M0 600 H1200"/><path d="M0 650 H1200"/><path d="M0 700 H1200"/><path d="M0 750 H1200"/><path d="M0 800 H1200"/><path d="M0 850 H1200"/><path d="M0 900 H1200"/><path d="M0 950 H1200"/><path d="M0 1000 H1200"/><path d="M0 1050 H1200"/><path d="M0 1100 H1200"/><path d="M0 1150 H1200"/><path d="M0 1200 H1200"/><path d="M0 1250 H1200"/><path d="M0 1300 H1200"/><path d="M0 1350 H1200"/><path d="M0 1400 H1200"/><path d="M0 1450 H1200"/><path d="M0 1500 H1200"/><path d="M0 1550 H1200"/><path d="M0 1600 H1200"/><path d="M0 0 V1600"/><path d="M50 0 V1600"/><path d="M100 0 V1600"/><path d="M150 0 V1600"/><path d="M200 0 V1600"/><path d="M250 0 V1600"/><path d="M300 0 V1600"/><path d="M350 0 V1600"/><path d="M400 0 V1600"/><path d="M450 0 V1600"/><path d="M500 0 V1600"/><path d="M550 0 V1600"/><path d="M600 0 V1600"/><path d="M650 0 V1600"/><path d="M700 0 V1600"/><path d="M750 0 V1600"/><path d="M800 0 V1600"/><path d="M850 0 V1600"/><path d="M900 0 V1600"/><path d="M950 0 V1600"/><path d="M1000 0 V1600"/><path d="M1050 0 V1600"/><path d="M1100 0 V1600"/><path d="M1150 0 V1600"/><path d="M1200 0 V1600"/></g>
+<rect x="80" y="78" width="10" height="10" rx="2" fill="#ffd079"/>
+<text x="110" y="90" fill="#ffffff" fill-opacity=".8" font-family="monospace" font-size="16" letter-spacing="3">MOBILE APP · PRODUCTIVITY</text>
+<text x="80" y="145" fill="#ffd079" font-family="monospace" font-size="12" letter-spacing="4">PROJECT VISUAL / 14 / 01</text>
+<text x="80" y="265" fill="#f5f4ef" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="56" font-weight="750">Study Planner</text><text x="82" y="460" fill="#d4d8dc" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="21" font-weight="450">An offline-first study planner built with React Native and</text><text x="82" y="494" fill="#d4d8dc" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="21" font-weight="450">Expo for tasks, study schedules, goals, notes, and progress</text><text x="82" y="528" fill="#d4d8dc" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="21" font-weight="450">statistics.</text><g transform="translate(350 555)">
+          <rect x="0" y="0" width="500" height="560" rx="38" fill="#080a0b" stroke="#ffd079" stroke-opacity=".8" stroke-width="3"/>
+          <rect x="18" y="18" width="464" height="524" rx="27" fill="#241b17"/>
+          <rect x="186" y="28" width="128" height="9" rx="5" fill="#ffffff" fill-opacity=".2"/>
+          <text x="48" y="92" fill="#ffffff" font-family="system-ui,sans-serif" font-size="22" font-weight="700">Study Planner</text>
+          <rect x="44" y="117" width="412" height="108" rx="14" fill="#70452b"/>
+          <circle cx="92" cy="161" r="22" fill="#ffd079"/>
+          <path d="M82 161 l7 7 l15 -16" stroke="#241b17" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="132" y="146" width="218" height="9" rx="4" fill="#ffffff" fill-opacity=".85"/>
+          <rect x="132" y="166" width="150" height="7" rx="4" fill="#ffffff" fill-opacity=".35"/>
+          <rect x="44" y="247" width="412" height="92" rx="12" fill="#ffffff" fill-opacity=".09"/>
+          <rect x="64" y="268" width="200" height="8" rx="4" fill="#ffffff" fill-opacity=".7"/>
+          <rect x="64" y="287" width="318" height="6" rx="3" fill="#ffffff" fill-opacity=".2"/>
+          <rect x="64" y="303" width="256" height="6" rx="3" fill="#ffffff" fill-opacity=".2"/>
+          <rect x="44" y="361" width="412" height="92" rx="12" fill="#ffffff" fill-opacity=".07"/>
+          <rect x="64" y="382" width="175" height="8" rx="4" fill="#ffffff" fill-opacity=".7"/>
+          <rect x="64" y="401" width="305" height="6" rx="3" fill="#ffffff" fill-opacity=".2"/>
+          <rect x="44" y="472" width="412" height="44" rx="11" fill="#ffd079"/>
+          <text x="250" y="499" fill="#241b17" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="750">KEEP MOVING FORWARD</text>
+        </g><text x="80" y="1215" fill="#ffd079" font-family="monospace" font-size="14" letter-spacing="3">01 / THE OVERVIEW</text><text x="80" y="1260" fill="#d4d8dc" font-family="system-ui,sans-serif" font-size="20" font-weight="450">A closer look at the idea, the experience, and what the</text><text x="80" y="1292" fill="#d4d8dc" font-family="system-ui,sans-serif" font-size="20" font-weight="450">project is built to do.</text><path d="M80 1450 H1120" stroke="#ffffff" stroke-opacity=".24"/>
+<text x="80" y="1490" fill="#ffffff" fill-opacity=".68" font-family="monospace" font-size="12" letter-spacing="2">MY AWESOME PROJECTS / SOUROV</text>
+<text x="80" y="1530" fill="#ffd079" font-family="monospace" font-size="11" letter-spacing="1.5">ORIGINAL PROMOTIONAL ART · NOT A LIVE SCREEN CAPTURE</text>
+<text x="1118" y="1490" fill="#ffffff" fill-opacity=".6" font-family="monospace" font-size="12" text-anchor="end">14 / 01</text>
+</svg>

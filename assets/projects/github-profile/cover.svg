@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">GitHub Profile &amp; Project Index — project cover</title>
+<desc id="desc">The GitHub profile repository with generated profile visuals, selected work, and activity summaries.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14241b"/><stop offset="1" stop-color="#28583c"/></linearGradient>
+  <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c3f47c" stop-opacity=".92"/><stop offset="1" stop-color="#89dcb3" stop-opacity=".2"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#c3f47c" stop-opacity=".26"/><stop offset="1" stop-color="#c3f47c" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="700" fill="url(#bg)"/>
+<circle cx="1080" cy="78" r="360" fill="url(#glow)"/>
+<circle cx="105" cy="620" r="315" fill="#89dcb3" opacity=".055"/>
+<g opacity=".12" stroke="#ffffff" stroke-width="1">
+  <path d="M0 0 V700"/><path d="M40 0 V700"/><path d="M80 0 V700"/><path d="M120 0 V700"/><path d="M160 0 V700"/><path d="M200 0 V700"/><path d="M240 0 V700"/><path d="M280 0 V700"/><path d="M320 0 V700"/><path d="M360 0 V700"/><path d="M400 0 V700"/><path d="M440 0 V700"/><path d="M480 0 V700"/><path d="M520 0 V700"/><path d="M560 0 V700"/><path d="M600 0 V700"/><path d="M640 0 V700"/><path d="M680 0 V700"/><path d="M720 0 V700"/><path d="M760 0 V700"/><path d="M800 0 V700"/><path d="M840 0 V700"/><path d="M880 0 V700"/><path d="M920 0 V700"/><path d="M960 0 V700"/><path d="M1000 0 V700"/><path d="M1040 0 V700"/><path d="M1080 0 V700"/><path d="M1120 0 V700"/><path d="M1160 0 V700"/><path d="M1200 0 V700"/>
+  <path d="M0 0 H1200"/><path d="M0 40 H1200"/><path d="M0 80 H1200"/><path d="M0 120 H1200"/><path d="M0 160 H1200"/><path d="M0 200 H1200"/><path d="M0 240 H1200"/><path d="M0 280 H1200"/><path d="M0 320 H1200"/><path d="M0 360 H1200"/><path d="M0 400 H1200"/><path d="M0 440 H1200"/><path d="M0 480 H1200"/><path d="M0 520 H1200"/><path d="M0 560 H1200"/><path d="M0 600 H1200"/><path d="M0 640 H1200"/><path d="M0 680 H1200"/>
+</g>
+<path d="M70 70 H535" stroke="#c3f47c" stroke-width="2" stroke-opacity=".82"/>
+<rect x="70" y="57" width="8" height="8" rx="2" fill="#c3f47c"/>
+<text x="92" y="65" fill="#ffffff" fill-opacity=".72" font-family="monospace" font-size="13" letter-spacing="2.3">PROFILE · OPEN SOURCE</text>
+<text x="70" y="238" fill="#c3f47c" font-family="monospace" font-size="12" letter-spacing="3.1">OPEN SOURCE</text>
+<text x="70" y="328" fill="#f5f4ed" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-weight="680" font-size="48" letter-spacing="-2.2">GitHub Profile &amp;</text><text x="70" y="389" fill="#f5f4ed" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-weight="680" font-size="48" letter-spacing="-2.2">Project Index</text>
+<path d="M70 525 H525" stroke="#ffffff" stroke-opacity=".25"/>
+<text x="70" y="557" fill="#ffffff" fill-opacity=".74" font-family="system-ui,sans-serif" font-size="15">Profile infrastructure</text>
+<text x="70" y="624" fill="#ffffff" fill-opacity=".39" font-family="monospace" font-size="10" letter-spacing="2.3">MY AWESOME PROJECTS / SOUROV</text>
+<text x="70" y="656" fill="#c3f47c" font-family="monospace" font-size="11" letter-spacing="1.5">SHOW THE WORK · RESPECT THE BOUNDARIES</text>
+
+        <g transform="translate(750 150)">
+          <rect x="0" y="0" width="260" height="255" rx="12" fill="#14241b" stroke="#c3f47c" stroke-opacity=".62"/>
+          <rect x="0" y="0" width="260" height="38" rx="12" fill="#ffffff" fill-opacity=".07"/>
+          <circle cx="19" cy="19" r="4" fill="#c3f47c"/><circle cx="34" cy="19" r="4" fill="#89dcb3"/><circle cx="49" cy="19" r="4" fill="#ffffff" fill-opacity=".35"/>
+          <path d="M22 70 H171 M22 91 H213 M22 112 H130 M22 145 H198 M22 166 H151 M22 187 H220" stroke="#ffffff" stroke-opacity=".34" stroke-width="6" stroke-linecap="round"/>
+          <rect x="173" y="218" width="65" height="20" rx="5" fill="#c3f47c" fill-opacity=".8"/>
+          <path d="M45 280 L82 317 L45 354 M104 354 H172" stroke="#c3f47c" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+<g transform="translate(1080 640)">
+  <rect x="-45" y="-28" width="90" height="56" rx="8" fill="#08090b" fill-opacity=".24" stroke="#ffffff" stroke-opacity=".18"/>
+  <text x="0" y="8" fill="#ffffff" fill-opacity=".9" font-family="monospace" font-size="19" text-anchor="middle">32</text>
+</g>
+</svg>

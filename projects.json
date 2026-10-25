@@ -1,0 +1,1390 @@
+[
+  {
+    "id": "scholarhub",
+    "title": "ScholarHub",
+    "eyebrow": "EDTECH · PRODUCT",
+    "category": "Web Apps",
+    "description": "A scholarship discovery and application-management platform designed to help students find opportunities and manage application progress.",
+    "story": "ScholarHub is an evolving product focused on making scholarship discovery and application planning easier to navigate. This entry uses the existing promotional assets from the local workspace; its live preview URL is intentionally left unset until the verified public deployment link is supplied.",
+    "highlights": [
+      "Scholarship discovery",
+      "Application progress",
+      "Student-focused workflow",
+      "Promotional screenshot set"
+    ],
+    "stack": [
+      "TypeScript",
+      "Web"
+    ],
+    "sourceAccess": "hidden",
+    "sourceUrl": "",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "The public preview URL has not yet been provided. No source repository link is shown.",
+    "status": "Preview URL pending",
+    "featured": true,
+    "updated": "2026-10-25",
+    "cover": "assets/projects/scholarhub/cover.svg",
+    "screenshots": [
+      {
+        "src": "assets/projects/scholarhub/screenshots/01-scholarship-discovery.png",
+        "alt": "ScholarHub scholarship discovery promotional graphic"
+      },
+      {
+        "src": "assets/projects/scholarhub/screenshots/02-progress-dashboard.png",
+        "alt": "ScholarHub progress dashboard promotional graphic"
+      },
+      {
+        "src": "assets/projects/scholarhub/screenshots/03-application-guides.png",
+        "alt": "ScholarHub application guides promotional graphic"
+      },
+      {
+        "src": "assets/projects/scholarhub/screenshots/04-scholarhub-mentor.png",
+        "alt": "ScholarHub mentor promotional graphic"
+      },
+      {
+        "src": "assets/projects/scholarhub/screenshots/05-feature-graphic-1024x500.png",
+        "alt": "ScholarHub feature graphic"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "assets/projects/scholarhub/screenshots/01-scholarship-discovery.png",
+        "alt": "ScholarHub scholarship discovery promotional graphic"
+      },
+      {
+        "src": "assets/projects/scholarhub/screenshots/02-progress-dashboard.png",
+        "alt": "ScholarHub progress dashboard promotional graphic"
+      },
+      {
+        "src": "assets/projects/scholarhub/screenshots/03-application-guides.png",
+        "alt": "ScholarHub application guides promotional graphic"
+      },
+      {
+        "src": "assets/projects/scholarhub/screenshots/04-scholarhub-mentor.png",
+        "alt": "ScholarHub mentor promotional graphic"
+      },
+      {
+        "src": "assets/projects/scholarhub/screenshots/05-feature-graphic-1024x500.png",
+        "alt": "ScholarHub feature graphic"
+      }
+    ]
+  },
+  {
+    "id": "apk-sherlock",
+    "title": "APK Sherlock",
+    "eyebrow": "SECURITY TOOLING · PYTHON",
+    "category": "Cybersecurity",
+    "description": "An offline-first Android APK static-analysis CLI for permissions, components, signing metadata, URLs, suspicious strings, SDK indicators, and explainable risk reports.",
+    "story": "APK Sherlock inspects APK files without executing them or making network requests to extracted URLs. Its rule-based findings are evidence-oriented and can be exported as JSON, Markdown, or self-contained HTML.",
+    "highlights": [
+      "Offline APK inspection",
+      "Manifest and component inventory",
+      "URL, domain and indicator extraction",
+      "Explainable 0–100 risk scoring",
+      "HTML, Markdown and JSON reports"
+    ],
+    "stack": [
+      "Python 3.11+",
+      "SQLite",
+      "CLI"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/apk-sherlock",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "Command-line project; no public hosted UI is listed.",
+    "status": "Active · CLI",
+    "featured": true,
+    "updated": "2026-09-22",
+    "cover": "assets/projects/apk-sherlock/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/apk-sherlock/gallery/01-feature.svg",
+        "alt": "APK Sherlock — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/apk-sherlock/gallery/02-feature.svg",
+        "alt": "APK Sherlock — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/apk-sherlock/gallery/03-feature.svg",
+        "alt": "APK Sherlock — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "ares",
+    "title": "ARES",
+    "eyebrow": "SECURITY RESEARCH · FRAMEWORK",
+    "category": "Cybersecurity",
+    "description": "An AI-assisted security assessment orchestration framework for authorized reconnaissance, vulnerability analysis, evidence collection, and reporting.",
+    "story": "ARES brings planning, staged assessment workflows, tool orchestration, and evidence-aware reporting into one modular framework. The repository documents agent, assessment, LLM, plugin, sandbox, and human-approval boundaries.",
+    "highlights": [
+      "Modular assessment workflow",
+      "Agent and stage orchestration",
+      "Evidence collection and reporting",
+      "Plugin-oriented architecture",
+      "Human-in-the-loop controls"
+    ],
+    "stack": [
+      "Python",
+      "AI agents",
+      "Security automation"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/ares",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "Framework/CLI; no verified public web demo is listed.",
+    "status": "Active development",
+    "featured": true,
+    "updated": "2026-08-12",
+    "cover": "assets/projects/ares/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/ares/gallery/01-feature.svg",
+        "alt": "ARES — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/ares/gallery/02-feature.svg",
+        "alt": "ARES — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/ares/gallery/03-feature.svg",
+        "alt": "ARES — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "cyberos",
+    "title": "CYBEROS",
+    "eyebrow": "SECURITY PLATFORM · GO",
+    "category": "Cybersecurity",
+    "description": "A Go-first modular security operations platform and control plane for authorized security work, with grants, brokered execution, workers, and audit-oriented boundaries.",
+    "story": "CYBEROS emphasizes explicit authorization and an auditable execution path. Its current repository documentation identifies the web console as a partial mock/thin client rather than a fully API-integrated UI.",
+    "highlights": [
+      "Control-plane and grant model",
+      "Brokered execution boundary",
+      "Remote worker model with mTLS",
+      "CLI, API and SDK surfaces",
+      "Fail-closed production database setup"
+    ],
+    "stack": [
+      "Go",
+      "PostgreSQL",
+      "React"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/cyberos",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "Development status is partial; no public live demo is currently listed.",
+    "status": "In development",
+    "featured": true,
+    "updated": "2026-08-30",
+    "cover": "assets/projects/cyberos/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/cyberos/gallery/01-feature.svg",
+        "alt": "CYBEROS — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/cyberos/gallery/02-feature.svg",
+        "alt": "CYBEROS — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/cyberos/gallery/03-feature.svg",
+        "alt": "CYBEROS — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "passhunter",
+    "title": "PassHunter",
+    "eyebrow": "SECURITY RESEARCH · PYTHON",
+    "category": "Cybersecurity",
+    "description": "A deterministic password-pattern candidate generator for authorized security assessments, CTFs, and lab research.",
+    "story": "PassHunter focuses on repeatable, streaming generation instead of loading enormous wordlists into memory. Checkpoint/resume, deduplication backends, dry-run estimation, and structured output make longer audit jobs easier to manage.",
+    "highlights": [
+      "Eight priority-ordered pattern tiers",
+      "Streaming output and deduplication",
+      "Checkpoint and resume",
+      "PIN-pattern generation",
+      "Dry-run and output statistics"
+    ],
+    "stack": [
+      "Python",
+      "CLI",
+      "Standard library"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/passhunter",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "Command-line security tool; no public hosted UI is listed.",
+    "status": "Active development",
+    "featured": true,
+    "updated": "2026-08-13",
+    "cover": "assets/projects/passhunter/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/passhunter/gallery/01-feature.svg",
+        "alt": "PassHunter — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/passhunter/gallery/02-feature.svg",
+        "alt": "PassHunter — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/passhunter/gallery/03-feature.svg",
+        "alt": "PassHunter — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "personal-website-pentest",
+    "title": "Sourov Works — Pentest Lab",
+    "eyebrow": "APPLICATION SECURITY · LAB",
+    "category": "Cybersecurity",
+    "description": "A deliberately vulnerable full-stack web application for hands-on penetration testing, vulnerability research, and security-assessment practice.",
+    "story": "This project is designed as an intentionally insecure lab target, with real route handlers and workflows rather than mock vulnerability endpoints. The public-facing gallery entry documents the lab only; it does not link to the deployment until isolation and access controls have been re-verified.",
+    "highlights": [
+      "Realistic application attack surface",
+      "Authentication and account workflows",
+      "API and business-logic test scenarios",
+      "Synthetic seeded data",
+      "Security testing documentation"
+    ],
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL / PGlite",
+      "Playwright"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/personal-website-pentest",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "Intentionally vulnerable target. The live demo link is withheld until public isolation and safety controls are verified.",
+    "status": "Security lab · isolated use only",
+    "featured": true,
+    "updated": "2026-10-20",
+    "cover": "assets/projects/personal-website-pentest/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/personal-website-pentest/gallery/01-feature.svg",
+        "alt": "Sourov Works — Pentest Lab — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/personal-website-pentest/gallery/02-feature.svg",
+        "alt": "Sourov Works — Pentest Lab — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/personal-website-pentest/gallery/03-feature.svg",
+        "alt": "Sourov Works — Pentest Lab — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "uab",
+    "title": "UniversalAIBridge",
+    "eyebrow": "AI INFRASTRUCTURE · PYTHON",
+    "category": "AI & Developer Tools",
+    "description": "An API-compatible bridge between AI agents and web-based AI sessions, with a control plane for tasks, approvals, events, and project management.",
+    "story": "UniversalAIBridge explores the boundary between an agent-facing API and human-controlled web sessions, with task lifecycle and approval concepts made explicit.",
+    "highlights": [
+      "API-compatible bridge",
+      "Task and approval concepts",
+      "Event-oriented control plane",
+      "Project management surface"
+    ],
+    "stack": [
+      "Python",
+      "AI agents",
+      "API"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/uab",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "No public hosted demo is listed.",
+    "status": "Active development",
+    "featured": false,
+    "updated": "2026-08-20",
+    "cover": "assets/projects/uab/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/uab/gallery/01-feature.svg",
+        "alt": "UniversalAIBridge — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/uab/gallery/02-feature.svg",
+        "alt": "UniversalAIBridge — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/uab/gallery/03-feature.svg",
+        "alt": "UniversalAIBridge — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "VercelStrike",
+    "title": "VercelStrike",
+    "eyebrow": "SECURITY RESEARCH · TOOLING",
+    "category": "Cybersecurity",
+    "description": "A work-in-progress security assessment framework for Vercel and Next.js applications.",
+    "story": "A focused research workspace for assessing deployment and application security around Vercel and Next.js. The repository currently describes itself as work in progress.",
+    "highlights": [
+      "Vercel-focused assessment",
+      "Next.js security research",
+      "Work-in-progress tooling"
+    ],
+    "stack": [
+      "Python",
+      "Security testing"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/VercelStrike",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "Work in progress; no live demo is listed.",
+    "status": "Work in progress",
+    "featured": false,
+    "updated": "2026-10-09",
+    "cover": "assets/projects/vercelstrike/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/VercelStrike/gallery/01-feature.svg",
+        "alt": "VercelStrike — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/VercelStrike/gallery/02-feature.svg",
+        "alt": "VercelStrike — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/VercelStrike/gallery/03-feature.svg",
+        "alt": "VercelStrike — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "VercStorm",
+    "title": "VercStorm",
+    "eyebrow": "SECURITY RESEARCH · PYTHON",
+    "category": "Cybersecurity",
+    "description": "A Python security-research repository in the Vercel/Next.js assessment space; project details remain to be curated.",
+    "story": "The repository is included in the index for discoverability, but its current README does not yet describe the project's purpose or usage. The entry is deliberately marked as needing documentation rather than guessing at capabilities.",
+    "highlights": [
+      "Repository indexed",
+      "Project overview needed",
+      "No hosted demo listed"
+    ],
+    "stack": [
+      "Python"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/VercStorm",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "README and feature details should be completed before promoting this project.",
+    "status": "Needs documentation",
+    "featured": false,
+    "updated": "2026-10-09",
+    "cover": "assets/projects/vercstorm/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/VercStorm/gallery/01-feature.svg",
+        "alt": "VercStorm — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/VercStorm/gallery/02-feature.svg",
+        "alt": "VercStorm — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/VercStorm/gallery/03-feature.svg",
+        "alt": "VercStorm — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "hackerai-main",
+    "title": "HackerAI",
+    "eyebrow": "AI · CYBERSECURITY",
+    "category": "AI & Developer Tools",
+    "description": "An AI-powered penetration-testing assistant concept with agent workflows and a modern full-stack application architecture.",
+    "story": "The repository is listed as the main HackerAI project and documents AI-assisted security features. The repository homepage URL returned a 404 in the audit, so no live-preview button is shown until the canonical deployment is confirmed.",
+    "highlights": [
+      "AI-assisted security workflows",
+      "Agent-oriented product concept",
+      "Full-stack TypeScript codebase",
+      "Deployment URL requires verification"
+    ],
+    "stack": [
+      "TypeScript",
+      "Next.js",
+      "AI"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/hackerai-main",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "Known homepage returned 404 during the audit (25 October 2026); provide a working deployment URL before publishing the live button.",
+    "status": "Live URL needs verification",
+    "featured": false,
+    "updated": "2026-10-24",
+    "cover": "assets/projects/hackerai-main/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/hackerai-main/gallery/01-feature.svg",
+        "alt": "HackerAI — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/hackerai-main/gallery/02-feature.svg",
+        "alt": "HackerAI — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/hackerai-main/gallery/03-feature.svg",
+        "alt": "HackerAI — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "hackerai-base44",
+    "title": "HackerAI Workspace",
+    "eyebrow": "AI · DEVELOPER WORKSPACE",
+    "category": "AI & Developer Tools",
+    "description": "An AI-powered developer workspace concept for building, coding, chatting, and deploying from a unified interface.",
+    "story": "The repository describes a workspace combining AI chat, code editing, file management, execution and deployment surfaces. Its public listing does not currently expose a verified homepage URL.",
+    "highlights": [
+      "AI chat concept",
+      "Code-editor workspace",
+      "File management",
+      "Developer workflow integration"
+    ],
+    "stack": [
+      "TypeScript",
+      "React",
+      "Next.js"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/hackerai-base44",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "No verified public deployment URL is listed.",
+    "status": "Development / concept",
+    "featured": false,
+    "updated": "2026-10-09",
+    "cover": "assets/projects/hackerai-base44/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/hackerai-base44/gallery/01-feature.svg",
+        "alt": "HackerAI Workspace — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/hackerai-base44/gallery/02-feature.svg",
+        "alt": "HackerAI Workspace — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/hackerai-base44/gallery/03-feature.svg",
+        "alt": "HackerAI Workspace — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "hackergf-ai",
+    "title": "Hacker gf AI",
+    "eyebrow": "AI · DEVELOPMENT PLATFORM",
+    "category": "AI & Developer Tools",
+    "description": "A hacker-themed AI development-platform interface concept for chat, code editing, sandboxed execution, and file management.",
+    "story": "The inspected landing page describes AI chat, an IDE-like editor and code execution. The page's canonical metadata differs from the original Vercel alias, so the catalog treats it as a demo and the final hostname should be re-confirmed before public promotion.",
+    "highlights": [
+      "AI chat interface",
+      "Code-editor concept",
+      "Code execution workflow",
+      "File-analysis concept"
+    ],
+    "stack": [
+      "JavaScript",
+      "React",
+      "AI"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/hackergf-ai",
+    "liveUrl": "https://hackergf-ai.vercel.app",
+    "demoLabel": "Demo / concept",
+    "demoNote": "Landing page was reachable; its canonical metadata points to a different hostname. Features and service availability may differ from the production implementation.",
+    "status": "Demo / concept",
+    "featured": false,
+    "updated": "2026-10-19",
+    "cover": "assets/projects/hackergf-ai/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/hackergf-ai/gallery/01-feature.svg",
+        "alt": "Hacker gf AI — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/hackergf-ai/gallery/02-feature.svg",
+        "alt": "Hacker gf AI — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/hackergf-ai/gallery/03-feature.svg",
+        "alt": "Hacker gf AI — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "onyx",
+    "title": "Onyx — Onion Web",
+    "eyebrow": "PRIVACY · RESEARCH ARCHIVE",
+    "category": "Cybersecurity",
+    "description": "A privacy-first research archive for security, privacy, intelligence, and network observability.",
+    "story": "Onyx positions itself as a focused archive for security and privacy research. The project has a published Vercel homepage and a TypeScript codebase.",
+    "highlights": [
+      "Security and privacy research",
+      "Curated archive concept",
+      "Network observability context"
+    ],
+    "stack": [
+      "TypeScript",
+      "Web"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/onyx",
+    "liveUrl": "https://onyx-xi-three.vercel.app",
+    "demoLabel": "Live preview",
+    "demoNote": "Preview URL is listed in the repository metadata; interactive functionality was not exhaustively tested.",
+    "status": "Live preview listed",
+    "featured": false,
+    "updated": "2026-09-22",
+    "cover": "assets/projects/onyx/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/onyx/gallery/01-feature.svg",
+        "alt": "Onyx — Onion Web — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/onyx/gallery/02-feature.svg",
+        "alt": "Onyx — Onion Web — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/onyx/gallery/03-feature.svg",
+        "alt": "Onyx — Onion Web — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "study-planner-apk",
+    "title": "Study Planner",
+    "eyebrow": "MOBILE APP · PRODUCTIVITY",
+    "category": "Mobile Apps",
+    "description": "An offline-first study planner built with React Native and Expo for tasks, study schedules, goals, notes, and progress statistics.",
+    "story": "Study Planner keeps data on-device and combines daily task planning with longer-term goals, notes, streaks and activity insights. It is a strong candidate for a mobile-first promotional screenshot sequence.",
+    "highlights": [
+      "Offline-first task management",
+      "Monthly goals and progress",
+      "Color-coded notes",
+      "Daily, weekly and monthly statistics",
+      "Light, dark and system themes"
+    ],
+    "stack": [
+      "React Native",
+      "Expo",
+      "TypeScript"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/study-planner-apk",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "Native mobile project; no public web preview is listed.",
+    "status": "Mobile app",
+    "featured": true,
+    "updated": "2026-07-16",
+    "cover": "assets/projects/study-planner-apk/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/study-planner-apk/gallery/01-feature.svg",
+        "alt": "Study Planner — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/study-planner-apk/gallery/02-feature.svg",
+        "alt": "Study Planner — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/study-planner-apk/gallery/03-feature.svg",
+        "alt": "Study Planner — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "cinematic-architecture-web",
+    "title": "The Glass Pavilion",
+    "eyebrow": "CINEMATIC WEB · 3D",
+    "category": "Creative & 3D",
+    "description": "A cinematic architectural website experiment combining immersive imagery, editorial typography, and scroll-driven motion.",
+    "story": "The Glass Pavilion is an architectural storytelling experience centred on material, landscape and sequential reveal. The deployed site describes a contemporary residence concept in the Surrey Hills.",
+    "highlights": [
+      "Scroll-driven storytelling",
+      "Editorial architectural layout",
+      "Immersive imagery",
+      "Mobile and desktop composition"
+    ],
+    "stack": [
+      "JavaScript",
+      "GSAP",
+      "Lenis",
+      "Three.js"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/cinematic-architecture-web",
+    "liveUrl": "https://kaven-itssourov13.vercel.app/",
+    "demoLabel": "Live preview",
+    "demoNote": "Hosted concept experience; not a real property listing.",
+    "status": "Live preview listed",
+    "featured": true,
+    "updated": "2026-10-21",
+    "cover": "assets/projects/cinematic-architecture-web/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/cinematic-architecture-web/gallery/01-feature.svg",
+        "alt": "The Glass Pavilion — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/cinematic-architecture-web/gallery/02-feature.svg",
+        "alt": "The Glass Pavilion — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/cinematic-architecture-web/gallery/03-feature.svg",
+        "alt": "The Glass Pavilion — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "arven",
+    "title": "ARVEN Residences",
+    "eyebrow": "ARCHITECTURE · INTERACTIVE CONCEPT",
+    "category": "Creative & 3D",
+    "description": "A cinematic luxury real-estate landing-page concept for a fictional Dubai waterfront residence, built around light, water, and space.",
+    "story": "ARVEN is a fictional residential concept, not a real development or property offering. Its live experience explores floor navigation, material studies, residence concepts and architectural storytelling.",
+    "highlights": [
+      "Cinematic narrative",
+      "Residence explorer concept",
+      "Material and lighting studies",
+      "Interactive architectural presentation"
+    ],
+    "stack": [
+      "JavaScript",
+      "GSAP",
+      "Lenis",
+      "Three.js"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/arven",
+    "liveUrl": "https://arven-itssourov13.vercel.app/",
+    "demoLabel": "Concept demo",
+    "demoNote": "Fictional architectural concept. Not a real development, property offer, or verified location.",
+    "status": "Visual concept",
+    "featured": true,
+    "updated": "2026-10-09",
+    "cover": "assets/projects/arven/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/arven/gallery/01-feature.svg",
+        "alt": "ARVEN Residences — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/arven/gallery/02-feature.svg",
+        "alt": "ARVEN Residences — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/arven/gallery/03-feature.svg",
+        "alt": "ARVEN Residences — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "stele-residences",
+    "title": "STELE Residences",
+    "eyebrow": "ARCHITECTURE · 3D STUDY",
+    "category": "Creative & 3D",
+    "description": "An immersive architectural website concept exploring stone, smoked glass, light, a custom interactive tower, and editorial motion.",
+    "story": "STELE is explicitly presented as a fictional architectural concept. Its interactive study explores floors, layout illustrations, material choices, and a simulated presentation flow.",
+    "highlights": [
+      "Interactive concept tower",
+      "Floor and layout exploration",
+      "Material-study storytelling",
+      "Responsive presentation"
+    ],
+    "stack": [
+      "JavaScript",
+      "Three.js",
+      "WebGL"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/stele-residences",
+    "liveUrl": "https://stele-residences-itssourov13.vercel.app",
+    "demoLabel": "Concept demo",
+    "demoNote": "Fictional architecture project; layouts and values are illustrative, not real property information.",
+    "status": "Visual concept",
+    "featured": false,
+    "updated": "2026-10-10",
+    "cover": "assets/projects/stele-residences/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/stele-residences/gallery/01-feature.svg",
+        "alt": "STELE Residences — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/stele-residences/gallery/02-feature.svg",
+        "alt": "STELE Residences — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/stele-residences/gallery/03-feature.svg",
+        "alt": "STELE Residences — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "rise-of-ai",
+    "title": "Rise of AI",
+    "eyebrow": "IMMERSIVE WEB · 3D",
+    "category": "Creative & 3D",
+    "description": "A cinematic 3D interactive journey through the evolution of artificial intelligence.",
+    "story": "This experience combines an interactive narrative with 3D scenes and scroll-driven motion to present a visual story about the evolution of AI.",
+    "highlights": [
+      "3D-driven visual narrative",
+      "Scroll-based transitions",
+      "Immersive interaction concept"
+    ],
+    "stack": [
+      "Next.js",
+      "React",
+      "Three.js",
+      "GSAP",
+      "WebGL"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/rise-of-ai",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "No verified live URL is listed in repository metadata.",
+    "status": "Creative experiment",
+    "featured": false,
+    "updated": "2026-10-09",
+    "cover": "assets/projects/rise-of-ai/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/rise-of-ai/gallery/01-feature.svg",
+        "alt": "Rise of AI — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/rise-of-ai/gallery/02-feature.svg",
+        "alt": "Rise of AI — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/rise-of-ai/gallery/03-feature.svg",
+        "alt": "Rise of AI — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "active-theory",
+    "title": "Active Theory V6 Rebuild",
+    "eyebrow": "WEBGL · RECONSTRUCTION",
+    "category": "Creative & 3D",
+    "description": "A reconstruction workspace researching an immersive WebGL web experience and documenting visual-parity verification.",
+    "story": "The repository documents a forensic reconstruction with recovered local assets, captured CMS data and parity tests. Full visual parity remains unverified on hardware-accelerated WebGL 2.",
+    "highlights": [
+      "Asset and route reconstruction",
+      "Local media archive",
+      "SSR deep-link checks",
+      "Explicit visual-parity status"
+    ],
+    "stack": [
+      "GLSL",
+      "WebGL",
+      "JavaScript"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/active-theory",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "Reconstruction workspace; parity limitations are documented in the repository.",
+    "status": "Research / reconstruction",
+    "featured": false,
+    "updated": "2026-10-12",
+    "cover": "assets/projects/active-theory/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/active-theory/gallery/01-feature.svg",
+        "alt": "Active Theory V6 Rebuild — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/active-theory/gallery/02-feature.svg",
+        "alt": "Active Theory V6 Rebuild — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/active-theory/gallery/03-feature.svg",
+        "alt": "Active Theory V6 Rebuild — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "sketchbook",
+    "title": "Sketchbook",
+    "eyebrow": "WRITING · INTERACTIVE DESIGN",
+    "category": "Creative & 3D",
+    "description": "A poetic writing space for poems, prose, fragments, notes, and a tactile visual sketchbook.",
+    "story": "Sketchbook creates a quiet digital room for writing, with paper-like details and a page-turning visual study that sits beside the writing instead of interrupting it.",
+    "highlights": [
+      "Editorial writing space",
+      "Tactile page-turn study",
+      "Poems, fragments and notes",
+      "Warm, quiet visual identity"
+    ],
+    "stack": [
+      "Astro",
+      "JavaScript",
+      "CSS"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/sketchbook",
+    "liveUrl": "https://sketchbook-itssourov13.vercel.app/",
+    "demoLabel": "Live preview",
+    "demoNote": "The live landing page responded and its metadata identifies the writing/sketchbook concept.",
+    "status": "Live preview listed",
+    "featured": true,
+    "updated": "2026-10-09",
+    "cover": "assets/projects/sketchbook/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/sketchbook/gallery/01-feature.svg",
+        "alt": "Sketchbook — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/sketchbook/gallery/02-feature.svg",
+        "alt": "Sketchbook — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/sketchbook/gallery/03-feature.svg",
+        "alt": "Sketchbook — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "blog",
+    "title": "Security & Engineering Notes",
+    "eyebrow": "PUBLICATION · MDX",
+    "category": "Writing & Publishing",
+    "description": "A technical publication covering security research, engineering experiments, reverse engineering, and lessons learned while building systems.",
+    "story": "The blog uses a file-based MDX content layer and a statically rendered Next.js site. Its purpose is to publish durable technical notes without requiring a database or external image service to run.",
+    "highlights": [
+      "MDX-based content",
+      "Static rendering",
+      "Technical long-form articles",
+      "Security and engineering focus"
+    ],
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "MDX",
+      "Tailwind CSS"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/blog",
+    "liveUrl": "https://blog-itssourov13.vercel.app",
+    "demoLabel": "Live preview",
+    "demoNote": "The live landing page and Open Graph metadata responded during the audit.",
+    "status": "Live preview listed",
+    "featured": true,
+    "updated": "2026-10-18",
+    "cover": "assets/projects/blog/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/blog/gallery/01-feature.svg",
+        "alt": "Security & Engineering Notes — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/blog/gallery/02-feature.svg",
+        "alt": "Security & Engineering Notes — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/blog/gallery/03-feature.svg",
+        "alt": "Security & Engineering Notes — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "personal-website-test",
+    "title": "Personal Website Demo",
+    "eyebrow": "PORTFOLIO · WEB",
+    "category": "Web Apps",
+    "description": "A Next.js personal-website demo focused on presenting profile content, projects, and a modern responsive web experience.",
+    "story": "This repository is a public website demo with a published homepage. Its card is intentionally labelled as a demo so it is not confused with the main personal portfolio.",
+    "highlights": [
+      "Responsive portfolio structure",
+      "Project presentation",
+      "Next.js and TypeScript"
+    ],
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "React"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/personal-website-test",
+    "liveUrl": "https://demo-website-itssourov13.vercel.app/",
+    "demoLabel": "Demo",
+    "demoNote": "Repository description identifies this as a demo personal website.",
+    "status": "Demo",
+    "featured": true,
+    "updated": "2026-10-22",
+    "cover": "assets/projects/personal-website-test/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/personal-website-test/gallery/01-feature.svg",
+        "alt": "Personal Website Demo — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/personal-website-test/gallery/02-feature.svg",
+        "alt": "Personal Website Demo — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/personal-website-test/gallery/03-feature.svg",
+        "alt": "Personal Website Demo — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "claude-personal-website",
+    "title": "Personal Website — Design Concept",
+    "eyebrow": "DESIGN CONCEPT · PORTFOLIO",
+    "category": "Web Apps",
+    "description": "A premium personal-website design concept exploring editorial positioning, product-design services, and a polished portfolio layout.",
+    "story": "The live page contains prototype metrics and testimonial-style content that should not be treated as real client outcomes. This entry is therefore explicitly presented as a design concept rather than verified professional proof.",
+    "highlights": [
+      "Editorial hero layout",
+      "Product-design and engineering narrative",
+      "Responsive portfolio concept",
+      "Placeholder metrics require replacement"
+    ],
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "React"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/claude-personal-website",
+    "liveUrl": "https://claude-personal-web-itssourov13.vercel.app/",
+    "demoLabel": "Concept demo",
+    "demoNote": "Contains placeholder metrics and testimonial-style copy; not presented as verified client evidence.",
+    "status": "Design concept",
+    "featured": false,
+    "updated": "2026-10-16",
+    "cover": "assets/projects/claude-personal-website/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/claude-personal-website/gallery/01-feature.svg",
+        "alt": "Personal Website — Design Concept — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/claude-personal-website/gallery/02-feature.svg",
+        "alt": "Personal Website — Design Concept — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/claude-personal-website/gallery/03-feature.svg",
+        "alt": "Personal Website — Design Concept — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "create-present-website",
+    "title": "Create Present",
+    "eyebrow": "DIGITAL GIFTS · WEB",
+    "category": "Web Apps",
+    "description": "An open-source static gift-website reconstruction/demo for personalized digital gifts for birthdays, anniversaries, and special moments.",
+    "story": "The repository describes a standalone static reconstruction. The private backend, accounts, database, storage, OAuth, publishing and payment systems were not recovered and are intentionally disabled in the demo.",
+    "highlights": [
+      "Standalone static deployment",
+      "Gift-creation UI concept",
+      "Local demo-safe fallback",
+      "Explicit scope and service limitations"
+    ],
+    "stack": [
+      "HTML",
+      "JavaScript",
+      "Vercel"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/create-present-website",
+    "liveUrl": "https://cgw-itssourov13.vercel.app",
+    "demoLabel": "Static demo",
+    "demoNote": "Static reconstruction/demo, not the original production service. Private backend features are disabled.",
+    "status": "Static demo",
+    "featured": false,
+    "updated": "2026-10-14",
+    "cover": "assets/projects/create-present-website/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/create-present-website/gallery/01-feature.svg",
+        "alt": "Create Present — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/create-present-website/gallery/02-feature.svg",
+        "alt": "Create Present — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/create-present-website/gallery/03-feature.svg",
+        "alt": "Create Present — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "birthday-present-preview",
+    "title": "Birthday Present Preview",
+    "eyebrow": "DIGITAL GIFT · INTERACTIVE WEB",
+    "category": "Web Apps",
+    "description": "A self-hostable interactive birthday-gift experience featuring 3D animations, memories, mini-games, and a personal letter.",
+    "story": "The project turns a digital gift into a small interactive experience with motion, storytelling and a personal reveal. It is a hosted preview of a self-hostable project.",
+    "highlights": [
+      "3D animation",
+      "Memory-led storytelling",
+      "Mini-games",
+      "Personal letter experience"
+    ],
+    "stack": [
+      "JavaScript",
+      "Web",
+      "Vercel"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/birthday-present-preview",
+    "liveUrl": "https://birthday-present-itssourov13.vercel.app/",
+    "demoLabel": "Live preview",
+    "demoNote": "Public preview URL is listed in repository metadata; inspect before sharing personal content.",
+    "status": "Live preview listed",
+    "featured": false,
+    "updated": "2026-10-14",
+    "cover": "assets/projects/birthday-present-preview/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/birthday-present-preview/gallery/01-feature.svg",
+        "alt": "Birthday Present Preview — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/birthday-present-preview/gallery/02-feature.svg",
+        "alt": "Birthday Present Preview — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/birthday-present-preview/gallery/03-feature.svg",
+        "alt": "Birthday Present Preview — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "travel-weather-planner",
+    "title": "Travel & Weather Planner",
+    "eyebrow": "PYTHON · DECISION SUPPORT",
+    "category": "Utilities",
+    "description": "A Python-based smart commute planner that considers distance, weather, and transport options to help decide whether a trip is practical.",
+    "story": "The project models a commute decision using a small set of conditions and transport choices, such as bike, car and ride-share services.",
+    "highlights": [
+      "Weather-aware decision logic",
+      "Distance and transport considerations",
+      "Small, readable Python project"
+    ],
+    "stack": [
+      "Python"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/-Travel-Weather-Planner-Smart-Commute-Decision-System-Python-",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "CLI/script project; no public web demo is listed.",
+    "status": "Utility / learning project",
+    "featured": false,
+    "updated": "2026-10-09",
+    "cover": "assets/projects/travel-weather-planner/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/travel-weather-planner/gallery/01-feature.svg",
+        "alt": "Travel & Weather Planner — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/travel-weather-planner/gallery/02-feature.svg",
+        "alt": "Travel & Weather Planner — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/travel-weather-planner/gallery/03-feature.svg",
+        "alt": "Travel & Weather Planner — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "Employee-profile-generator",
+    "title": "Employee Profile Generator",
+    "eyebrow": "PYTHON · UTILITY",
+    "category": "Utilities",
+    "description": "A Python tool for generating employee profiles with salary analysis, role information, and code breakdown features.",
+    "story": "A focused learning utility that combines structured employee information with simple analysis and formatted output.",
+    "highlights": [
+      "Profile generation",
+      "Salary analysis",
+      "Role-based information"
+    ],
+    "stack": [
+      "Python"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/Employee-profile-generator",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "No public web demo is listed.",
+    "status": "Utility / learning project",
+    "featured": false,
+    "updated": "2026-05-22",
+    "cover": "assets/projects/employee-profile-generator/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/Employee-profile-generator/gallery/01-feature.svg",
+        "alt": "Employee Profile Generator — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/Employee-profile-generator/gallery/02-feature.svg",
+        "alt": "Employee Profile Generator — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/Employee-profile-generator/gallery/03-feature.svg",
+        "alt": "Employee Profile Generator — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "Report-card-printer",
+    "title": "Report Card Printer",
+    "eyebrow": "PYTHON · EDUCATION",
+    "category": "Utilities",
+    "description": "A Python project that generates student profiles and performs age checks, topper detection, and grade calculation.",
+    "story": "A small educational utility for modelling student information and simple academic rules in Python.",
+    "highlights": [
+      "Student profile output",
+      "Automatic grade calculation",
+      "Topper detection",
+      "Age checks"
+    ],
+    "stack": [
+      "Python"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/Report-card-printer",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "CLI/script project; no public web demo is listed.",
+    "status": "Learning project",
+    "featured": false,
+    "updated": "2026-05-22",
+    "cover": "assets/projects/report-card-printer/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/Report-card-printer/gallery/01-feature.svg",
+        "alt": "Report Card Printer — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/Report-card-printer/gallery/02-feature.svg",
+        "alt": "Report Card Printer — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/Report-card-printer/gallery/03-feature.svg",
+        "alt": "Report Card Printer — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "Movie-Ticket-Booking-Calculator-Python-",
+    "title": "Movie Ticket Booking Calculator",
+    "eyebrow": "PYTHON · PRICING LOGIC",
+    "category": "Utilities",
+    "description": "A Python calculator for ticket prices based on age, seat type, show time, discounts, and extra charges.",
+    "story": "This beginner-friendly pricing model demonstrates how multiple conditions and business rules combine to calculate a final price.",
+    "highlights": [
+      "Age-based pricing",
+      "Seat and show-time rules",
+      "Discounts and extra charges"
+    ],
+    "stack": [
+      "Python"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/Movie-Ticket-Booking-Calculator-Python-",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "CLI/script project; no public web demo is listed.",
+    "status": "Learning project",
+    "featured": false,
+    "updated": "2026-05-22",
+    "cover": "assets/projects/movie-ticket-calculator/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/Movie-Ticket-Booking-Calculator-Python-/gallery/01-feature.svg",
+        "alt": "Movie Ticket Booking Calculator — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/Movie-Ticket-Booking-Calculator-Python-/gallery/02-feature.svg",
+        "alt": "Movie Ticket Booking Calculator — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/Movie-Ticket-Booking-Calculator-Python-/gallery/03-feature.svg",
+        "alt": "Movie Ticket Booking Calculator — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "awesome",
+    "title": "Awesome Lists",
+    "eyebrow": "OPEN SOURCE · CURATION",
+    "category": "Open Source",
+    "description": "A curated collection of awesome lists and useful community resources.",
+    "story": "A lightweight discovery point for exploring community-maintained resource lists. This is a curation repository rather than a product demo.",
+    "highlights": [
+      "Community resources",
+      "Topic-based discovery"
+    ],
+    "stack": [
+      "Markdown"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/awesome",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "Repository / curated-resource list.",
+    "status": "Curated resources",
+    "featured": false,
+    "updated": "2026-06-30",
+    "cover": "assets/projects/awesome/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/awesome/gallery/01-feature.svg",
+        "alt": "Awesome Lists — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/awesome/gallery/02-feature.svg",
+        "alt": "Awesome Lists — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/awesome/gallery/03-feature.svg",
+        "alt": "Awesome Lists — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "js.org",
+    "title": "JS.ORG",
+    "eyebrow": "COMMUNITY · JAVASCRIPT",
+    "category": "Open Source",
+    "description": "A repository associated with JS.ORG, a community project dedicated to JavaScript and its ecosystem.",
+    "story": "Included in the repository index as a community/resource contribution. This catalog entry does not claim ownership of the upstream project.",
+    "highlights": [
+      "JavaScript community",
+      "Open-source resource"
+    ],
+    "stack": [
+      "JavaScript"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/js.org",
+    "liveUrl": "https://js.org",
+    "demoLabel": "External site",
+    "demoNote": "Community project; the repository is not presented as an original product.",
+    "status": "Community / resource",
+    "featured": false,
+    "updated": "2026-08-19",
+    "cover": "assets/projects/js-org/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/js.org/gallery/01-feature.svg",
+        "alt": "JS.ORG — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/js.org/gallery/02-feature.svg",
+        "alt": "JS.ORG — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/js.org/gallery/03-feature.svg",
+        "alt": "JS.ORG — Technology and status promotional graphic"
+      }
+    ]
+  },
+  {
+    "id": "itssourov13",
+    "title": "GitHub Profile & Project Index",
+    "eyebrow": "PROFILE · OPEN SOURCE",
+    "category": "Open Source",
+    "description": "The GitHub profile repository with generated profile visuals, selected work, and activity summaries.",
+    "story": "This special repository powers the profile README, including generated graphics and links to selected projects. It is included as profile infrastructure rather than a standalone application.",
+    "highlights": [
+      "Generated profile visuals",
+      "Featured-work section",
+      "Project constellation",
+      "Recent-work index"
+    ],
+    "stack": [
+      "Markdown",
+      "SVG",
+      "TypeScript"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/itssourov13",
+    "liveUrl": "https://itssourov13.github.io/itssourov13/",
+    "demoLabel": "Profile page",
+    "demoNote": "GitHub profile README and its Pages URL.",
+    "status": "Profile infrastructure",
+    "featured": false,
+    "updated": "2026-10-25",
+    "cover": "assets/projects/github-profile/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/itssourov13/gallery/01-feature.svg",
+        "alt": "GitHub Profile & Project Index — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/itssourov13/gallery/02-feature.svg",
+        "alt": "GitHub Profile & Project Index — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/itssourov13/gallery/03-feature.svg",
+        "alt": "GitHub Profile & Project Index — Technology and status promotional graphic"
+      }
+    ]
+  }
+]

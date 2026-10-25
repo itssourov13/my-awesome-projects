@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">VercStorm — project cover</title>
+<desc id="desc">A Python security-research repository in the Vercel/Next.js assessment space; project details remain to be curated.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a151a"/><stop offset="1" stop-color="#143f42"/></linearGradient>
+  <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d0ff70" stop-opacity=".92"/><stop offset="1" stop-color="#72c9c7" stop-opacity=".2"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#d0ff70" stop-opacity=".26"/><stop offset="1" stop-color="#d0ff70" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="700" fill="url(#bg)"/>
+<circle cx="1080" cy="78" r="360" fill="url(#glow)"/>
+<circle cx="105" cy="620" r="315" fill="#72c9c7" opacity=".055"/>
+<g opacity=".12" stroke="#ffffff" stroke-width="1">
+  <path d="M0 0 V700"/><path d="M40 0 V700"/><path d="M80 0 V700"/><path d="M120 0 V700"/><path d="M160 0 V700"/><path d="M200 0 V700"/><path d="M240 0 V700"/><path d="M280 0 V700"/><path d="M320 0 V700"/><path d="M360 0 V700"/><path d="M400 0 V700"/><path d="M440 0 V700"/><path d="M480 0 V700"/><path d="M520 0 V700"/><path d="M560 0 V700"/><path d="M600 0 V700"/><path d="M640 0 V700"/><path d="M680 0 V700"/><path d="M720 0 V700"/><path d="M760 0 V700"/><path d="M800 0 V700"/><path d="M840 0 V700"/><path d="M880 0 V700"/><path d="M920 0 V700"/><path d="M960 0 V700"/><path d="M1000 0 V700"/><path d="M1040 0 V700"/><path d="M1080 0 V700"/><path d="M1120 0 V700"/><path d="M1160 0 V700"/><path d="M1200 0 V700"/>
+  <path d="M0 0 H1200"/><path d="M0 40 H1200"/><path d="M0 80 H1200"/><path d="M0 120 H1200"/><path d="M0 160 H1200"/><path d="M0 200 H1200"/><path d="M0 240 H1200"/><path d="M0 280 H1200"/><path d="M0 320 H1200"/><path d="M0 360 H1200"/><path d="M0 400 H1200"/><path d="M0 440 H1200"/><path d="M0 480 H1200"/><path d="M0 520 H1200"/><path d="M0 560 H1200"/><path d="M0 600 H1200"/><path d="M0 640 H1200"/><path d="M0 680 H1200"/>
+</g>
+<path d="M70 70 H535" stroke="#d0ff70" stroke-width="2" stroke-opacity=".82"/>
+<rect x="70" y="57" width="8" height="8" rx="2" fill="#d0ff70"/>
+<text x="92" y="65" fill="#ffffff" fill-opacity=".72" font-family="monospace" font-size="13" letter-spacing="2.3">SECURITY RESEARCH · PYTHON</text>
+<text x="70" y="238" fill="#d0ff70" font-family="monospace" font-size="12" letter-spacing="3.1">CYBERSECURITY</text>
+<text x="70" y="328" fill="#f5f4ed" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-weight="680" font-size="48" letter-spacing="-2.2">VercStorm</text>
+<path d="M70 525 H525" stroke="#ffffff" stroke-opacity=".25"/>
+<text x="70" y="557" fill="#ffffff" fill-opacity=".74" font-family="system-ui,sans-serif" font-size="15">Needs documentation</text>
+<text x="70" y="624" fill="#ffffff" fill-opacity=".39" font-family="monospace" font-size="10" letter-spacing="2.3">MY AWESOME PROJECTS / SOUROV</text>
+<text x="70" y="656" fill="#d0ff70" font-family="monospace" font-size="11" letter-spacing="1.5">SHOW THE WORK · RESPECT THE BOUNDARIES</text>
+
+        <g transform="translate(720 144)">
+          <circle cx="138" cy="154" r="145" stroke="#d0ff70" stroke-opacity=".24" fill="none"/>
+          <circle cx="138" cy="154" r="108" stroke="#d0ff70" stroke-opacity=".35" fill="none" stroke-dasharray="4 8"/>
+          <circle cx="138" cy="154" r="70" stroke="#72c9c7" stroke-opacity=".55" fill="#0a151a" fill-opacity=".45"/>
+          <path d="M138 16 L138 56 M138 252 L138 292 M0 154 L38 154 M238 154 L276 154" stroke="#d0ff70" stroke-opacity=".7"/>
+          <rect x="68" y="84" width="140" height="140" rx="18" fill="#0b1214" stroke="#d0ff70" stroke-opacity=".7"/>
+          <path d="M92 123 L112 141 L92 159 M122 162 H166" fill="none" stroke="#d0ff70" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="226" cy="48" r="7" fill="#72c9c7"/><circle cx="48" cy="245" r="5" fill="#d0ff70"/>
+          <path d="M218 57 L195 83 M55 238 L74 216" stroke="#72c9c7" stroke-opacity=".55" stroke-width="1.5"/>
+        </g>
+        <g transform="translate(710 477)" fill="#d0ff70" font-family="monospace" font-size="10" opacity=".8">
+          <text x="0" y="0">SCOPE / EVIDENCE / VERIFY</text>
+          <text x="0" y="17" fill="#72c9c7">[ LOCAL · AUDIT · REPORT ]</text>
+        </g>
+<g transform="translate(1080 640)">
+  <rect x="-45" y="-28" width="90" height="56" rx="8" fill="#08090b" fill-opacity=".24" stroke="#ffffff" stroke-opacity=".18"/>
+  <text x="0" y="8" fill="#ffffff" fill-opacity=".9" font-family="monospace" font-size="19" text-anchor="middle">09</text>
+</g>
+</svg>

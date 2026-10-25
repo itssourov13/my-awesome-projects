@@ -1,0 +1,26 @@
+ScholarHub — Google Play listing graphics
+
+UPLOAD-READY CANDIDATES
+01-scholarship-discovery.png — 1080 × 1920, portrait
+02-progress-dashboard.png — 1080 × 1920, portrait
+03-application-guides.png — 1080 × 1920, portrait
+04-scholarhub-mentor.png — 1080 × 1920, portrait
+05-feature-graphic-1024x500.png — 1024 × 500, landscape feature graphic
+preview-contact-sheet.jpg — local review only; do not upload
+
+SOURCE AND PRIVACY
+- Source captures were taken from this project's mobile-browser screenshots in the parent screenshort folder. Browser address/status UI was cropped away.
+- The dashboard display name is blurred to avoid exposing account/test-profile text.
+- The long applicant-profile capture was intentionally not used; it contains filled personal/profile fields. The original screenshots remain unchanged in the parent folder.
+- No source screenshots are copied into this folder. No file was added to Git or uploaded to Google Play.
+
+BEFORE SUBMISSION
+- Google's Play Console guidelines specify 1080 × 1920 for recommended 9:16 portrait screenshots and a required 1024 × 500 feature graphic. Check the current guidelines again before upload.
+- These images are polished preview assets, not release certification. The captures come from the mobile web experience; compare with the final Android build and replace any screen that differs from the current app.
+- Verify all visible data and features in Play Console's submitted version. The Mentor intro text is part of the captured UI and should be rechecked for current policy and product accuracy.
+- Add alt text:
+  01: Scholarship discovery screen with search filters and scholarship cards.
+  02: ScholarHub dashboard showing profile progress and suggested next steps.
+  03: ScholarHub application-guide library with planning resources.
+  04: ScholarHub Mentor interface with example scholarship questions.
+  05: ScholarHub feature graphic highlighting scholarship discovery and application guidance.

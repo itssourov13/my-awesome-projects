@@ -1,0 +1,25 @@
+name: Validate showcase
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Validate JSON, link policy, and local assets
+        run: |
+          python3 -m json.tool projects.json > /dev/null
+          python3 scripts/validate.py
+          node --check app.js
+
+      - name: Run standard-library tests
+        run: python3 -m unittest discover -s tests -v

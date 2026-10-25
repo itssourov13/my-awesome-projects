@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">Study Planner — project cover</title>
+<desc id="desc">An offline-first study planner built with React Native and Expo for tasks, study schedules, goals, notes, and progress statistics.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#241b17"/><stop offset="1" stop-color="#70452b"/></linearGradient>
+  <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd079" stop-opacity=".92"/><stop offset="1" stop-color="#f7a58b" stop-opacity=".2"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#ffd079" stop-opacity=".26"/><stop offset="1" stop-color="#ffd079" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="700" fill="url(#bg)"/>
+<circle cx="1080" cy="78" r="360" fill="url(#glow)"/>
+<circle cx="105" cy="620" r="315" fill="#f7a58b" opacity=".055"/>
+<g opacity=".12" stroke="#ffffff" stroke-width="1">
+  <path d="M0 0 V700"/><path d="M40 0 V700"/><path d="M80 0 V700"/><path d="M120 0 V700"/><path d="M160 0 V700"/><path d="M200 0 V700"/><path d="M240 0 V700"/><path d="M280 0 V700"/><path d="M320 0 V700"/><path d="M360 0 V700"/><path d="M400 0 V700"/><path d="M440 0 V700"/><path d="M480 0 V700"/><path d="M520 0 V700"/><path d="M560 0 V700"/><path d="M600 0 V700"/><path d="M640 0 V700"/><path d="M680 0 V700"/><path d="M720 0 V700"/><path d="M760 0 V700"/><path d="M800 0 V700"/><path d="M840 0 V700"/><path d="M880 0 V700"/><path d="M920 0 V700"/><path d="M960 0 V700"/><path d="M1000 0 V700"/><path d="M1040 0 V700"/><path d="M1080 0 V700"/><path d="M1120 0 V700"/><path d="M1160 0 V700"/><path d="M1200 0 V700"/>
+  <path d="M0 0 H1200"/><path d="M0 40 H1200"/><path d="M0 80 H1200"/><path d="M0 120 H1200"/><path d="M0 160 H1200"/><path d="M0 200 H1200"/><path d="M0 240 H1200"/><path d="M0 280 H1200"/><path d="M0 320 H1200"/><path d="M0 360 H1200"/><path d="M0 400 H1200"/><path d="M0 440 H1200"/><path d="M0 480 H1200"/><path d="M0 520 H1200"/><path d="M0 560 H1200"/><path d="M0 600 H1200"/><path d="M0 640 H1200"/><path d="M0 680 H1200"/>
+</g>
+<path d="M70 70 H535" stroke="#ffd079" stroke-width="2" stroke-opacity=".82"/>
+<rect x="70" y="57" width="8" height="8" rx="2" fill="#ffd079"/>
+<text x="92" y="65" fill="#ffffff" fill-opacity=".72" font-family="monospace" font-size="13" letter-spacing="2.3">MOBILE APP · PRODUCTIVITY</text>
+<text x="70" y="238" fill="#ffd079" font-family="monospace" font-size="12" letter-spacing="3.1">MOBILE APPS</text>
+<text x="70" y="328" fill="#f5f4ed" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-weight="680" font-size="48" letter-spacing="-2.2">Study Planner</text>
+<path d="M70 525 H525" stroke="#ffffff" stroke-opacity=".25"/>
+<text x="70" y="557" fill="#ffffff" fill-opacity=".74" font-family="system-ui,sans-serif" font-size="15">Mobile app</text>
+<text x="70" y="624" fill="#ffffff" fill-opacity=".39" font-family="monospace" font-size="10" letter-spacing="2.3">MY AWESOME PROJECTS / SOUROV</text>
+<text x="70" y="656" fill="#ffd079" font-family="monospace" font-size="11" letter-spacing="1.5">SHOW THE WORK · RESPECT THE BOUNDARIES</text>
+
+        <g transform="translate(755 98) rotate(7 120 240)">
+          <rect x="0" y="0" width="228" height="440" rx="28" fill="#0b0c0f" stroke="#ffd079" stroke-opacity=".82" stroke-width="2"/>
+          <rect x="12" y="14" width="204" height="412" rx="19" fill="#241b17" stroke="#ffffff" stroke-opacity=".14"/>
+          <rect x="78" y="22" width="72" height="7" rx="4" fill="#ffffff" fill-opacity=".18"/>
+          <rect x="28" y="56" width="112" height="8" rx="4" fill="#ffd079" fill-opacity=".9"/>
+          <rect x="28" y="75" width="158" height="22" rx="5" fill="#ffffff" fill-opacity=".10"/>
+          <rect x="28" y="111" width="172" height="82" rx="9" fill="#70452b" fill-opacity=".56"/>
+          <circle cx="61" cy="144" r="18" fill="#ffd079" fill-opacity=".95"/>
+          <rect x="89" y="132" width="78" height="6" rx="3" fill="#ffffff" fill-opacity=".9"/>
+          <rect x="89" y="147" width="58" height="5" rx="3" fill="#ffffff" fill-opacity=".44"/>
+          <rect x="28" y="208" width="172" height="50" rx="8" fill="#ffffff" fill-opacity=".09"/>
+          <rect x="40" y="222" width="83" height="6" rx="3" fill="#ffffff" fill-opacity=".65"/>
+          <rect x="40" y="236" width="130" height="5" rx="2.5" fill="#ffffff" fill-opacity=".22"/>
+          <rect x="28" y="271" width="172" height="50" rx="8" fill="#ffffff" fill-opacity=".08"/>
+          <rect x="40" y="285" width="73" height="6" rx="3" fill="#ffffff" fill-opacity=".65"/>
+          <rect x="40" y="299" width="118" height="5" rx="2.5" fill="#ffffff" fill-opacity=".22"/>
+          <rect x="28" y="338" width="172" height="34" rx="8" fill="#ffd079"/>
+          <rect x="72" y="352" width="84" height="6" rx="3" fill="#241b17"/>
+        </g>
+<g transform="translate(1080 640)">
+  <rect x="-45" y="-28" width="90" height="56" rx="8" fill="#08090b" fill-opacity=".24" stroke="#ffffff" stroke-opacity=".18"/>
+  <text x="0" y="8" fill="#ffffff" fill-opacity=".9" font-family="monospace" font-size="19" text-anchor="middle">14</text>
+</g>
+</svg>
