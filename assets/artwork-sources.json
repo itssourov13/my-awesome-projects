@@ -277,10 +277,11 @@
     "id": "scholarhub",
     "title": "ScholarHub",
     "kind": "user-provided-banner",
-    "imagePath": "assets/projects/scholarhub/screenshots/05-feature-graphic-1024x500.png",
-    "status": "downloaded",
+    "imagePath": "assets/projects/scholarhub/source/cover-original-edited.webp",
+    "status": "edited",
     "notes": [
-      "The supplied root banner matches this existing ScholarHub feature-graphic asset; reuse it as the cover source without duplicating the PNG."
+      "Restored the historical 1200×700 ScholarHub showcase cover from the revision before 684bb55, then replaced visible BairePorbo branding with ScholarHub.",
+      "The unedited historical image is retained at assets/projects/scholarhub/source/cover-original.webp for rollback; the supplied promotional PNGs remain unchanged in the screenshot gallery."
     ],
     "coverOutput": "assets/projects/scholarhub/scholarhub-banner.webp"
   },

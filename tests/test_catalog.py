@@ -71,10 +71,11 @@ class CatalogTests(unittest.TestCase):
         source = next(item for item in sources if item["id"] == "scholarhub")
         project = next(item for item in PROJECTS if item["id"] == "scholarhub")
         self.assertEqual(source["kind"], "user-provided-banner")
-        self.assertEqual(source["imagePath"], "assets/projects/scholarhub/screenshots/05-feature-graphic-1024x500.png")
+        self.assertEqual(source["imagePath"], "assets/projects/scholarhub/source/cover-original-edited.webp")
         self.assertEqual(source["coverOutput"], "assets/projects/scholarhub/scholarhub-banner.webp")
         self.assertEqual(project["cover"], source["coverOutput"])
         self.assertTrue((ROOT / source["imagePath"]).is_file())
+        self.assertTrue((ROOT / "assets/projects/scholarhub/source/cover-original.webp").is_file())
         self.assertTrue((ROOT / project["cover"]).is_file())
         self.assertFalse((ROOT / "assets/projects/scholarhub/cover.webp").exists())
 
@@ -93,7 +94,7 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(set(source_ids), set(catalog_ids))
         for item in sources:
             with self.subTest(project=item["id"]):
-                self.assertIn(item.get("status"), {"downloaded", "screenshot", "failed"})
+                self.assertIn(item.get("status"), {"downloaded", "screenshot", "edited", "failed"})
                 if item.get("status") != "failed":
                     image_path = item.get("imagePath", "")
                     self.assertTrue(image_path)
