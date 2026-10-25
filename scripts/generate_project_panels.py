@@ -373,7 +373,12 @@ def main() -> None:
             project["gallery"] = original
             continue
         project_id = str(project["id"])
-        source = ROOT / "assets" / "projects" / project_id / "source" / "cover.jpg"
+        metadata = source_log.get(project_id, {})
+        source_rel = str(metadata.get("imagePath") or f"assets/projects/{project_id}/source/cover.jpg")
+        source_part = Path(source_rel)
+        if source_part.is_absolute() or ".." in source_part.parts:
+            raise ValueError(f"Unsafe artwork source path for {project_id}: {source_rel}")
+        source = ROOT / source_part
         output_dir = ROOT / "assets" / "projects" / project_id / "gallery"
         output_dir.mkdir(parents=True, exist_ok=True)
         gallery = []

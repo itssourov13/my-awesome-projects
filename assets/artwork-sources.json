@@ -276,13 +276,13 @@
   {
     "id": "scholarhub",
     "title": "ScholarHub",
-    "pageUrl": "https://scholarhub-test.vercel.app/",
     "kind": "user-provided-banner",
-    "imagePath": "assets/projects/scholarhub/source/cover.jpg",
+    "imagePath": "assets/projects/scholarhub/screenshots/05-feature-graphic-1024x500.png",
     "status": "downloaded",
     "notes": [
-      "Owner-provided banner from project root: scholarhub-banner.png."
-    ]
+      "The supplied root banner matches this existing ScholarHub feature-graphic asset; reuse it as the cover source without duplicating the PNG."
+    ],
+    "coverOutput": "assets/projects/scholarhub/scholarhub-banner.webp"
   },
   {
     "id": "sketchbook",

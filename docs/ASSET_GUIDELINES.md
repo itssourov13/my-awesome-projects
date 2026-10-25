@@ -9,14 +9,14 @@ The showcase uses high-resolution public-web artwork as a visual starting point,
 - Each project has a locally hosted cover whose path is defined in projects.json. Image-backed projects use 1200 × 700 WebP covers with a project-aware color palette, title, category, status and stack.
 - Three 1200 × 1600 WebP panels are generated for projects without a supplied screenshot gallery: project overview, key highlights, and technology/current status. They reuse the same high-resolution source image with different editorial layouts.
 - Existing supplied ScholarHub PNG promotional graphics remain in assets/projects/scholarhub/screenshots/ and are used directly as its gallery.
-- Source image files are stored under assets/projects/<project-id>/source/cover.jpg. Their public page/image URLs and acquisition type are recorded in assets/artwork-sources.json so the generated files can be traced and regenerated.
+- By default, source images are stored under assets/projects/<project-id>/source/cover.jpg. A deliberately supplied asset can use its own local path through imagePath in assets/artwork-sources.json; a custom coverOutput selects its generated cover path. This keeps owner-provided artwork reproducible and allows a new URL when an existing image path is cached.
 - The asset collector prioritizes a project's public live-page sharing image, then an image from the public repository README, then a relevant public-web reference. It captures an ordinary public page only when a suitable image is unavailable.
 - An external public reference is clearly labeled in the generated design; it is used as a visual reference, not presented as a screenshot of the project itself.
 - The files are stored locally in the repository. The website does not need to fetch image assets from third-party hosts at runtime, which avoids extra runtime requests and hotlink dependency.
 
 ## Source and quality workflow
 
-1. Run python3 scripts/collect_web_artwork.py to refresh the public artwork sources. Use --only id1,id2 for a targeted refresh, or --missing to collect only missing source images.
+1. Run python3 scripts/collect_web_artwork.py to refresh public artwork sources. Use --only id1,id2 for a targeted refresh, or --missing to collect only missing source images. Entries marked user-provided-banner are preserved by the collector and are not silently replaced with page artwork.
 2. Review assets/artwork-sources.json alongside the downloaded images.
 3. Run python3 scripts/generate_covers.py and python3 scripts/generate_project_panels.py to create optimized WebP output.
 4. Run python3 scripts/generate_readme.py and python3 scripts/generate_catalog.py so the README and catalog docs point at the new paths.

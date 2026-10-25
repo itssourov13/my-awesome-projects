@@ -274,6 +274,14 @@ def collect_one(project: dict) -> dict:
 
 def main() -> int:
     projects = json.loads(CATALOG.read_text(encoding="utf-8"))
+    existing = []
+    if SOURCE_LOG.exists():
+        try:
+            existing = json.loads(SOURCE_LOG.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            existing = []
+    results_by_id = {item.get("id"): item for item in existing if item.get("id")}
+
     selected = set()
     missing_only = len(sys.argv) > 1 and sys.argv[1] == "--missing"
     if len(sys.argv) > 1 and sys.argv[1] == "--only":
@@ -283,24 +291,44 @@ def main() -> int:
             print("Unknown project IDs: " + ", ".join(sorted(unknown)), file=sys.stderr)
             return 2
         projects = [project for project in projects if str(project["id"]) in selected]
+
+    def stored_source_path(project: dict) -> Path:
+        project_id = str(project["id"])
+        metadata = results_by_id.get(project_id, {})
+        relative = metadata.get("imagePath") or f"assets/projects/{project_id}/source/cover.jpg"
+        relative_path = Path(str(relative))
+        if relative_path.is_absolute() or ".." in relative_path.parts:
+            raise ValueError(f"Unsafe artwork source path for {project_id}: {relative}")
+        return ROOT / relative_path
+
     if missing_only:
-        projects = [
-            project for project in projects
-            if not (ROOT / "assets" / "projects" / str(project["id"]) / "source" / "cover.jpg").is_file()
-        ]
+        projects = [project for project in projects if not stored_source_path(project).is_file()]
         if not projects:
             print("No project artwork missing; existing source images remain unchanged.")
             return 0
-    existing = []
-    if SOURCE_LOG.exists():
-        try:
-            existing = json.loads(SOURCE_LOG.read_text(encoding="utf-8"))
-        except json.JSONDecodeError:
-            existing = []
-    results_by_id = {item.get("id"): item for item in existing if item.get("id")}
+
+    # A manually supplied banner is an explicit owner choice. Keep it on both
+    # full refreshes and targeted refreshes; automatic scraping must not replace it.
+    pending = []
+    for project in projects:
+        project_id = str(project["id"])
+        metadata = results_by_id.get(project_id, {})
+        if metadata.get("kind") == "user-provided-banner":
+            source = stored_source_path(project)
+            if not source.is_file():
+                print(f"ERROR: owner-provided banner source missing for {project_id}: {source}", file=sys.stderr)
+                return 1
+            print(f"PRESERVED   {project_id}: owner-provided banner {metadata.get('imagePath', '')}")
+            continue
+        pending.append(project)
+    projects = pending
+    if not projects:
+        print("No artwork requires collection; owner-provided banner(s) preserved.")
+        return 0
+
     results: list[dict] = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
-        futures = {executor.submit(collect_one, p): p for p in projects}
+        futures = {executor.submit(collect_one, project): project for project in projects}
         for future in concurrent.futures.as_completed(futures):
             project = futures[future]
             try:
@@ -313,13 +341,13 @@ def main() -> int:
     ordered = sorted(results_by_id.values(), key=lambda item: item.get("id", ""))
     SOURCE_LOG.parent.mkdir(parents=True, exist_ok=True)
     SOURCE_LOG.write_text(json.dumps(ordered, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    failed = [r for r in results if r["status"] == "failed"]
+    failed = [result for result in results if result["status"] == "failed"]
     if selected:
         print(f"Artwork refresh complete: {len(results) - len(failed)}/{len(projects)} selected visuals collected.")
     else:
         print(f"Artwork collection complete: {len(results) - len(failed)}/{len(projects)} project visuals collected.")
     if failed:
-        print("Failed project IDs: " + ", ".join(r["id"] for r in failed))
+        print("Failed project IDs: " + ", ".join(result["id"] for result in failed))
         return 1
     return 0
 
