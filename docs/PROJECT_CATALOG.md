@@ -21,75 +21,97 @@ Private/unpublished projects are added manually. Their source URL must remain em
 
 ### AI & Developer Tools
 
-| Project | Source | Live preview | Status | Last repository update |
-|---|---|---|---|---|
-| Hacker gf AI | [Public source](https://github.com/itssourov13/hackergf-ai) | [Open preview](https://hackergf-ai.vercel.app) | Demo / concept | 2026-10-19 |
-| HackerAI | [Public source](https://github.com/itssourov13/hackerai-main) | Not linked | Live URL needs verification | 2026-10-25 |
-| HackerAI Workspace | [Public source](https://github.com/itssourov13/hackerai-base44) | Not linked | Development / concept | 2026-10-09 |
-| UniversalAIBridge | [Public source](https://github.com/itssourov13/uab) | Not linked | Active development | 2026-08-20 |
+| Project | Source | Live preview | Stack | Status | Last repository update |
+|---|---|---|---|---|---|
+| Hacker gf AI | [Public source](https://github.com/itssourov13/hackergf-ai) | [Open preview](https://hackergf-ai.vercel.app) | JavaScript, React, AI | Demo / concept | 2026-10-19 |
+| HackerAI | [Public source](https://github.com/itssourov13/hackerai-main) | Not linked | TypeScript, Next.js, AI | Live URL needs verification | 2026-10-25 |
+| HackerAI Workspace | [Public source](https://github.com/itssourov13/hackerai-base44) | Not linked | TypeScript, React, Next.js | Development / concept | 2026-10-09 |
+| UniversalAIBridge | [Public source](https://github.com/itssourov13/uab) | Not linked | Python, AI agents, API | Active development | 2026-08-20 |
 
 ### Creative & 3D
 
-| Project | Source | Live preview | Status | Last repository update |
-|---|---|---|---|---|
-| Active Theory V6 Rebuild | [Public source](https://github.com/itssourov13/active-theory) | Not linked | Research / reconstruction | 2026-10-12 |
-| ARVEN Residences | [Public source](https://github.com/itssourov13/arven) | [Open preview](https://arven-itssourov13.vercel.app/) | Visual concept | 2026-10-09 |
-| Rise of AI | [Public source](https://github.com/itssourov13/rise-of-ai) | Not linked | Creative experiment | 2026-10-09 |
-| Sketchbook | [Public source](https://github.com/itssourov13/sketchbook) | [Open preview](https://sketchbook-itssourov13.vercel.app/) | Live preview listed | 2026-10-09 |
-| STELE Residences | [Public source](https://github.com/itssourov13/stele-residences) | [Open preview](https://stele-residences-itssourov13.vercel.app) | Visual concept | 2026-10-10 |
-| The Glass Pavilion | [Public source](https://github.com/itssourov13/cinematic-architecture-web) | [Open preview](https://kaven-itssourov13.vercel.app/) | Live preview listed | 2026-10-21 |
+| Project | Source | Live preview | Stack | Status | Last repository update |
+|---|---|---|---|---|---|
+| Active Theory V6 Rebuild | [Public source](https://github.com/itssourov13/active-theory) | Not linked | GLSL, WebGL, JavaScript | Research / reconstruction | 2026-10-12 |
+| ARVEN Residences | [Public source](https://github.com/itssourov13/arven) | [Open preview](https://arven-itssourov13.vercel.app/) | JavaScript, GSAP, Lenis, Three.js | Visual concept | 2026-10-09 |
+| Rise of AI | [Public source](https://github.com/itssourov13/rise-of-ai) | Not linked | Next.js, React, Three.js, GSAP | Creative experiment | 2026-10-09 |
+| Sketchbook | [Public source](https://github.com/itssourov13/sketchbook) | [Open preview](https://sketchbook-itssourov13.vercel.app/) | Astro, JavaScript, CSS | Live preview listed | 2026-10-09 |
+| STELE Residences | [Public source](https://github.com/itssourov13/stele-residences) | [Open preview](https://stele-residences-itssourov13.vercel.app) | JavaScript, Three.js, WebGL | Visual concept | 2026-10-10 |
+| The Glass Pavilion | [Public source](https://github.com/itssourov13/cinematic-architecture-web) | [Open preview](https://kaven-itssourov13.vercel.app/) | JavaScript, GSAP, Lenis, Three.js | Live preview listed | 2026-10-21 |
 
 ### Cybersecurity
 
-| Project | Source | Live preview | Status | Last repository update |
-|---|---|---|---|---|
-| APK Sherlock | [Public source](https://github.com/itssourov13/apk-sherlock) | Not linked | Active · CLI | 2026-09-22 |
-| ARES | [Public source](https://github.com/itssourov13/ares) | Not linked | Active development | 2026-08-12 |
-| CYBEROS | [Public source](https://github.com/itssourov13/cyberos) | Not linked | In development | 2026-08-30 |
-| Onyx — Onion Web | [Public source](https://github.com/itssourov13/onyx) | [Open preview](https://onyx-xi-three.vercel.app) | Live preview listed | 2026-09-22 |
-| PassHunter | [Public source](https://github.com/itssourov13/passhunter) | Not linked | Active development | 2026-08-13 |
-| Sourov Works — Pentest Lab | [Public source](https://github.com/itssourov13/personal-website-pentest) | Not linked | Security lab · isolated use only | 2026-10-20 |
-| VercelStrike | [Public source](https://github.com/itssourov13/VercelStrike) | Not linked | Work in progress | 2026-10-09 |
-| VercStorm | [Public source](https://github.com/itssourov13/VercStorm) | Not linked | Needs documentation | 2026-10-09 |
+| Project | Source | Live preview | Stack | Status | Last repository update |
+|---|---|---|---|---|---|
+| APK Sherlock | [Public source](https://github.com/itssourov13/apk-sherlock) | Not linked | Python 3.11+, SQLite, CLI | Active · CLI | 2026-09-22 |
+| ARES | [Public source](https://github.com/itssourov13/ares) | Not linked | Python, AI agents, Security automation | Active development | 2026-08-12 |
+| CYBEROS | [Public source](https://github.com/itssourov13/cyberos) | Not linked | Go, PostgreSQL, React | In development | 2026-08-30 |
+| Onyx — Onion Web | [Public source](https://github.com/itssourov13/onyx) | [Open preview](https://onyx-xi-three.vercel.app) | TypeScript, Web | Live preview listed | 2026-09-22 |
+| PassHunter | [Public source](https://github.com/itssourov13/passhunter) | Not linked | Python, CLI, Standard library | Active development | 2026-08-13 |
+| Sourov Works — Pentest Lab | [Public source](https://github.com/itssourov13/personal-website-pentest) | Not linked | Next.js, TypeScript, PostgreSQL / PGlite, Playwright | Security lab · isolated use only | 2026-10-20 |
+| VercelStrike | [Public source](https://github.com/itssourov13/VercelStrike) | Not linked | Python, Security testing | Work in progress | 2026-10-09 |
+| VercStorm | [Public source](https://github.com/itssourov13/VercStorm) | Not linked | Python | Needs documentation | 2026-10-09 |
 
 ### Mobile Apps
 
-| Project | Source | Live preview | Status | Last repository update |
-|---|---|---|---|---|
-| Study Planner | [Public source](https://github.com/itssourov13/study-planner-apk) | Not linked | Mobile app | 2026-07-16 |
+| Project | Source | Live preview | Stack | Status | Last repository update |
+|---|---|---|---|---|---|
+| Study Planner | [Public source](https://github.com/itssourov13/study-planner-apk) | Not linked | React Native, Expo, TypeScript | Mobile app | 2026-07-16 |
 
 ### Open Source
 
-| Project | Source | Live preview | Status | Last repository update |
-|---|---|---|---|---|
-| Awesome Lists | [Public source](https://github.com/itssourov13/awesome) | Not linked | Curated resources | 2026-06-30 |
-| GitHub Profile & Project Index | [Public source](https://github.com/itssourov13/itssourov13) | [Open preview](https://itssourov13.github.io/itssourov13/) | Profile infrastructure | 2026-10-25 |
-| JS.ORG | [Public source](https://github.com/itssourov13/js.org) | [Open preview](https://js.org) | Community / resource | 2026-08-19 |
+| Project | Source | Live preview | Stack | Status | Last repository update |
+|---|---|---|---|---|---|
+| Awesome Lists | [Public source](https://github.com/itssourov13/awesome) | Not linked | Markdown | Curated resources | 2026-06-30 |
+| GitHub Profile & Project Index | [Public source](https://github.com/itssourov13/itssourov13) | [Open preview](https://itssourov13.github.io/itssourov13/) | Markdown, SVG, TypeScript | Profile infrastructure | 2026-10-25 |
+| JS.ORG | [Public source](https://github.com/itssourov13/js.org) | [Open preview](https://js.org) | JavaScript | Community / resource | 2026-08-19 |
 
 ### Utilities
 
-| Project | Source | Live preview | Status | Last repository update |
-|---|---|---|---|---|
-| Employee Profile Generator | [Public source](https://github.com/itssourov13/Employee-profile-generator) | Not linked | Utility / learning project | 2026-05-22 |
-| Movie Ticket Booking Calculator | [Public source](https://github.com/itssourov13/Movie-Ticket-Booking-Calculator-Python-) | Not linked | Learning project | 2026-05-22 |
-| Report Card Printer | [Public source](https://github.com/itssourov13/Report-card-printer) | Not linked | Learning project | 2026-05-22 |
-| Travel & Weather Planner | [Public source](https://github.com/itssourov13/-Travel-Weather-Planner-Smart-Commute-Decision-System-Python-) | Not linked | Utility / learning project | 2026-10-09 |
+| Project | Source | Live preview | Stack | Status | Last repository update |
+|---|---|---|---|---|---|
+| Employee Profile Generator | [Public source](https://github.com/itssourov13/Employee-profile-generator) | Not linked | Python | Utility / learning project | 2026-05-22 |
+| Movie Ticket Booking Calculator | [Public source](https://github.com/itssourov13/Movie-Ticket-Booking-Calculator-Python-) | Not linked | Python | Learning project | 2026-05-22 |
+| Report Card Printer | [Public source](https://github.com/itssourov13/Report-card-printer) | Not linked | Python | Learning project | 2026-05-22 |
+| Travel & Weather Planner | [Public source](https://github.com/itssourov13/-Travel-Weather-Planner-Smart-Commute-Decision-System-Python-) | Not linked | Python | Utility / learning project | 2026-10-09 |
 
 ### Web Apps
 
-| Project | Source | Live preview | Status | Last repository update |
-|---|---|---|---|---|
-| Birthday Present Preview | [Public source](https://github.com/itssourov13/birthday-present-preview) | [Open preview](https://birthday-present-itssourov13.vercel.app/) | Live preview listed | 2026-10-14 |
-| Create Present | [Public source](https://github.com/itssourov13/create-present-website) | [Open preview](https://cgw-itssourov13.vercel.app) | Static demo | 2026-10-14 |
-| Personal Website Demo | [Public source](https://github.com/itssourov13/personal-website-test) | [Open preview](https://demo-website-itssourov13.vercel.app/) | Demo | 2026-10-22 |
-| Personal Website — Design Concept | [Public source](https://github.com/itssourov13/claude-personal-website) | [Open preview](https://claude-personal-web-itssourov13.vercel.app/) | Design concept | 2026-10-16 |
-| ScholarHub | Source hidden | [Open preview](https://scholarhub-test.vercel.app/) | Live preview listed | 2026-10-25 |
+| Project | Source | Live preview | Stack | Status | Last repository update |
+|---|---|---|---|---|---|
+| Birthday Present Preview | [Public source](https://github.com/itssourov13/birthday-present-preview) | [Open preview](https://birthday-present-itssourov13.vercel.app/) | JavaScript, Web, Vercel | Live preview listed | 2026-10-14 |
+| Create Present | [Public source](https://github.com/itssourov13/create-present-website) | [Open preview](https://cgw-itssourov13.vercel.app) | HTML, JavaScript, Vercel | Static demo | 2026-10-14 |
+| Personal Website Demo | [Public source](https://github.com/itssourov13/personal-website-test) | [Open preview](https://demo-website-itssourov13.vercel.app/) | Next.js, TypeScript, React | Demo | 2026-10-22 |
+| Personal Website — Design Concept | [Public source](https://github.com/itssourov13/claude-personal-website) | [Open preview](https://claude-personal-web-itssourov13.vercel.app/) | Next.js, TypeScript, React | Design concept | 2026-10-16 |
+| ScholarHub | Source hidden | [Open preview](https://scholarhub-test.vercel.app/) | TypeScript, Web | Live preview listed | 2026-10-25 |
 
 ### Writing & Publishing
 
-| Project | Source | Live preview | Status | Last repository update |
-|---|---|---|---|---|
-| Security & Engineering Notes | [Public source](https://github.com/itssourov13/blog) | [Open preview](https://blog-itssourov13.vercel.app) | Live preview listed | 2026-10-18 |
+| Project | Source | Live preview | Stack | Status | Last repository update |
+|---|---|---|---|---|---|
+| Security & Engineering Notes | [Public source](https://github.com/itssourov13/blog) | [Open preview](https://blog-itssourov13.vercel.app) | Next.js, TypeScript, MDX, Tailwind CSS | Live preview listed | 2026-10-18 |
+
+## Technology index
+
+Technologies used by two or more projects. These match the website's technology filters; version suffixes such as `3.11+` are ignored.
+
+| Technology | Projects | Used by |
+|---|---|---|
+| Python | 10 | APK Sherlock, ARES, Employee Profile Generator, Movie Ticket Booking Calculator, PassHunter, Report Card Printer, Travel & Weather Planner, UniversalAIBridge, VercelStrike, VercStorm |
+| TypeScript | 10 | GitHub Profile & Project Index, HackerAI, HackerAI Workspace, Onyx — Onion Web, Personal Website Demo, Personal Website — Design Concept, ScholarHub, Security & Engineering Notes, Sourov Works — Pentest Lab, Study Planner |
+| JavaScript | 9 | Active Theory V6 Rebuild, ARVEN Residences, Birthday Present Preview, Create Present, Hacker gf AI, JS.ORG, Sketchbook, STELE Residences, The Glass Pavilion |
+| Next.js | 7 | HackerAI, HackerAI Workspace, Personal Website Demo, Personal Website — Design Concept, Rise of AI, Security & Engineering Notes, Sourov Works — Pentest Lab |
+| React | 6 | CYBEROS, Hacker gf AI, HackerAI Workspace, Personal Website Demo, Personal Website — Design Concept, Rise of AI |
+| Three.js | 4 | ARVEN Residences, Rise of AI, STELE Residences, The Glass Pavilion |
+| GSAP | 3 | ARVEN Residences, Rise of AI, The Glass Pavilion |
+| Web | 3 | Birthday Present Preview, Onyx — Onion Web, ScholarHub |
+| WebGL | 3 | Active Theory V6 Rebuild, Rise of AI, STELE Residences |
+| AI | 2 | Hacker gf AI, HackerAI |
+| AI agents | 2 | ARES, UniversalAIBridge |
+| CLI | 2 | APK Sherlock, PassHunter |
+| Lenis | 2 | ARVEN Residences, The Glass Pavilion |
+| Markdown | 2 | Awesome Lists, GitHub Profile & Project Index |
+| Vercel | 2 | Birthday Present Preview, Create Present |
 
 ## Trust and verification rules
 
@@ -99,6 +121,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 - Private repository data is not fetched by the automatic public inventory sync. Private and unpublished projects remain manual-only entries.
 - If a previously listed owned repository disappears from the verified public inventory, the sync fails closed by removing its source URL. The entry and any separately approved live URL remain for manual review.
 - Generated covers and feature panels are promotional illustrations, not captured screenshots or proof of production completeness.
+- The website footer and navigation link only to the public GitHub profile, this repository and its public docs; they never link to private repositories.
 - Never publish credentials, private endpoints, production identifiers, customer data, internal system details, or screenshots copied from private tools.
 
 ## Updating manually curated projects
@@ -109,4 +132,4 @@ Private/unpublished projects are added manually. Their source URL must remain em
 4. Run python3 scripts/generate_covers.py, python3 scripts/generate_project_panels.py, python3 scripts/generate_readme.py, python3 scripts/generate_catalog.py and the validation/test commands.
 5. Commit the catalog and generated README/artwork together.
 
-Read [PRIVATE_PROJECTS.md](PRIVATE_PROJECTS.md) for the private-project workflow and [ASSET_GUIDELINES.md](ASSET_GUIDELINES.md) for image rules.
+Read [PRIVATE_PROJECTS.md](PRIVATE_PROJECTS.md) for the private-project workflow and [ASSET_GUIDELINES.md](ASSET_GUIDELINES.md) for image rules. Website behaviour, filters and the footer are documented in [SITE.md](SITE.md).

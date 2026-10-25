@@ -6,6 +6,12 @@ on:
       - main
     paths:
       - "projects.json"
+      - "index.html"
+      - "styles.css"
+      - "app.js"
+      - "README.md"
+      - "REPORT.md"
+      - "docs/**"
       - "scripts/**"
       - "assets/**"
       - "docs/PRIVATE_PROJECTS.md"

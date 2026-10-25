@@ -141,7 +141,7 @@ def main() -> int:
     required_files = (
         "index.html", "styles.css", "app.js", "README.md",
         "docs/PRIVATE_PROJECTS.md", "docs/ASSET_GUIDELINES.md",
-        "docs/PROJECT_CATALOG.md", "REPORT.md",
+        "docs/PROJECT_CATALOG.md", "docs/SITE.md", "REPORT.md",
         "scripts/generate_readme.py", "scripts/sync_public_projects.py",
         "scripts/collect_web_artwork.py", "assets/artwork-sources.json",
         ".github/workflows/pages.yml", ".github/workflows/validate.yml",
@@ -158,6 +158,9 @@ def main() -> int:
                 error(f"index.html does not contain expected reference {ref}")
         if re.search(r"https?://fonts\.googleapis\.com|https?://fonts\.gstatic\.com", html_text, re.I):
             warn("index.html references a remote font host; consider keeping the site self-contained")
+        for marker in ('<footer class="site-footer"', 'id="footer-categories"', 'id="tech-filters"', 'id="project-search"'):
+            if marker not in html_text:
+                error(f"index.html is missing expected site structure: {marker}")
 
     js_path = ROOT / "app.js"
     if js_path.is_file():
@@ -170,6 +173,10 @@ def main() -> int:
             error("app.js does not enforce public-source-only source buttons")
         if "project.gallery || project.screenshots" not in js:
             error("app.js does not use the visual gallery catalog")
+        if "githubRepo" in js:
+            error("app.js must never render internal githubRepo identifiers")
+        if "isGithubUrl" not in js:
+            error("app.js does not restrict source links to github.com")
 
     print("Project catalog validation")
     print(f"  Entries: {len(projects)}")
