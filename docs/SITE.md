@@ -72,3 +72,7 @@ python3 -m unittest discover -s tests -v
 ~~~
 
 To preview locally, serve the folder (the catalog is loaded with `fetch`, which `file://` blocks): `python3 -m http.server 8000`.
+
+## Responsive layout
+
+The project grids use three columns on wide screens, two columns on tablet-sized screens, and one column on mobile. The hero showcase covers retain their landscape 1200:700 ratio at every breakpoint; their intrinsic HTML dimensions must not force a fixed rendered height. The decorative hero backdrop stays inside the hero so it cannot expand the page viewport. Mobile page margins, card gaps, and the compact header are adjusted at the smaller breakpoints.

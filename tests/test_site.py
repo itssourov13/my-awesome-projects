@@ -102,6 +102,29 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn('$(".dialog-close", els.dialog)', open_project)
         self.assertIn('closeButton.focus({ preventScroll: true })', open_project)
 
+    def test_hero_backdrop_does_not_extend_past_page_edge(self):
+        backdrop = CSS.split(".hero-backdrop {", 1)[1].split("}", 1)[0]
+        self.assertIn("right: 0;", backdrop)
+
+    def test_showcase_images_keep_landscape_ratio_at_all_breakpoints(self):
+        showcase_rule = re.search(r"\.showcase-card img\s*\{([^}]*)\}", CSS, re.S).group(1)
+        self.assertRegex(showcase_rule, r"height:\s*auto")
+        self.assertRegex(showcase_rule, r"aspect-ratio:\s*1200\s*/\s*700")
+
+    def test_project_grids_progress_from_three_to_two_to_one_column(self):
+        tablet = re.search(r"@media \(max-width: 860px\) \{(.*?)(?=@media \(max-width: 700px\))", CSS, re.S).group(1)
+        mobile = re.search(r"@media \(max-width: 700px\) \{(.*?)(?=@media \(max-width: 420px\))", CSS, re.S).group(1)
+        self.assertIn("repeat(2, minmax(0, 1fr))", tablet)
+        self.assertIn("grid-template-columns: minmax(0, 1fr)", mobile)
+        self.assertIn("--page: calc(100% - 40px)", mobile)
+
+    def test_small_mobile_header_uses_compact_spacing(self):
+        small = CSS.split("@media (max-width: 420px) {", 1)[1].split(chr(10) + "}", 1)[0]
+        self.assertIn(".header-inner { gap: 12px; }", small)
+        self.assertIn(".brand { gap: 8px; }", small)
+        self.assertIn(".brand-copy strong { font-size: 9px; letter-spacing: .06em; }", small)
+        self.assertIn(".header-actions { gap: 6px; }", small)
+
     def test_site_respects_reduced_motion_and_keeps_theme_tokens(self):
         self.assertIn("prefers-reduced-motion: reduce", CSS)
         self.assertIn(':root[data-theme="light"]', CSS)

@@ -17,7 +17,7 @@ The current branch carries forward the UI/UX implementation Claude Code left as 
 ### Website experience
 
 - Reworked the page structure around a clearer hero, selected-work section, complete project index, about section, and responsive footer.
-- Added a three-cover hero showcase, featured-project spotlight, and consistent project cards.
+- Added a three-cover hero showcase, featured-project spotlight, and consistent project cards. A CDP visual audit found and fixed the showcase images ignoring their landscape sizing because of intrinsic HTML height attributes.
 - Added multi-term search, category filters, featured/live/public-source quick filters, technology filters, and sorting.
 - Added shareable query-string state for filters and project-detail dialogs.
 - Added project detail dialogs with gallery navigation/lightbox, related projects, stack filtering, and copy-link support.
@@ -40,11 +40,13 @@ The following checks passed after the UI/UX implementation was reconciled to a n
 - `node --check app.js`
 - `python3 scripts/validate.py` — 32 entries, 8 categories, 31 public source links, 1 source-hidden entry, 14 HTTPS previews, 98 gallery visuals, 0 warnings.
 - `python3 scripts/generate_readme.py --check`
-- `python3 -m unittest discover -s tests -v` — 32 tests passed.
+- `python3 -m unittest discover -s tests -v` — 36 tests passed.
 - `git diff --check`
 - HTML parser check — no duplicate IDs or unmatched local fragment links.
 
-A browser/Chromium visual run has not been performed in this implementation pass. This report does not claim a full visual cross-browser verification.
+Headless Chromium CDP validation was run at 1440×1000 desktop, 800×900 tablet, 390×844 mobile, and 320×700 small-mobile viewports. The hero images retain a computed 1200:700 (1.714:1) ratio; the backdrop no longer expands the viewport; document width matched viewport width and horizontal scroll stayed at zero at all four sizes. No JavaScript errors were reported. The project-details dialog opened and closed, and searching ScholarHub reduced the project grid to one visible match. This is a focused visual/interaction audit, not a full cross-browser or end-to-end verification.
+
+Final viewport and full-page screenshots are saved outside the repository at /home/kali/screenshort/my-awesome-projects-uiux-audit/final-desktop-viewport.png, final-desktop-full.png, final-mobile-viewport.png, and final-mobile-full.png. Detailed measurements are in postfix-cdp-report.json.
 
 ## Public-source and asset rules
 
