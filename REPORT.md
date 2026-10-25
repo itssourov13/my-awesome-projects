@@ -41,7 +41,7 @@
 
 ## Audit limitations / owner follow-ups
 
-1. **Private repositories:** the connected repository inventory did not return any private repos. To add your real private projects, provide each approved project title/description and its exact public HTTPS live deployment URL. The catalog schema supports showing those live deployments without displaying source links.
+1. **Private repositories:** the connected GitHub repository inventory did not return private repos. The Vercel inventory did reveal a deployment named birthday-present-private, but its project settings report SSO protection enabled, so it is excluded from the public gallery until anonymous visitor access is confirmed. To add the remaining real private projects, provide each approved title/description and exact public HTTPS live deployment URL. The catalog supports live previews without source links.
 2. **ScholarHub:** the production deployment at https://scholarhub-test.vercel.app/ was verified as reachable and is now linked from the card. The source repository remains intentionally unlinked; only the public landing page was checked, not every authenticated or interactive flow.
 3. **HackerAI:** the current repository homepage URL returned 404 in the audit. A corrected deployment URL is needed before the live button can be enabled.
 4. **Hacker gf AI:** its Vercel alias responded, but page canonical metadata pointed to another hostname; confirm the intended canonical deployment URL.
