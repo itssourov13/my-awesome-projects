@@ -106,7 +106,7 @@ If you create it in a different account, change the remote URL to match. The rem
 
 - The connected GitHub inventory returned 31 public repositories for itssourov13; the profile README currently reports 32 public repositories. Reconcile the count when the full account inventory is available.
 - Private repositories were not enumerable through the current connected inventory. Add each private project only when its approved description and intended public live URL are known. Do not expose source links.
-- ScholarHub's source could not be verified through the current connected inventory, and its deployed preview URL has not been provided in this workspace. Its locally available promotional graphics have been copied into assets/projects/scholarhub/screenshots/; a live button is intentionally absent until its URL is verified.
+- ScholarHub's source is intentionally not linked. Its production preview at https://scholarhub-test.vercel.app/ was verified as reachable, and its existing promotional graphics are included in assets/projects/scholarhub/screenshots/.
 - The hackerai-main repository homepage returned 404 during the audit. No live button is shown until a working deployment URL is confirmed.
 - The public vulnerability lab's live link is intentionally withheld pending re-verification of deployment isolation.
 - The claude-personal-website entry is labelled a concept/demo because the inspected page contained placeholder metrics and testimonial-style copy.

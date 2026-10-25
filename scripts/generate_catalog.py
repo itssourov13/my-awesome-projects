@@ -47,7 +47,7 @@ lines += [
     "## Trust and verification notes",
     "",
     "- **Private-source behavior:** only entries marked sourceAccess = public render a source button. Entries marked hidden keep sourceUrl empty.",
-    "- **ScholarHub:** five existing promotional PNG graphics were copied from /home/kali/screenshort/playstore-graphics. The public preview URL is still needed; no fake live link is shown.",
+    "- **ScholarHub:** five existing promotional PNG graphics were copied from /home/kali/screenshort/playstore-graphics. The production homepage at https://scholarhub-test.vercel.app/ responded during verification; the source repository is intentionally not linked.",
     "- **HackerAI:** the hackerai-main repository homepage returned HTTP 404 during the connected web audit, so its live button is withheld. A corrected public URL is needed.",
     "- **Hacker gf AI:** the Vercel alias returned content, but its canonical metadata named a different host. Its current URL should be confirmed by the owner before treating it as the final canonical deployment.",
     "- **Personal Website — Design Concept:** the inspected landing page contains placeholder metrics and testimonial-style copy. It is labelled as a concept, not real client evidence.",

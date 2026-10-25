@@ -74,7 +74,7 @@ The catalog includes 32 entries: the 31 returned repositories plus ScholarHub, w
 | Create Present | [Public source](https://github.com/itssourov13/create-present-website) | [Open preview](https://cgw-itssourov13.vercel.app) | Static demo | 2026-10-14 |
 | Personal Website Demo | [Public source](https://github.com/itssourov13/personal-website-test) | [Open preview](https://demo-website-itssourov13.vercel.app/) | Demo | 2026-10-22 |
 | Personal Website — Design Concept | [Public source](https://github.com/itssourov13/claude-personal-website) | [Open preview](https://claude-personal-web-itssourov13.vercel.app/) | Design concept | 2026-10-16 |
-| ScholarHub | Not linked | Not linked | Preview URL pending | 2026-10-25 |
+| ScholarHub | Not linked | [Open preview](https://scholarhub-test.vercel.app/) | Live preview listed | 2026-10-25 |
 
 ### Writing & Publishing
 
@@ -85,7 +85,7 @@ The catalog includes 32 entries: the 31 returned repositories plus ScholarHub, w
 ## Trust and verification notes
 
 - **Private-source behavior:** only entries marked sourceAccess = public render a source button. Entries marked hidden keep sourceUrl empty.
-- **ScholarHub:** five existing promotional PNG graphics were copied from /home/kali/screenshort/playstore-graphics. The public preview URL is still needed; no fake live link is shown.
+- **ScholarHub:** five existing promotional PNG graphics were copied from /home/kali/screenshort/playstore-graphics. The production homepage at https://scholarhub-test.vercel.app/ responded during verification; the source repository is intentionally not linked.
 - **HackerAI:** the hackerai-main repository homepage returned HTTP 404 during the connected web audit, so its live button is withheld. A corrected public URL is needed.
 - **Hacker gf AI:** the Vercel alias returned content, but its canonical metadata named a different host. Its current URL should be confirmed by the owner before treating it as the final canonical deployment.
 - **Personal Website — Design Concept:** the inspected landing page contains placeholder metrics and testimonial-style copy. It is labelled as a concept, not real client evidence.

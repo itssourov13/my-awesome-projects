@@ -60,6 +60,12 @@ class CatalogTests(unittest.TestCase):
                 for key in ("description", "story", "demoNote"):
                     self.assertNotIn("github.com/", str(project.get(key, "")).lower())
 
+    def test_scholarhub_has_preview_without_source_link(self):
+        project = next(item for item in PROJECTS if item["id"] == "scholarhub")
+        self.assertEqual(project["sourceAccess"], "hidden")
+        self.assertEqual(project.get("sourceUrl", ""), "")
+        self.assertEqual(project["liveUrl"], "https://scholarhub-test.vercel.app/")
+
     def test_private_vulnerable_lab_has_no_public_preview_link(self):
         project = next(item for item in PROJECTS if item["id"] == "personal-website-pentest")
         self.assertEqual(project.get("liveUrl", ""), "")
