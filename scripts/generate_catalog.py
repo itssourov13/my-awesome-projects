@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
 
@@ -41,7 +42,7 @@ lines = [
     "",
 ]
 for category in sorted(groups):
-    lines += [f"### {category}", "", "| Project | Source | Live preview | Status | Last repository update |", "|---|---|---|---|---|"]
+    lines += [f"### {category}", "", "| Project | Source | Live preview | Stack | Status | Last repository update |", "|---|---|---|---|---|---|"]
     for p in sorted(groups[category], key=lambda item: str(item["title"]).casefold()):
         title = str(p["title"]).replace("|", "\\|")
         if p.get("sourceAccess") == "public" and p.get("sourceUrl"):
@@ -54,8 +55,38 @@ for category in sorted(groups):
             live = "Not linked"
         status = str(p.get("status", "Not specified")).replace("|", "\\|")
         updated = p.get("updated", "—")
-        lines.append(f"| {title} | {source} | {live} | {status} | {updated} |")
+        stack = ", ".join(str(item) for item in (p.get("stack") or [])[:4]).replace("|", "\\|") or "—"
+        lines.append(f"| {title} | {source} | {live} | {stack} | {status} | {updated} |")
     lines.append("")
+
+tech_projects: dict[str, list[str]] = defaultdict(list)
+tech_labels: dict[str, str] = {}
+for project in projects:
+    seen_keys: set[str] = set()
+    for name in project.get("stack") or []:
+        label = re.sub(r"\s+v?\d+(?:\.\d+)*\+?$", "", str(name), flags=re.I).strip()
+        key = label.casefold()
+        if not key or key in seen_keys:
+            continue
+        seen_keys.add(key)
+        tech_labels.setdefault(key, label)
+        tech_projects[key].append(str(project["title"]))
+shared_tech = sorted(
+    (key for key, titles in tech_projects.items() if len(titles) >= 2),
+    key=lambda key: (-len(tech_projects[key]), tech_labels[key].casefold()),
+)
+lines += [
+    "## Technology index",
+    "",
+    "Technologies used by two or more projects. These match the website's technology filters; version suffixes such as `3.11+` are ignored.",
+    "",
+    "| Technology | Projects | Used by |",
+    "|---|---|---|",
+]
+for key in shared_tech:
+    used_by = ", ".join(sorted(tech_projects[key], key=str.casefold)).replace("|", "\\|")
+    lines.append(f"| {tech_labels[key]} | {len(tech_projects[key])} | {used_by} |")
+lines.append("")
 
 lines += [
     "## Trust and verification rules",
@@ -66,6 +97,7 @@ lines += [
     "- Private repository data is not fetched by the automatic public inventory sync. Private and unpublished projects remain manual-only entries.",
     "- If a previously listed owned repository disappears from the verified public inventory, the sync fails closed by removing its source URL. The entry and any separately approved live URL remain for manual review.",
     "- Generated covers and feature panels are promotional illustrations, not captured screenshots or proof of production completeness.",
+    "- The website footer and navigation link only to the public GitHub profile, this repository and its public docs; they never link to private repositories.",
     "- Never publish credentials, private endpoints, production identifiers, customer data, internal system details, or screenshots copied from private tools.",
     "",
     "## Updating manually curated projects",
@@ -76,7 +108,7 @@ lines += [
     "4. Run python3 scripts/generate_covers.py, python3 scripts/generate_project_panels.py, python3 scripts/generate_readme.py, python3 scripts/generate_catalog.py and the validation/test commands.",
     "5. Commit the catalog and generated README/artwork together.",
     "",
-    "Read [PRIVATE_PROJECTS.md](PRIVATE_PROJECTS.md) for the private-project workflow and [ASSET_GUIDELINES.md](ASSET_GUIDELINES.md) for image rules.",
+    "Read [PRIVATE_PROJECTS.md](PRIVATE_PROJECTS.md) for the private-project workflow and [ASSET_GUIDELINES.md](ASSET_GUIDELINES.md) for image rules. Website behaviour, filters and the footer are documented in [SITE.md](SITE.md).",
     "",
 ]
 (ROOT / "docs/PROJECT_CATALOG.md").write_text("\n".join(lines), encoding="utf-8")

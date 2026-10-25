@@ -1,69 +1,61 @@
 # Implementation report — My Awesome Projects
 
-**Date:** 25 October 2026
-**Workspace:** /home/kali/gpt-workspace/my-awesome-projects
-**Branch:** feat/readme-first-public-sync
-**Remote:** https://github.com/itssourov13/my-awesome-projects.git
-**Publication status:** the README-first implementation is already pushed on this feature branch; the high-quality artwork refresh in this report is local and not yet pushed. The live site remains unchanged until the updated branch is pushed and merged.
+**Last updated:** 26 October 2026
 
-## Scope implemented
+**Workspace:** Repository root
 
-The repository README is now the primary project showcase. The existing static website remains the companion interactive gallery. The profile/special repository and other project repositories were not changed.
+**Implementation branch:** `feat/full-showcase-ui-ux` (not yet pushed)
 
-- Replaced the documentation-first README with a visual catalogue: hero artwork, project-count summary, six featured project cards, category-grouped cards for the rest of the catalog, project covers, curated descriptions, stack/status details, and independently rendered source/live links.
-- Added scripts/generate_readme.py. The README is deterministic output from projects.json and supports --check.
-- Added scripts/sync_public_projects.py. It fetches the complete public-repository inventory for itssourov13 before changing the catalog; adds new public repositories, updates last-push metadata, and refreshes metadata only for entries explicitly managed as GitHub-generated.
-- Public metadata sync fails closed: repositories absent from the verified public inventory lose their public source link. Private/manual entries are not enumerated and are not rewritten by the public sync.
-- Added a scheduled GitHub Actions publication workflow that runs every six hours, refreshes public metadata, regenerates covers/panels/README/catalog docs, validates output, commits generated changes only when necessary, then deploys GitHub Pages in the same run.
-- Added a separate pull-request README consistency check; regular main-branch catalog pushes are allowed to regenerate the README automatically.
-- Updated private-project documentation for the agreed weekly manual process. Only approved metadata, approved graphics, and a separately verified public HTTPS preview should be committed. Private source URLs remain empty.
-- Replaced stale hand-written inventory notes with a generated catalog report based on projects.json.
-- Added unit tests for public-only inventory filtering, newly discovered repositories, preservation of curated metadata, fail-closed handling when a repository is no longer public, duplicate suppression for a manually hidden project, and README privacy behavior.
+**Production baseline:** `origin/main` at `e52253f` when this branch was created
 
-## Current catalog after the public-inventory check
+**Repository:** https://github.com/itssourov13/my-awesome-projects
 
-- 32 project entries across 8 categories.
-- 31 public source entries and 1 source-hidden entry (ScholarHub).
-- 14 public preview URLs.
-- 98 gallery visuals (the existing five ScholarHub graphics plus generated panels).
-- The public GitHub API returned 31 owned public repositories before the showcase repository was excluded; the catalog reconciled to those public sources without adding duplicate entries.
-- The ScholarHub source entry remains intentionally hidden. Its public preview remains listed independently.
+## Current work
 
-## Verification results
+The current branch carries forward the UI/UX implementation Claude Code left as uncommitted work and continues it from the latest `origin/main`. A separate branch was created before further implementation so these changes do not mix with the already-merged ScholarHub banner work.
 
-**Passed locally**
-- Python compile checks for all scripts/tests.
-- projects.json parses as valid JSON.
-- scripts/validate.py: 32 entries, 8 categories, 31 public source entries, 1 hidden source, 14 HTTPS preview URLs, no errors or warnings.
-- scripts/generate_readme.py --check: generated README matches the current catalog.
-- node --check app.js.
-- Unit tests: 18 passed.
-- The public sync was run against GitHub's public repository inventory. The script's unit tests also exercise private-record filtering without network access.
-- Public data sync, generated artwork, README output, and catalog documentation are all represented on this feature branch.
+### Website experience
 
-## Deployment and owner follow-up
+- Reworked the page structure around a clearer hero, selected-work section, complete project index, about section, and responsive footer.
+- Added a three-cover hero showcase, featured-project spotlight, and consistent project cards. A CDP visual audit found and fixed the showcase images ignoring their landscape sizing because of intrinsic HTML height attributes.
+- Added multi-term search, category filters, featured/live/public-source quick filters, technology filters, and sorting.
+- Added shareable query-string state for filters and project-detail dialogs.
+- Added project detail dialogs with gallery navigation/lightbox, related projects, stack filtering, and copy-link support.
+- Added a saved dark/light theme, mobile navigation, section scroll indication, loading/error states, and keyboard shortcuts.
+- Added a footer with data-driven category navigation, public profile/repository links, catalog statistics, copyright, and back-to-top navigation.
 
-The GitHub Pages deployment and scheduled sync workflow changes are **not live yet**, because this feature branch has not been pushed/merged. After the branch is pushed and merged to main:
+### Quality and publication support
 
-1. The push to main triggers the Sync public projects and deploy showcase workflow.
-2. It will refresh public project metadata, generate the README/artwork, validate everything, commit any generated differences, and deploy the static site.
-3. The same scheduled workflow then repeats every six hours. Private/unpublished projects remain manual weekly edits to projects.json; no private-source token or special-repository modification is required.
+- Added `docs/SITE.md` describing site behavior, URL parameters, asset/link rules, and local preview steps.
+- Added `tests/test_site.py` for site structure, footer links, theme/reduced-motion contracts, sorting parity, and source-link visibility.
+- Extended catalog documentation with technology-stack information.
+- Expanded GitHub Pages push-path filters to include the website files; this branch adds README/report/docs paths as well, since the Pages artifact publishes the repository root.
+- Fixed filter-chip counts so counts predict the result of toggling that specific chip while leaving other filters in place.
+- Corrected generated README copyright year to use the publication year instead of the newest project-update year.
 
-## Security boundaries
+## Validation performed
 
-- The workflow uses the repository-scoped GITHUB_TOKEN and calls only the public user-repository API. It does not use a personal token or request private repositories.
-- Catalog entries marked sourceAccess = hidden must have an empty sourceUrl and cannot carry the githubRepo internal identifier.
-- Live preview visibility is separate from source visibility. The sync never guesses a live deployment URL for a newly discovered repository.
-- Deliberately vulnerable labs remain without a public preview until isolation and deployment access controls are verified.
-- The user must still review new public-repository entries for copy quality, categories, and any live preview before manually adding those details.
+The following checks passed after the UI/UX implementation was reconciled to a new branch:
 
-## High-quality artwork refresh — 25 October 2026
+- `node --check app.js`
+- `python3 scripts/validate.py` — 32 entries, 8 categories, 31 public source links, 1 source-hidden entry, 14 HTTPS previews, 98 gallery visuals, 0 warnings.
+- `python3 scripts/generate_readme.py --check`
+- `python3 -m unittest discover -s tests -v` — 36 tests passed.
+- `git diff --check`
+- HTML parser check — no duplicate IDs or unmatched local fragment links.
 
-- Replaced the placeholder-generated geometric cover art with image-backed 1200 × 700 WebP project covers using collected public page imagery, project-specific public reference art, and the existing project palette/metadata overlay.
-- Replaced all 93 generated SVG feature panels with image-backed 1200 × 1600 WebP panels across overview, highlights, and technology/status layouts. ScholarHub's five supplied promotional PNGs remain unchanged.
-- Collected one artwork source for each of the 32 catalog entries. Sources, acquisition type, and local source-image path are recorded in assets/artwork-sources.json; normalized source images are stored in assets/projects/<id>/source/cover.jpg. Source art and generated WebP assets are local, so page views do not depend on third-party image hotlinks.
-- Added scripts/collect_web_artwork.py for complete/targeted artwork collection and incremental collection for newly added entries. The scheduled workflow now installs Pillow, collects only missing artwork (falls back to local vector art when a public source is unavailable), generates covers/panels, regenerates README/catalog metadata, validates the result, and deploys.
-- Updated docs/ASSET_GUIDELINES.md to describe the image pipeline and attribution/source-provenance records.
-- Added tests for one-to-one artwork provenance and generated WebP asset existence/size.
-- Local verification after the artwork refresh: catalog validation passed with no warnings; generated README check passed; JavaScript syntax check passed; Python compile checks passed; YAML/workflow ordering checks passed; unit tests passed (20/20). Chromium smoke test rendered 38 card markers (32 catalogue cards plus six featured cards); 130/130 local cover/gallery asset requests returned HTTP 200, and the catalog did not enter its fatal fallback state. The temporary smoke-test server was stopped. The project catalog remains at 32 entries, 8 categories, 31 public-source entries, 1 source-hidden entry, 14 public preview URLs, and 98 gallery visuals.
-- These artwork and workflow changes are on the feature branch and are not yet in production. The live website will update after the branch changes are pushed and merged and the Pages workflow succeeds.
+Headless Chromium CDP validation was run at 1440×1000 desktop, 800×900 tablet, 390×844 mobile, and 320×700 small-mobile viewports. The hero images retain a computed 1200:700 (1.714:1) ratio; the backdrop no longer expands the viewport; document width matched viewport width and horizontal scroll stayed at zero at all four sizes. No JavaScript errors were reported. The project-details dialog opened and closed, and searching ScholarHub reduced the project grid to one visible match. This is a focused visual/interaction audit, not a full cross-browser or end-to-end verification.
+
+Final viewport and full-page screenshots are saved outside the repository at /home/kali/screenshort/my-awesome-projects-uiux-audit/final-desktop-viewport.png, final-desktop-full.png, final-mobile-viewport.png, and final-mobile-full.png. Detailed measurements are in postfix-cdp-report.json.
+
+## Public-source and asset rules
+
+- The website only renders source links for entries marked public with an HTTPS GitHub URL.
+- Source-hidden entries must not expose internal repository identifiers or private source URLs.
+- Live preview URLs are separate from source visibility and must remain verified public HTTPS links.
+- The ScholarHub showcase cover uses the restored historical artwork with the visible branding updated; the original historical cover is retained as a rollback source.
+- The root `scholarhub-banner.png` file is an untracked local input and is intentionally not part of this UI/UX commit.
+
+## Next step
+
+The implementation is committed on `feat/full-showcase-ui-ux`; it has not been pushed or merged by this work. After reviewing the branch, push it and use the normal pull-request workflow to merge it.
