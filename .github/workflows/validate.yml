@@ -23,3 +23,7 @@ jobs:
 
       - name: Run standard-library tests
         run: python3 -m unittest discover -s tests -v
+
+      - name: Verify generated README on pull requests
+        if: github.event_name == 'pull_request'
+        run: python3 scripts/generate_readme.py --check

@@ -1,36 +1,86 @@
-name: Deploy showcase to GitHub Pages
+name: Sync public projects and deploy showcase
 
 on:
   push:
     branches:
       - main
+    paths:
+      - "projects.json"
+      - "scripts/**"
+      - "assets/**"
+      - "docs/PRIVATE_PROJECTS.md"
+      - "docs/ASSET_GUIDELINES.md"
+      - ".github/workflows/pages.yml"
+      - ".github/workflows/validate.yml"
+  schedule:
+    - cron: "17 */6 * * *"
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 concurrency:
-  group: github-pages
-  cancel-in-progress: true
+  group: showcase-publish
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  build-and-publish:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
-      - name: Validate project catalog and local assets
+      - name: Align with the latest main branch head
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Refresh only public repository metadata
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/sync_public_projects.py
+
+      - name: Generate covers and feature panels
+        run: |
+          python3 scripts/generate_covers.py
+          python3 scripts/generate_project_panels.py
+
+      - name: Generate README-first showcase and catalog docs
+        run: |
+          python3 scripts/generate_readme.py
+          python3 scripts/generate_catalog.py
+
+      - name: Validate public catalog, source visibility, and generated README
         run: |
           python3 -m json.tool projects.json > /dev/null
           python3 scripts/validate.py
+          python3 scripts/generate_readme.py --check
           node --check app.js
           python3 -m unittest discover -s tests -v
+
+      - name: Commit generated showcase changes only when needed
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md projects.json docs/PROJECT_CATALOG.md assets/brand assets/projects
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No catalog or generated showcase changes."
+          else
+            git commit -m "chore(showcase): sync public projects and regenerate README"
+            git push origin "HEAD:main"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -40,6 +90,6 @@ jobs:
         with:
           path: .
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy showcase to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

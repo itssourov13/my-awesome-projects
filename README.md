@@ -1,122 +1,92 @@
-# My Awesome Projects
+<!-- GENERATED SHOWCASE:BEGIN -->
+<div align="center">
+<img src="assets/brand/og-cover.svg" alt="My Awesome Projects — built to solve, made to explore" width="100%">
 
-A visual, searchable index of projects by **Md Sourov Mondol / @itssourov13** — software products, security tooling, mobile experiments, writing, and immersive web experiences.
+<h1>My Awesome Projects</h1>
+<p><strong>A visual archive of software, security tooling, product experiments and creative computing.</strong></p>
+<p><a href="https://itssourov13.github.io/my-awesome-projects/">Open the interactive showcase ↗</a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13">GitHub profile ↗</a></p>
+</div>
 
-**This is a showcase, not a source-code mirror.** Public repository links are listed when appropriate. For projects whose code is not published, a curated entry can show approved details, screenshots, and a verified public live preview without linking to the private repository.
+> **32 projects** &nbsp;·&nbsp; **8 disciplines** &nbsp;·&nbsp; **31 public sources** &nbsp;·&nbsp; **14 live previews**
 
-> **Current implementation status:** static gallery and project catalog are implemented. The catalog includes public repositories discovered during the inventory pass and a ScholarHub entry using the existing local promotional graphics. Some live preview URLs and private-project links are deliberately pending because a verified URL was not supplied or the current deployment failed verification.
+This README is the **main project showcase**. The companion website provides search, category filters, sorting, detail views and a visual gallery.
 
-## What's included
+## How to explore
 
-- Responsive project gallery with category filters, search, sorting, and featured projects.
-- A detail view for each project with a summary, technical stack, highlights, status, and safe links.
-- Local SVG cover art for the catalog entries; optional real screenshots and promotional graphics per project.
-- A visual-gallery lightbox for locally hosted feature panels and supplied project graphics.
-- Dark/light theme, keyboard-friendly controls, reduced-motion support, and semantic markup.
-- No application framework, runtime API calls, database, analytics, external font dependency, or third-party UI package.
-- A GitHub Actions workflow for publishing the static site to GitHub Pages.
-- A validation script that checks the JSON catalog, local assets, link policy, and duplicate project IDs.
+- **Public projects** link to their public source repository when that source is verified.
+- **Private or unpublished projects** can show approved descriptions and graphics without a source link.
+- **Live previews are separate from source visibility.** A preview is listed only when its HTTPS URL is approved for public visitors.
+- Covers and feature panels are portfolio artwork, not claims that every feature is production-ready or real UI screenshots.
 
-## Run locally
+## Selected work
 
-A local web server is recommended because the gallery fetches projects.json. From the repository root:
+<table width="100%">
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/scholarhub/cover.svg" alt="ScholarHub — original project cover artwork" width="100%"><h3><a href="https://scholarhub-test.vercel.app/">ScholarHub</a></h3><p><strong>Web Apps</strong> &nbsp;·&nbsp; <code>Live preview listed</code></p><p>A scholarship discovery and application-management platform designed to help students find opportunities and manage application progress.</p><p><sub><strong>Stack:</strong> TypeScript · Web</sub></p><p><a href="https://scholarhub-test.vercel.app/">Live preview ↗</a> &nbsp;·&nbsp; <span><em>Source hidden</em></span></p></td><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/personal-website-test/cover.svg" alt="Personal Website Demo — original project cover artwork" width="100%"><h3><a href="https://demo-website-itssourov13.vercel.app/">Personal Website Demo</a></h3><p><strong>Web Apps</strong> &nbsp;·&nbsp; <code>Demo</code></p><p>A Next.js personal-website demo focused on presenting profile content, projects, and a modern responsive web experience.</p><p><sub><strong>Stack:</strong> Next.js · TypeScript · React</sub></p><p><a href="https://demo-website-itssourov13.vercel.app/">Live preview ↗</a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/personal-website-test">Public source ↗</a></p></td></tr>
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/cinematic-architecture-web/cover.svg" alt="The Glass Pavilion — original project cover artwork" width="100%"><h3><a href="https://kaven-itssourov13.vercel.app/">The Glass Pavilion</a></h3><p><strong>Creative &amp; 3D</strong> &nbsp;·&nbsp; <code>Live preview listed</code></p><p>A cinematic architectural website experiment combining immersive imagery, editorial typography, and scroll-driven motion.</p><p><sub><strong>Stack:</strong> JavaScript · GSAP · Lenis · Three.js</sub></p><p><a href="https://kaven-itssourov13.vercel.app/">Live preview ↗</a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/cinematic-architecture-web">Public source ↗</a></p></td><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/personal-website-pentest/cover.svg" alt="Sourov Works — Pentest Lab — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/personal-website-pentest">Sourov Works — Pentest Lab</a></h3><p><strong>Cybersecurity</strong> &nbsp;·&nbsp; <code>Security lab · isolated use only</code></p><p>A deliberately vulnerable full-stack web application for hands-on penetration testing, vulnerability research, and security-assessment practice.</p><p><sub><strong>Stack:</strong> Next.js · TypeScript · PostgreSQL / PGlite · Playwright</sub></p><p><a href="https://github.com/itssourov13/personal-website-pentest">Public source ↗</a></p></td></tr>
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/blog/cover.svg" alt="Security &amp; Engineering Notes — original project cover artwork" width="100%"><h3><a href="https://blog-itssourov13.vercel.app">Security &amp; Engineering Notes</a></h3><p><strong>Writing &amp; Publishing</strong> &nbsp;·&nbsp; <code>Live preview listed</code></p><p>A technical publication covering security research, engineering experiments, reverse engineering, and lessons learned while building systems.</p><p><sub><strong>Stack:</strong> Next.js · TypeScript · MDX · Tailwind CSS</sub></p><p><a href="https://blog-itssourov13.vercel.app">Live preview ↗</a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/blog">Public source ↗</a></p></td><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/sketchbook/cover.svg" alt="Sketchbook — original project cover artwork" width="100%"><h3><a href="https://sketchbook-itssourov13.vercel.app/">Sketchbook</a></h3><p><strong>Creative &amp; 3D</strong> &nbsp;·&nbsp; <code>Live preview listed</code></p><p>A poetic writing space for poems, prose, fragments, notes, and a tactile visual sketchbook.</p><p><sub><strong>Stack:</strong> Astro · JavaScript · CSS</sub></p><p><a href="https://sketchbook-itssourov13.vercel.app/">Live preview ↗</a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/sketchbook">Public source ↗</a></p></td></tr>
+</table>
 
-~~~bash
-python3 -m http.server 4173
-~~~
+## Complete project archive
 
-Open http://127.0.0.1:4173/.
+<p><sub>Public-source entries: 31 · Source-hidden entries: 1 · Latest recorded project update in the catalog: 2026-10-25.</sub></p>
+### Cybersecurity
 
-No npm install is required. Validate the catalog and assets with:
+<table width="100%">
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/apk-sherlock/cover.svg" alt="APK Sherlock — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/apk-sherlock">APK Sherlock</a></h3><p><strong>Cybersecurity</strong> &nbsp;·&nbsp; <code>Active · CLI</code></p><p>An offline-first Android APK static-analysis CLI for permissions, components, signing metadata, URLs, suspicious strings, SDK indicators, and explainable risk reports.</p><p><sub><strong>Stack:</strong> Python 3.11+ · SQLite · CLI</sub></p><p><a href="https://github.com/itssourov13/apk-sherlock">Public source ↗</a></p></td><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/ares/cover.svg" alt="ARES — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/ares">ARES</a></h3><p><strong>Cybersecurity</strong> &nbsp;·&nbsp; <code>Active development</code></p><p>An AI-assisted security assessment orchestration framework for authorized reconnaissance, vulnerability analysis, evidence collection, and reporting.</p><p><sub><strong>Stack:</strong> Python · AI agents · Security automation</sub></p><p><a href="https://github.com/itssourov13/ares">Public source ↗</a></p></td></tr>
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/cyberos/cover.svg" alt="CYBEROS — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/cyberos">CYBEROS</a></h3><p><strong>Cybersecurity</strong> &nbsp;·&nbsp; <code>In development</code></p><p>A Go-first modular security operations platform and control plane for authorized security work, with grants, brokered execution, workers, and audit-oriented boundaries.</p><p><sub><strong>Stack:</strong> Go · PostgreSQL · React</sub></p><p><a href="https://github.com/itssourov13/cyberos">Public source ↗</a></p></td><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/onyx/cover.svg" alt="Onyx — Onion Web — original project cover artwork" width="100%"><h3><a href="https://onyx-xi-three.vercel.app">Onyx — Onion Web</a></h3><p><strong>Cybersecurity</strong> &nbsp;·&nbsp; <code>Live preview listed</code></p><p>A privacy-first research archive for security, privacy, intelligence, and network observability.</p><p><sub><strong>Stack:</strong> TypeScript · Web</sub></p><p><a href="https://onyx-xi-three.vercel.app">Live preview ↗</a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/onyx">Public source ↗</a></p></td></tr>
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/passhunter/cover.svg" alt="PassHunter — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/passhunter">PassHunter</a></h3><p><strong>Cybersecurity</strong> &nbsp;·&nbsp; <code>Active development</code></p><p>A deterministic password-pattern candidate generator for authorized security assessments, CTFs, and lab research.</p><p><sub><strong>Stack:</strong> Python · CLI · Standard library</sub></p><p><a href="https://github.com/itssourov13/passhunter">Public source ↗</a></p></td><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/vercelstrike/cover.svg" alt="VercelStrike — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/VercelStrike">VercelStrike</a></h3><p><strong>Cybersecurity</strong> &nbsp;·&nbsp; <code>Work in progress</code></p><p>A work-in-progress security assessment framework for Vercel and Next.js applications.</p><p><sub><strong>Stack:</strong> Python · Security testing</sub></p><p><a href="https://github.com/itssourov13/VercelStrike">Public source ↗</a></p></td></tr>
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/vercstorm/cover.svg" alt="VercStorm — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/VercStorm">VercStorm</a></h3><p><strong>Cybersecurity</strong> &nbsp;·&nbsp; <code>Needs documentation</code></p><p>A Python security-research repository in the Vercel/Next.js assessment space; project details remain to be curated.</p><p><sub><strong>Stack:</strong> Python</sub></p><p><a href="https://github.com/itssourov13/VercStorm">Public source ↗</a></p></td><td width="50%" valign="top"></td></tr>
+</table>
 
-~~~bash
-python3 scripts/validate.py
-node --check app.js
-python3 -m json.tool projects.json > /dev/null
-~~~
+### AI & Developer Tools
 
-## Add or update a project
+<table width="100%">
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/hackergf-ai/cover.svg" alt="Hacker gf AI — original project cover artwork" width="100%"><h3><a href="https://hackergf-ai.vercel.app">Hacker gf AI</a></h3><p><strong>AI &amp; Developer Tools</strong> &nbsp;·&nbsp; <code>Demo / concept</code></p><p>A hacker-themed AI development-platform interface concept for chat, code editing, sandboxed execution, and file management.</p><p><sub><strong>Stack:</strong> JavaScript · React · AI</sub></p><p><a href="https://hackergf-ai.vercel.app">Live preview ↗</a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/hackergf-ai">Public source ↗</a></p></td><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/hackerai-main/cover.svg" alt="HackerAI — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/hackerai-main">HackerAI</a></h3><p><strong>AI &amp; Developer Tools</strong> &nbsp;·&nbsp; <code>Live URL needs verification</code></p><p>An AI-powered penetration-testing assistant concept with agent workflows and a modern full-stack application architecture.</p><p><sub><strong>Stack:</strong> TypeScript · Next.js · AI</sub></p><p><a href="https://github.com/itssourov13/hackerai-main">Public source ↗</a></p></td></tr>
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/hackerai-base44/cover.svg" alt="HackerAI Workspace — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/hackerai-base44">HackerAI Workspace</a></h3><p><strong>AI &amp; Developer Tools</strong> &nbsp;·&nbsp; <code>Development / concept</code></p><p>An AI-powered developer workspace concept for building, coding, chatting, and deploying from a unified interface.</p><p><sub><strong>Stack:</strong> TypeScript · React · Next.js</sub></p><p><a href="https://github.com/itssourov13/hackerai-base44">Public source ↗</a></p></td><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/uab/cover.svg" alt="UniversalAIBridge — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/uab">UniversalAIBridge</a></h3><p><strong>AI &amp; Developer Tools</strong> &nbsp;·&nbsp; <code>Active development</code></p><p>An API-compatible bridge between AI agents and web-based AI sessions, with a control plane for tasks, approvals, events, and project management.</p><p><sub><strong>Stack:</strong> Python · AI agents · API</sub></p><p><a href="https://github.com/itssourov13/uab">Public source ↗</a></p></td></tr>
+</table>
 
-Edit projects.json. Each entry uses this general shape:
+### Web Apps
 
-~~~json
-{
-  "id": "my-project",
-  "title": "My Project",
-  "eyebrow": "CATEGORY · SHORT LABEL",
-  "category": "Web Apps",
-  "description": "A concise, accurate summary of what the project does.",
-  "story": "A little more context about the problem, decisions, or experiment.",
-  "highlights": ["Feature one", "Feature two"],
-  "stack": ["TypeScript", "React"],
-  "sourceAccess": "hidden",
-  "sourceUrl": "",
-  "liveUrl": "https://example.com/",
-  "demoLabel": "Live preview",
-  "demoNote": "Any important access, demo, scope, or security caveat.",
-  "status": "Live preview listed",
-  "featured": false,
-  "updated": "2026-10-25",
-  "cover": "assets/projects/my-project/cover.svg",
-  "gallery": [
-    {
-      "src": "assets/projects/my-project/screenshots/dashboard.png",
-      "alt": "The project dashboard showing current tasks"
-    }
-  ]
-}
-~~~
+<table width="100%">
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/birthday-present-preview/cover.svg" alt="Birthday Present Preview — original project cover artwork" width="100%"><h3><a href="https://birthday-present-itssourov13.vercel.app/">Birthday Present Preview</a></h3><p><strong>Web Apps</strong> &nbsp;·&nbsp; <code>Live preview listed</code></p><p>A self-hostable interactive birthday-gift experience featuring 3D animations, memories, mini-games, and a personal letter.</p><p><sub><strong>Stack:</strong> JavaScript · Web · Vercel</sub></p><p><a href="https://birthday-present-itssourov13.vercel.app/">Live preview ↗</a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/birthday-present-preview">Public source ↗</a></p></td><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/create-present-website/cover.svg" alt="Create Present — original project cover artwork" width="100%"><h3><a href="https://cgw-itssourov13.vercel.app">Create Present</a></h3><p><strong>Web Apps</strong> &nbsp;·&nbsp; <code>Static demo</code></p><p>An open-source static gift-website reconstruction/demo for personalized digital gifts for birthdays, anniversaries, and special moments.</p><p><sub><strong>Stack:</strong> HTML · JavaScript · Vercel</sub></p><p><a href="https://cgw-itssourov13.vercel.app">Live preview ↗</a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/create-present-website">Public source ↗</a></p></td></tr>
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/claude-personal-website/cover.svg" alt="Personal Website — Design Concept — original project cover artwork" width="100%"><h3><a href="https://claude-personal-web-itssourov13.vercel.app/">Personal Website — Design Concept</a></h3><p><strong>Web Apps</strong> &nbsp;·&nbsp; <code>Design concept</code></p><p>A premium personal-website design concept exploring editorial positioning, product-design services, and a polished portfolio layout.</p><p><sub><strong>Stack:</strong> Next.js · TypeScript · React</sub></p><p><a href="https://claude-personal-web-itssourov13.vercel.app/">Live preview ↗</a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/claude-personal-website">Public source ↗</a></p></td><td width="50%" valign="top"></td></tr>
+</table>
 
-### Source-link policy
+### Creative & 3D
 
-- For a **public repository**, set sourceAccess to public and put the public source link in sourceUrl.
-- For a **private or otherwise unpublished source**, set sourceAccess to hidden and leave sourceUrl empty. Do not put a private GitHub URL in any other public field.
-- liveUrl is only for a confirmed HTTPS deployment that visitors are allowed to view. It is independent of source visibility.
-- If a URL is private, login-gated, broken, or still needs access-control verification, do not label it as a public live preview.
-- For intentionally vulnerable security labs, do not link to a public target until isolation, synthetic data, and access controls have been reviewed.
-- Do not include secrets, production identifiers, private endpoints, customer data, or sensitive architecture in descriptions, images, metadata, or screenshots.
+<table width="100%">
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/active-theory/cover.svg" alt="Active Theory V6 Rebuild — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/active-theory">Active Theory V6 Rebuild</a></h3><p><strong>Creative &amp; 3D</strong> &nbsp;·&nbsp; <code>Research / reconstruction</code></p><p>A reconstruction workspace researching an immersive WebGL web experience and documenting visual-parity verification.</p><p><sub><strong>Stack:</strong> GLSL · WebGL · JavaScript</sub></p><p><a href="https://github.com/itssourov13/active-theory">Public source ↗</a></p></td><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/arven/cover.svg" alt="ARVEN Residences — original project cover artwork" width="100%"><h3><a href="https://arven-itssourov13.vercel.app/">ARVEN Residences</a></h3><p><strong>Creative &amp; 3D</strong> &nbsp;·&nbsp; <code>Visual concept</code></p><p>A cinematic luxury real-estate landing-page concept for a fictional Dubai waterfront residence, built around light, water, and space.</p><p><sub><strong>Stack:</strong> JavaScript · GSAP · Lenis · Three.js</sub></p><p><a href="https://arven-itssourov13.vercel.app/">Live preview ↗</a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/arven">Public source ↗</a></p></td></tr>
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/rise-of-ai/cover.svg" alt="Rise of AI — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/rise-of-ai">Rise of AI</a></h3><p><strong>Creative &amp; 3D</strong> &nbsp;·&nbsp; <code>Creative experiment</code></p><p>A cinematic 3D interactive journey through the evolution of artificial intelligence.</p><p><sub><strong>Stack:</strong> Next.js · React · Three.js · GSAP · WebGL</sub></p><p><a href="https://github.com/itssourov13/rise-of-ai">Public source ↗</a></p></td><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/stele-residences/cover.svg" alt="STELE Residences — original project cover artwork" width="100%"><h3><a href="https://stele-residences-itssourov13.vercel.app">STELE Residences</a></h3><p><strong>Creative &amp; 3D</strong> &nbsp;·&nbsp; <code>Visual concept</code></p><p>An immersive architectural website concept exploring stone, smoked glass, light, a custom interactive tower, and editorial motion.</p><p><sub><strong>Stack:</strong> JavaScript · Three.js · WebGL</sub></p><p><a href="https://stele-residences-itssourov13.vercel.app">Live preview ↗</a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/stele-residences">Public source ↗</a></p></td></tr>
+</table>
 
-Read [docs/PRIVATE_PROJECTS.md](docs/PRIVATE_PROJECTS.md) before adding unpublished work.
+### Mobile Apps
 
-## Image asset guidance
+<table width="100%">
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/study-planner-apk/cover.svg" alt="Study Planner — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/study-planner-apk">Study Planner</a></h3><p><strong>Mobile Apps</strong> &nbsp;·&nbsp; <code>Mobile app</code></p><p>An offline-first study planner built with React Native and Expo for tasks, study schedules, goals, notes, and progress statistics.</p><p><sub><strong>Stack:</strong> React Native · Expo · TypeScript</sub></p><p><a href="https://github.com/itssourov13/study-planner-apk">Public source ↗</a></p></td><td width="50%" valign="top"></td></tr>
+</table>
 
-Every project has a locally hosted SVG cover plus three app-store-inspired visual panels. Generated panels summarize the project, features, and technology/status; they are original promotional artwork, **not** real application screenshots. ScholarHub also includes five existing PNG graphics from the workspace. Real UI captures may be added to each project's gallery when available and approved. See [docs/ASSET_GUIDELINES.md](docs/ASSET_GUIDELINES.md).
+### Utilities
 
-## Publish with GitHub Pages
+<table width="100%">
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/employee-profile-generator/cover.svg" alt="Employee Profile Generator — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/Employee-profile-generator">Employee Profile Generator</a></h3><p><strong>Utilities</strong> &nbsp;·&nbsp; <code>Utility / learning project</code></p><p>A Python tool for generating employee profiles with salary analysis, role information, and code breakdown features.</p><p><sub><strong>Stack:</strong> Python</sub></p><p><a href="https://github.com/itssourov13/Employee-profile-generator">Public source ↗</a></p></td><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/movie-ticket-calculator/cover.svg" alt="Movie Ticket Booking Calculator — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/Movie-Ticket-Booking-Calculator-Python-">Movie Ticket Booking Calculator</a></h3><p><strong>Utilities</strong> &nbsp;·&nbsp; <code>Learning project</code></p><p>A Python calculator for ticket prices based on age, seat type, show time, discounts, and extra charges.</p><p><sub><strong>Stack:</strong> Python</sub></p><p><a href="https://github.com/itssourov13/Movie-Ticket-Booking-Calculator-Python-">Public source ↗</a></p></td></tr>
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/report-card-printer/cover.svg" alt="Report Card Printer — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/Report-card-printer">Report Card Printer</a></h3><p><strong>Utilities</strong> &nbsp;·&nbsp; <code>Learning project</code></p><p>A Python project that generates student profiles and performs age checks, topper detection, and grade calculation.</p><p><sub><strong>Stack:</strong> Python</sub></p><p><a href="https://github.com/itssourov13/Report-card-printer">Public source ↗</a></p></td><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/travel-weather-planner/cover.svg" alt="Travel &amp; Weather Planner — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/-Travel-Weather-Planner-Smart-Commute-Decision-System-Python-">Travel &amp; Weather Planner</a></h3><p><strong>Utilities</strong> &nbsp;·&nbsp; <code>Utility / learning project</code></p><p>A Python-based smart commute planner that considers distance, weather, and transport options to help decide whether a trip is practical.</p><p><sub><strong>Stack:</strong> Python</sub></p><p><a href="https://github.com/itssourov13/-Travel-Weather-Planner-Smart-Commute-Decision-System-Python-">Public source ↗</a></p></td></tr>
+</table>
 
-1. Create a **public** GitHub repository named my-awesome-projects under the account you want to use for this showcase.
-2. Push the default branch as main.
-3. In **Settings → Pages**, select **GitHub Actions** as the publishing source.
-4. Push to main; the pages.yml workflow validates the catalog and deploys the static files.
-5. Wait for the Deploy to GitHub Pages workflow to finish. The published URL will be shown in the workflow summary and Pages settings.
+### Open Source
 
-GitHub's current guidance: [Deploying a website automatically](https://docs.github.com/en/get-started/start-your-journey/deploying-your-website-automatically) and [custom Pages workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+<table width="100%">
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/awesome/cover.svg" alt="Awesome Lists — original project cover artwork" width="100%"><h3><a href="https://github.com/itssourov13/awesome">Awesome Lists</a></h3><p><strong>Open Source</strong> &nbsp;·&nbsp; <code>Curated resources</code></p><p>A curated collection of awesome lists and useful community resources.</p><p><sub><strong>Stack:</strong> Markdown</sub></p><p><a href="https://github.com/itssourov13/awesome">Public source ↗</a></p></td><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/github-profile/cover.svg" alt="GitHub Profile &amp; Project Index — original project cover artwork" width="100%"><h3><a href="https://itssourov13.github.io/itssourov13/">GitHub Profile &amp; Project Index</a></h3><p><strong>Open Source</strong> &nbsp;·&nbsp; <code>Profile infrastructure</code></p><p>The GitHub profile repository with generated profile visuals, selected work, and activity summaries.</p><p><sub><strong>Stack:</strong> Markdown · SVG · TypeScript</sub></p><p><a href="https://itssourov13.github.io/itssourov13/">Live preview ↗</a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/itssourov13">Public source ↗</a></p></td></tr>
+<tr><td width="50%" valign="top" style="padding:14px;"><img src="assets/projects/js-org/cover.svg" alt="JS.ORG — original project cover artwork" width="100%"><h3><a href="https://js.org">JS.ORG</a></h3><p><strong>Open Source</strong> &nbsp;·&nbsp; <code>Community / resource</code></p><p>A repository associated with JS.ORG, a community project dedicated to JavaScript and its ecosystem.</p><p><sub><strong>Stack:</strong> JavaScript</sub></p><p><a href="https://js.org">Live preview ↗</a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/js.org">Public source ↗</a></p></td><td width="50%" valign="top"></td></tr>
+</table>
 
-### Push commands (after you create the GitHub repository)
+## Source privacy & live preview policy
 
-~~~bash
-cd /home/kali/gpt-workspace/my-awesome-projects
-git remote add origin https://github.com/itssourov13/my-awesome-projects.git
-git push -u origin main
-~~~
+Private repository code is not mirrored here. For a source-hidden entry, the catalog keeps <code>sourceUrl</code> empty; no source button or source link is generated. Its public live URL may still be displayed independently after anonymous access and deployment safety are verified.
 
-If you create it in a different account, change the remote URL to match. The remote is intentionally not configured in this workspace yet; no repository was created or pushed automatically.
+For deliberately vulnerable labs, internal dashboards, or systems containing real data, do not publish a preview until isolation, synthetic data, access controls and exposed routes have been reviewed.
 
-## Catalog status and known follow-ups
+<p align="center"><a href="https://itssourov13.github.io/my-awesome-projects/"><strong>Explore the full interactive showcase ↗</strong></a></p>
 
-- The connected GitHub inventory returned 31 public repositories for itssourov13; the profile README currently reports 32 public repositories. Reconcile the count when the full account inventory is available.
-- Private repositories were not enumerable through the current connected inventory. Add each private project only when its approved description and intended public live URL are known. Do not expose source links.
-- ScholarHub's source is intentionally not linked. Its production preview at https://scholarhub-test.vercel.app/ was verified as reachable, and its existing promotional graphics are included in assets/projects/scholarhub/screenshots/.
-- The hackerai-main repository homepage returned 404 during the audit. No live button is shown until a working deployment URL is confirmed.
-- The public vulnerability lab's live link is intentionally withheld pending re-verification of deployment isolation.
-- The claude-personal-website entry is labelled a concept/demo because the inspected page contained placeholder metrics and testimonial-style copy.
-
-The full project inventory and confidence notes are maintained in [docs/PROJECT_CATALOG.md](docs/PROJECT_CATALOG.md).
-
-## Project boundaries
-
-This showcase is a static public site. **Anything committed here, including screenshots and text, must be considered public.** Making the portfolio repository private is not a substitute for deployment access controls on an individual app.
-
----
-
-Curated for discovery. Source visibility and preview availability are handled separately.
+<sub>Catalog source: projects.json · README generated by scripts/generate_readme.py · Public repository sync never imports private repository metadata.</sub>
+<p align="center"><sub><a href="docs/PRIVATE_PROJECTS.md">Private-project policy</a> · <a href="docs/ASSET_GUIDELINES.md">Asset guidelines</a> · <a href="docs/PROJECT_CATALOG.md">Catalog notes</a></sub></p>
+<!-- GENERATED SHOWCASE:END -->

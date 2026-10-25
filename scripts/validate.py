@@ -102,6 +102,8 @@ def main() -> int:
             hidden_count += 1
             if source_url:
                 error(f"{owner}: hidden source must keep sourceUrl empty")
+            if project.get("githubRepo"):
+                error(f"{owner}: hidden-source entry must not expose an internal repository identifier")
             for field in ("description", "story", "demoNote", "eyebrow", "title"):
                 if "github.com/" in str(project.get(field, "")).lower():
                     error(f"{owner}: hidden-source entry contains a GitHub URL in {field}")
@@ -140,6 +142,7 @@ def main() -> int:
         "index.html", "styles.css", "app.js", "README.md",
         "docs/PRIVATE_PROJECTS.md", "docs/ASSET_GUIDELINES.md",
         "docs/PROJECT_CATALOG.md", "REPORT.md",
+        "scripts/generate_readme.py", "scripts/sync_public_projects.py",
         ".github/workflows/pages.yml", ".github/workflows/validate.yml",
     )
     for needed in required_files:

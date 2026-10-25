@@ -1,19 +1,21 @@
 # Adding private-source projects safely
 
-The portfolio should show what a project does without disclosing its source repository. The source-visibility setting and live-deployment URL are independent.
+This repository is public. Anything committed here—including README content, projects.json, SVGs, images, commit history and docs—must be treated as public.
 
-## Publicly showing an unpublished project
+## Weekly manual workflow
 
-1. Confirm the project owner approves publishing the name, summary, screenshots, technical stack, and any case-study details.
-2. Confirm the exact live URL the visitor is allowed to open. Do not infer it from a private repository name or guess a Vercel hostname.
-3. Open the URL in a signed-out/incognito session and confirm whether it is intended for anonymous visitors. A login screen, deployment-protection page, or access-denied response is not a public live preview.
-4. Review the deployment for credentials, private API routes, internal admin pages, private customer/user data, and unsafe debug output.
-5. If the app is intentionally vulnerable, treat it as a security lab: synthetic data only, isolated services and credentials, explicit scope, and access controls appropriate to the risk. Withhold the public preview link until that review passes.
-6. Add the project to projects.json with sourceAccess set to "hidden", sourceUrl set to an empty string, and liveUrl set only to the verified public HTTPS URL.
-7. Store approved images inside assets/projects/<project-id>/screenshots/ and reference relative paths. Never add screenshots copied from private systems unless they are approved for public release.
-8. Run python3 scripts/validate.py and review the diff before commit.
+Private projects are deliberately **not** enumerated by the automatic public-repository sync. Review them manually when a project is ready to be presented (for example, during a weekly showcase review).
 
-## Example catalog entry
+1. Get or confirm the approved public title, summary, category, stack, highlights and current status. Do not copy internal notes wholesale.
+2. Confirm the exact public HTTPS deployment URL, if one should be shown.
+3. Open that URL in a signed-out/incognito browser. A login screen, deployment-protection page or access-denied response is not a public live preview.
+4. Review the deployed app for private API routes, internal admin pages, credentials, debug output, real user/customer data and unsafe exposed endpoints.
+5. For intentionally vulnerable labs, confirm isolation, synthetic data, explicit scope and suitable access controls. Keep the public live URL empty until that review is complete.
+6. Add a manual entry to projects.json with sourceAccess set to hidden and sourceUrl set to an empty string. Add only approved public description/story/stack/highlights and graphics.
+7. Set liveUrl only when anonymous access and deployment safety are verified. Source visibility and preview visibility are separate decisions.
+8. Regenerate the README, covers, feature panels and catalog docs; run the test suite; then commit and push to main.
+
+## Safe entry shape
 
 ~~~json
 {
@@ -34,18 +36,20 @@ The portfolio should show what a project does without disclosing its source repo
   "featured": false,
   "updated": "2026-10-25",
   "cover": "assets/projects/private-dashboard/cover.svg",
-  "screenshots": []
+  "screenshots": [],
+  "gallery": []
 }
 ~~~
 
-Replace example values with the real, approved data. The example hostname is illustrative and must not be copied as a project URL.
+The example domain is illustrative; never copy it as a real project URL.
 
 ## Never do these
 
-- Never put a private GitHub repository URL in sourceUrl, description, story, demoNote, image alt text, or a button URL.
-- Never assume a private repo means the deployment is private or secure. Deployment permissions are separate.
-- Never put tokens, credentials, customer records, production IDs, secret configuration, private endpoints, or useful exploit artifacts in public source files or screenshots.
-- Never label an access-controlled app as a public live demo.
-- Never link an intentionally vulnerable application until its isolation and deployment access controls have been verified.
+- Never put a private GitHub URL in sourceUrl, descriptions, story, demoNote, image alt text, README content or button targets.
+- Never put a private repository's URL/name in the public catalog just to support synchronization.
+- Never mirror private source files or run the public sync with a personal token that can enumerate private repositories.
+- Never put tokens, credentials, customer records, production identifiers, private endpoints or useful exploit artifacts in public files or screenshots.
+- Never assume a private source repository means its deployment URL is private or secure.
+- Never link an intentionally vulnerable application until isolation and deployment access controls have been reviewed.
 
-Remember: the entire published gallery, JSON, SVG files, screenshots, commit history, and docs are public content.
+The scheduled public sync uses only GitHub's public user-repository listing and applies an explicit public-only filter. It does not need access to private repositories. The README and web gallery use the same projects.json catalog; hidden sources remain unlinked in both.
