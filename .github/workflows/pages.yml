@@ -49,6 +49,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/sync_public_projects.py
 
+      - name: Set up Python for image generation
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.x"
+
+      - name: Install image-generation tooling
+        run: python -m pip install --disable-pip-version-check --quiet Pillow==12.3.0
+
+      - name: Collect artwork for new project entries
+        run: python3 scripts/collect_web_artwork.py --missing || echo "Some artwork sources were unavailable; vector fallback will be used for those entries."
+
       - name: Generate covers and feature panels
         run: |
           python3 scripts/generate_covers.py
@@ -72,7 +83,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md projects.json docs/PROJECT_CATALOG.md assets/brand assets/projects
+          git add README.md projects.json docs/PROJECT_CATALOG.md assets/brand assets/projects assets/artwork-sources.json
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No catalog or generated showcase changes."

@@ -143,6 +143,7 @@ def main() -> int:
         "docs/PRIVATE_PROJECTS.md", "docs/ASSET_GUIDELINES.md",
         "docs/PROJECT_CATALOG.md", "REPORT.md",
         "scripts/generate_readme.py", "scripts/sync_public_projects.py",
+        "scripts/collect_web_artwork.py", "assets/artwork-sources.json",
         ".github/workflows/pages.yml", ".github/workflows/validate.yml",
     )
     for needed in required_files:
