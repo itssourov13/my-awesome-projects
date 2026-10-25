@@ -2,59 +2,57 @@
 
 **Date:** 25 October 2026
 **Workspace:** /home/kali/gpt-workspace/my-awesome-projects
-**Branch:** main (local only)
-**Remote / deployment:** not configured; no push or deployment performed.
+**Branch:** feat/readme-first-public-sync
+**Remote:** https://github.com/itssourov13/my-awesome-projects.git
+**Publication status:** implementation is local and not pushed or merged; the existing live site remains on the current main branch until this branch is merged.
 
-## Delivered
+## Scope implemented
 
-- Initialized a clean local Git repository on branch main.
-- Built a dependency-free, responsive static showcase with a README-led project directory and locally hosted assets.
-- Added search, category filters, featured entries, sorting, project detail dialogs, visual-gallery lightbox, dark/light theme, keyboard support, and reduced-motion support.
-- Added a curated JSON catalog with **32 project entries across 8 categories**: 31 public repositories returned by the connected GitHub inventory plus a ScholarHub entry whose source link is intentionally hidden and whose production preview is verified.
-- Generated original SVG cover art for all 32 entries and 3 app-store-inspired SVG feature panels per project without an existing gallery — **93 generated panels**. These are labelled as promotional artwork, not real application screenshots.
-- Copied five existing ScholarHub PNG promotional graphics from /home/kali/screenshort/playstore-graphics into the catalog gallery.
-- Added local catalog generation and validation scripts, 10 automated unit tests, and two GitHub Actions workflows for validation and GitHub Pages deployment.
-- Added documentation for private-source entries, visual assets, repository inventory, and final operational follow-ups.
-- Kept hidden-source entry's sourceUrl empty, and withheld the intentionally vulnerable Pentest Lab live URL pending deployment-isolation review.
-- Did not create a remote repository, push this showcase, or deploy the showcase website.
+The repository README is now the primary project showcase. The existing static website remains the companion interactive gallery. The profile/special repository and other project repositories were not changed.
+
+- Replaced the documentation-first README with a visual catalogue: hero artwork, project-count summary, six featured project cards, category-grouped cards for the rest of the catalog, project covers, curated descriptions, stack/status details, and independently rendered source/live links.
+- Added scripts/generate_readme.py. The README is deterministic output from projects.json and supports --check.
+- Added scripts/sync_public_projects.py. It fetches the complete public-repository inventory for itssourov13 before changing the catalog; adds new public repositories, updates last-push metadata, and refreshes metadata only for entries explicitly managed as GitHub-generated.
+- Public metadata sync fails closed: repositories absent from the verified public inventory lose their public source link. Private/manual entries are not enumerated and are not rewritten by the public sync.
+- Added a scheduled GitHub Actions publication workflow that runs every six hours, refreshes public metadata, regenerates covers/panels/README/catalog docs, validates output, commits generated changes only when necessary, then deploys GitHub Pages in the same run.
+- Added a separate pull-request README consistency check; regular main-branch catalog pushes are allowed to regenerate the README automatically.
+- Updated private-project documentation for the agreed weekly manual process. Only approved metadata, approved graphics, and a separately verified public HTTPS preview should be committed. Private source URLs remain empty.
+- Replaced stale hand-written inventory notes with a generated catalog report based on projects.json.
+- Added unit tests for public-only inventory filtering, newly discovered repositories, preservation of curated metadata, fail-closed handling when a repository is no longer public, duplicate suppression for a manually hidden project, and README privacy behavior.
+
+## Current catalog after the public-inventory check
+
+- 32 project entries across 8 categories.
+- 31 public source entries and 1 source-hidden entry (ScholarHub).
+- 14 public preview URLs.
+- 98 gallery visuals (the existing five ScholarHub graphics plus generated panels).
+- The public GitHub API returned 31 owned public repositories before the showcase repository was excluded; the catalog reconciled to those public sources without adding duplicate entries.
+- The ScholarHub source entry remains intentionally hidden. Its public preview remains listed independently.
 
 ## Verification results
 
-**PASS**
-- projects.json syntax validation.
-- Project catalog, source-visibility rules, URLs, covers and gallery assets: zero errors, zero warnings.
-- Python unit tests: **10 passed**.
-- JavaScript syntax check: passed.
-- Python compile check for scripts and tests: passed.
-- Staged whitespace validation: run immediately before the local commit.
+**Passed locally**
+- Python compile checks for all scripts/tests.
+- projects.json parses as valid JSON.
+- scripts/validate.py: 32 entries, 8 categories, 31 public source entries, 1 hidden source, 14 HTTPS preview URLs, no errors or warnings.
+- scripts/generate_readme.py --check: generated README matches the current catalog.
+- node --check app.js.
+- Unit tests: 18 passed.
+- The public sync was run against GitHub's public repository inventory. The script's unit tests also exercise private-record filtering without network access.
+- Public data sync, generated artwork, README output, and catalog documentation are all represented on this feature branch.
 
-**Browser smoke test (local HTTP server + headless Chromium)**
-- HTTP status: 200.
-- Main catalog rendered 32 project cards; featured row rendered 6.
-- Searching for ScholarHub filtered to the expected single entry.
-- ScholarHub project details dialog opened; its card and detail view show the verified HTTPS preview but **zero GitHub source links**.
-- Five ScholarHub gallery items rendered; lightbox opened and responded to Escape.
-- Dark/light theme toggle changed the selected theme.
-- No page JavaScript errors.
-- Checked viewport widths 320, 360, 390, 768, 1024, and 1365 px; no horizontal overflow.
-- Desktop and 390 px mobile page screenshots were captured to temporary files under /tmp during testing, not added to the repository.
+## Deployment and owner follow-up
 
-## Audit limitations / owner follow-ups
+The GitHub Pages deployment and scheduled sync workflow changes are **not live yet**, because this feature branch has not been pushed/merged. After the branch is pushed and merged to main:
 
-1. **Private repositories:** the connected GitHub repository inventory did not return private repos. The Vercel inventory did reveal a deployment named birthday-present-private, but its project settings report SSO protection enabled, so it is excluded from the public gallery until anonymous visitor access is confirmed. To add the remaining real private projects, provide each approved title/description and exact public HTTPS live deployment URL. The catalog supports live previews without source links.
-2. **ScholarHub:** the production deployment at https://scholarhub-test.vercel.app/ was verified as reachable and is now linked from the card. The source repository remains intentionally unlinked; only the public landing page was checked, not every authenticated or interactive flow.
-3. **HackerAI:** the current repository homepage URL returned 404 in the audit. A corrected deployment URL is needed before the live button can be enabled.
-4. **Hacker gf AI:** its Vercel alias responded, but page canonical metadata pointed to another hostname; confirm the intended canonical deployment URL.
-5. **Pentest Lab:** the repo is deliberately vulnerable. The public live link remains withheld until isolation, synthetic data, and access-control posture are verified.
-6. **Repository count:** the connected inventory returned 31 public repos, while a GitHub profile README stats graphic reports 32. The discrepancy remains unresolved.
-7. **GitHub publication:** create the public my-awesome-projects repository, push the main branch, choose GitHub Actions under Settings → Pages, and let the Pages workflow deploy. The remote is intentionally not configured yet.
+1. The push to main triggers the Sync public projects and deploy showcase workflow.
+2. It will refresh public project metadata, generate the README/artwork, validate everything, commit any generated differences, and deploy the static site.
+3. The same scheduled workflow then repeats every six hours. Private/unpublished projects remain manual weekly edits to projects.json; no private-source token or special-repository modification is required.
 
-## Security / accuracy notes
+## Security boundaries
 
-- Public repository links are shown only for entries marked sourceAccess = public.
-- The ScholarHub entry is marked sourceAccess = hidden and has an empty sourceUrl, but its verified production preview remains clickable. The gallery never creates a source button for hidden-source entries.
-- Preview URLs are separate from source visibility and are only shown when set in the catalog.
-- The Pentest Lab preview is deliberately omitted pending review.
-- ARVEN and STELE cards state that they are fictional architectural concepts.
-- The Claude personal-website entry is labelled a concept because the inspected live page contained placeholder metrics and testimonial-style content.
-- Generated covers and feature panels are promotional illustrations, not captured UI screens.
+- The workflow uses the repository-scoped GITHUB_TOKEN and calls only the public user-repository API. It does not use a personal token or request private repositories.
+- Catalog entries marked sourceAccess = hidden must have an empty sourceUrl and cannot carry the githubRepo internal identifier.
+- Live preview visibility is separate from source visibility. The sync never guesses a live deployment URL for a newly discovered repository.
+- Deliberately vulnerable labs remain without a public preview until isolation and deployment access controls are verified.
+- The user must still review new public-repository entries for copy quality, categories, and any live preview before manually adding those details.

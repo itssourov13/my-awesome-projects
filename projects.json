@@ -112,7 +112,8 @@
         "src": "assets/projects/apk-sherlock/gallery/03-feature.svg",
         "alt": "APK Sherlock — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "apk-sherlock"
   },
   {
     "id": "ares",
@@ -156,7 +157,8 @@
         "src": "assets/projects/ares/gallery/03-feature.svg",
         "alt": "ARES — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "ares"
   },
   {
     "id": "cyberos",
@@ -200,7 +202,8 @@
         "src": "assets/projects/cyberos/gallery/03-feature.svg",
         "alt": "CYBEROS — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "cyberos"
   },
   {
     "id": "passhunter",
@@ -244,7 +247,8 @@
         "src": "assets/projects/passhunter/gallery/03-feature.svg",
         "alt": "PassHunter — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "passhunter"
   },
   {
     "id": "personal-website-pentest",
@@ -289,7 +293,8 @@
         "src": "assets/projects/personal-website-pentest/gallery/03-feature.svg",
         "alt": "Sourov Works — Pentest Lab — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "personal-website-pentest"
   },
   {
     "id": "uab",
@@ -332,7 +337,8 @@
         "src": "assets/projects/uab/gallery/03-feature.svg",
         "alt": "UniversalAIBridge — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "uab"
   },
   {
     "id": "VercelStrike",
@@ -373,7 +379,8 @@
         "src": "assets/projects/VercelStrike/gallery/03-feature.svg",
         "alt": "VercelStrike — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "VercelStrike"
   },
   {
     "id": "VercStorm",
@@ -413,7 +420,8 @@
         "src": "assets/projects/VercStorm/gallery/03-feature.svg",
         "alt": "VercStorm — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "VercStorm"
   },
   {
     "id": "hackerai-main",
@@ -440,7 +448,7 @@
     "demoNote": "Known homepage returned 404 during the audit (25 October 2026); provide a working deployment URL before publishing the live button.",
     "status": "Live URL needs verification",
     "featured": false,
-    "updated": "2026-10-24",
+    "updated": "2026-10-25",
     "cover": "assets/projects/hackerai-main/cover.svg",
     "screenshots": [],
     "gallery": [
@@ -456,7 +464,8 @@
         "src": "assets/projects/hackerai-main/gallery/03-feature.svg",
         "alt": "HackerAI — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "hackerai-main"
   },
   {
     "id": "hackerai-base44",
@@ -499,7 +508,8 @@
         "src": "assets/projects/hackerai-base44/gallery/03-feature.svg",
         "alt": "HackerAI Workspace — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "hackerai-base44"
   },
   {
     "id": "hackergf-ai",
@@ -542,7 +552,8 @@
         "src": "assets/projects/hackergf-ai/gallery/03-feature.svg",
         "alt": "Hacker gf AI — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "hackergf-ai"
   },
   {
     "id": "onyx",
@@ -583,7 +594,8 @@
         "src": "assets/projects/onyx/gallery/03-feature.svg",
         "alt": "Onyx — Onion Web — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "onyx"
   },
   {
     "id": "study-planner-apk",
@@ -627,7 +639,8 @@
         "src": "assets/projects/study-planner-apk/gallery/03-feature.svg",
         "alt": "Study Planner — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "study-planner-apk"
   },
   {
     "id": "cinematic-architecture-web",
@@ -671,7 +684,8 @@
         "src": "assets/projects/cinematic-architecture-web/gallery/03-feature.svg",
         "alt": "The Glass Pavilion — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "cinematic-architecture-web"
   },
   {
     "id": "arven",
@@ -715,7 +729,8 @@
         "src": "assets/projects/arven/gallery/03-feature.svg",
         "alt": "ARVEN Residences — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "arven"
   },
   {
     "id": "stele-residences",
@@ -758,7 +773,8 @@
         "src": "assets/projects/stele-residences/gallery/03-feature.svg",
         "alt": "STELE Residences — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "stele-residences"
   },
   {
     "id": "rise-of-ai",
@@ -802,7 +818,8 @@
         "src": "assets/projects/rise-of-ai/gallery/03-feature.svg",
         "alt": "Rise of AI — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "rise-of-ai"
   },
   {
     "id": "active-theory",
@@ -845,7 +862,8 @@
         "src": "assets/projects/active-theory/gallery/03-feature.svg",
         "alt": "Active Theory V6 Rebuild — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "active-theory"
   },
   {
     "id": "sketchbook",
@@ -888,7 +906,8 @@
         "src": "assets/projects/sketchbook/gallery/03-feature.svg",
         "alt": "Sketchbook — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "sketchbook"
   },
   {
     "id": "blog",
@@ -932,7 +951,8 @@
         "src": "assets/projects/blog/gallery/03-feature.svg",
         "alt": "Security & Engineering Notes — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "blog"
   },
   {
     "id": "personal-website-test",
@@ -974,7 +994,8 @@
         "src": "assets/projects/personal-website-test/gallery/03-feature.svg",
         "alt": "Personal Website Demo — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "personal-website-test"
   },
   {
     "id": "claude-personal-website",
@@ -1017,7 +1038,8 @@
         "src": "assets/projects/claude-personal-website/gallery/03-feature.svg",
         "alt": "Personal Website — Design Concept — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "claude-personal-website"
   },
   {
     "id": "create-present-website",
@@ -1060,7 +1082,8 @@
         "src": "assets/projects/create-present-website/gallery/03-feature.svg",
         "alt": "Create Present — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "create-present-website"
   },
   {
     "id": "birthday-present-preview",
@@ -1103,7 +1126,8 @@
         "src": "assets/projects/birthday-present-preview/gallery/03-feature.svg",
         "alt": "Birthday Present Preview — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "birthday-present-preview"
   },
   {
     "id": "travel-weather-planner",
@@ -1143,7 +1167,8 @@
         "src": "assets/projects/travel-weather-planner/gallery/03-feature.svg",
         "alt": "Travel & Weather Planner — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "-Travel-Weather-Planner-Smart-Commute-Decision-System-Python-"
   },
   {
     "id": "Employee-profile-generator",
@@ -1183,7 +1208,8 @@
         "src": "assets/projects/Employee-profile-generator/gallery/03-feature.svg",
         "alt": "Employee Profile Generator — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "Employee-profile-generator"
   },
   {
     "id": "Report-card-printer",
@@ -1224,7 +1250,8 @@
         "src": "assets/projects/Report-card-printer/gallery/03-feature.svg",
         "alt": "Report Card Printer — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "Report-card-printer"
   },
   {
     "id": "Movie-Ticket-Booking-Calculator-Python-",
@@ -1264,7 +1291,8 @@
         "src": "assets/projects/Movie-Ticket-Booking-Calculator-Python-/gallery/03-feature.svg",
         "alt": "Movie Ticket Booking Calculator — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "Movie-Ticket-Booking-Calculator-Python-"
   },
   {
     "id": "awesome",
@@ -1303,7 +1331,8 @@
         "src": "assets/projects/awesome/gallery/03-feature.svg",
         "alt": "Awesome Lists — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "awesome"
   },
   {
     "id": "js.org",
@@ -1342,7 +1371,8 @@
         "src": "assets/projects/js.org/gallery/03-feature.svg",
         "alt": "JS.ORG — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "js.org"
   },
   {
     "id": "itssourov13",
@@ -1385,6 +1415,7 @@
         "src": "assets/projects/itssourov13/gallery/03-feature.svg",
         "alt": "GitHub Profile & Project Index — Technology and status promotional graphic"
       }
-    ]
+    ],
+    "githubRepo": "itssourov13"
   }
 ]
