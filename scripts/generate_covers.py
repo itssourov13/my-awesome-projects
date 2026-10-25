@@ -218,12 +218,24 @@ def main() -> None:
     artwork = load_artwork_map()
     for index, project in enumerate(projects, 1):
         project_id = str(project["id"])
-        source = ROOT / "assets" / "projects" / project_id / "source" / "cover.jpg"
+        provenance = artwork.get(project_id, {})
+        default_source = f"assets/projects/{project_id}/source/cover.jpg"
+        source_rel = str(provenance.get("imagePath") or default_source)
+        source_part = Path(source_rel)
+        if source_part.is_absolute() or ".." in source_part.parts:
+            raise ValueError(f"Unsafe artwork source path for {project_id}: {source_rel}")
+        source = ROOT / source_part
+
         if source.is_file() and project_id in artwork:
-            output = ROOT / "assets" / "projects" / project_id / "cover.webp"
-            raster_cover(project, source, output, artwork[project_id])
+            default_output = f"assets/projects/{project_id}/cover.webp"
+            output_rel = str(provenance.get("coverOutput") or default_output)
+            output_part = Path(output_rel)
+            if output_part.is_absolute() or ".." in output_part.parts or not output_rel.startswith("assets/projects/"):
+                raise ValueError(f"Unsafe cover output path for {project_id}: {output_rel}")
+            output = ROOT / output_part
+            raster_cover(project, source, output, provenance)
             (ROOT / "assets" / "projects" / project_id / "cover.svg").unlink(missing_ok=True)
-            project["cover"] = str(output.relative_to(ROOT))
+            project["cover"] = output_rel
         else:
             target = ROOT / "assets" / "projects" / project_id / "cover.svg"
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -238,7 +250,12 @@ def main() -> None:
     favicon = brand / "favicon.svg"
     if not favicon.exists():
         favicon.write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="15" fill="#101114"/><rect x="13" y="34" width="9" height="16" rx="3" fill="#c6f56c" opacity=".65"/><rect x="27" y="16" width="9" height="34" rx="3" fill="#c6f56c"/><rect x="41" y="25" width="9" height="25" rx="3" fill="#c6f56c" opacity=".8"/></svg>', encoding="utf-8")
-    print(f"Generated high-resolution image-backed covers for {sum((ROOT / 'assets/projects' / str(p['id']) / 'source' / 'cover.jpg').is_file() and p['id'] in artwork for p in projects)} projects; vector fallback retained for entries without collected artwork.")
+    generated = sum(
+        (ROOT / str(artwork.get(str(project["id"]), {}).get("imagePath") or f"assets/projects/{project['id']}/source/cover.jpg")).is_file()
+        and str(project["id"]) in artwork
+        for project in projects
+    )
+    print(f"Generated high-resolution image-backed covers for {generated} projects; vector fallback retained for entries without collected artwork.")
 
 
 if __name__ == "__main__":

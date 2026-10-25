@@ -22,7 +22,7 @@
 
 <table width="100%">
 <tr>
-<td width="58%" valign="middle"><a href="https://scholarhub-test.vercel.app/"><img src="assets/projects/scholarhub/cover.webp" alt="ScholarHub — project cover artwork" width="100%"></a></td>
+<td width="58%" valign="middle"><a href="https://scholarhub-test.vercel.app/"><img src="assets/projects/scholarhub/scholarhub-banner.webp" alt="ScholarHub — project cover artwork" width="100%"></a></td>
 <td width="42%" valign="middle"><sub><strong>EDTECH · PRODUCT</strong></sub><h3><a href="https://scholarhub-test.vercel.app/">ScholarHub</a></h3><p>A scholarship discovery and application-management platform designed to help students find opportunities and manage application progress.</p><p><code>TypeScript</code> <code>Web</code></p><p><sub>Live preview listed</sub><br><a href="https://scholarhub-test.vercel.app/"><strong>Live preview ↗</strong></a> &nbsp;·&nbsp; <em>Source hidden</em></p></td>
 </tr>
 </table>
@@ -132,7 +132,7 @@
 <td valign="top"><strong><a href="https://claude-personal-web-itssourov13.vercel.app/">Personal Website — Design Concept</a></strong><br><sub>Design concept</sub><br>A premium personal-website design concept exploring editorial positioning, product-design services, and a polished portfolio layout.<br><code>Next.js</code> <code>TypeScript</code> <code>React</code><br><a href="https://claude-personal-web-itssourov13.vercel.app/"><strong>Live preview ↗</strong></a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/claude-personal-website">Public source ↗</a></td>
 </tr>
 <tr>
-<td width="190" valign="top"><a href="https://scholarhub-test.vercel.app/"><img src="assets/projects/scholarhub/cover.webp" alt="ScholarHub — project cover artwork" width="190"></a></td>
+<td width="190" valign="top"><a href="https://scholarhub-test.vercel.app/"><img src="assets/projects/scholarhub/scholarhub-banner.webp" alt="ScholarHub — project cover artwork" width="190"></a></td>
 <td valign="top"><strong><a href="https://scholarhub-test.vercel.app/">ScholarHub</a></strong> ★<br><sub>Live preview listed</sub><br>A scholarship discovery and application-management platform designed to help students find opportunities and manage application progress.<br><code>TypeScript</code> <code>Web</code><br><a href="https://scholarhub-test.vercel.app/"><strong>Live preview ↗</strong></a> &nbsp;·&nbsp; <em>Source hidden</em></td>
 </tr>
 </table>
