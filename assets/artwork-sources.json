@@ -277,11 +277,12 @@
     "id": "scholarhub",
     "title": "ScholarHub",
     "pageUrl": "https://scholarhub-test.vercel.app/",
-    "imageUrl": "https://scholarhub-test.vercel.app/og-image.png",
-    "kind": "project-page-open-graph",
+    "kind": "user-provided-banner",
     "imagePath": "assets/projects/scholarhub/source/cover.jpg",
-    "pageTitle": "Find International Scholarships for Bangladeshi Students",
-    "status": "downloaded"
+    "status": "downloaded",
+    "notes": [
+      "Owner-provided banner from project root: scholarhub-banner.png."
+    ]
   },
   {
     "id": "sketchbook",

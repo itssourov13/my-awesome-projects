@@ -66,6 +66,13 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(project.get("sourceUrl", ""), "")
         self.assertEqual(project["liveUrl"], "https://scholarhub-test.vercel.app/")
 
+    def test_scholarhub_cover_uses_owner_provided_banner_source(self):
+        sources = json.loads((ROOT / "assets/artwork-sources.json").read_text(encoding="utf-8"))
+        source = next(item for item in sources if item["id"] == "scholarhub")
+        self.assertEqual(source["kind"], "user-provided-banner")
+        self.assertEqual(source["imagePath"], "assets/projects/scholarhub/source/cover.jpg")
+        self.assertTrue((ROOT / source["imagePath"]).is_file())
+
     def test_private_vulnerable_lab_has_no_public_preview_link(self):
         project = next(item for item in PROJECTS if item["id"] == "personal-website-pentest")
         self.assertEqual(project.get("liveUrl", ""), "")

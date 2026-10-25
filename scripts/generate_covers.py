@@ -8,7 +8,7 @@ import math
 import re
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont, ImageOps
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 PALETTES = {
@@ -117,7 +117,18 @@ def raster_cover(project: dict, image_path: Path, out_path: Path, provenance: di
     palette = PALETTES.get(project.get("category", "Web Apps"), PALETTES["Web Apps"])
     c1, c2, accent, accent2 = palette
     with Image.open(image_path) as src:
-        image = ImageOps.fit(src.convert("RGB"), (1200, 700), method=Image.Resampling.LANCZOS, centering=(0.54, 0.42))
+        original = src.convert("RGB")
+        if provenance.get("kind") == "user-provided-banner":
+            # Preserve the supplied banner in full; use a softened, darkened fill
+            # behind it to meet the gallery's 1200x700 cover ratio without cropping text.
+            image = ImageOps.fit(original, (1200, 700), method=Image.Resampling.LANCZOS)
+            image = ImageEnhance.Brightness(image.filter(ImageFilter.GaussianBlur(radius=24))).enhance(0.52)
+            foreground = ImageOps.contain(original, (1200, 700), method=Image.Resampling.LANCZOS)
+            image.paste(foreground, ((1200 - foreground.width) // 2, (700 - foreground.height) // 2))
+            out_path.parent.mkdir(parents=True, exist_ok=True)
+            image.save(out_path, "WEBP", quality=94, method=6)
+            return
+        image = ImageOps.fit(original, (1200, 700), method=Image.Resampling.LANCZOS, centering=(0.54, 0.42))
     image = add_gradient(image, palette)
     draw = ImageDraw.Draw(image, "RGBA")
 
