@@ -1,0 +1,33 @@
+{
+  "id": "passhunter",
+  "title": "PassHunter",
+  "eyebrow": "SECURITY RESEARCH · PYTHON",
+  "category": "Cybersecurity",
+  "description": "A deterministic password-pattern candidate generator for authorized security assessments, CTFs, and lab research.",
+  "stack": [
+    "Python",
+    "CLI",
+    "Standard library"
+  ],
+  "sourceAccess": "public",
+  "sourceUrl": "https://github.com/itssourov13/passhunter",
+  "liveUrl": "",
+  "status": "Active development",
+  "updated": "2026-08-13",
+  "cover": "popular/public/passhunter/assets/cover.webp",
+  "coverAlt": "PassHunter project cover artwork",
+  "gallery": [
+    {
+      "src": "popular/public/passhunter/assets/gallery/01-feature.webp",
+      "alt": "PassHunter overview artwork"
+    },
+    {
+      "src": "popular/public/passhunter/assets/gallery/02-feature.webp",
+      "alt": "PassHunter feature highlights artwork"
+    },
+    {
+      "src": "popular/public/passhunter/assets/gallery/03-feature.webp",
+      "alt": "PassHunter technology and status artwork"
+    }
+  ]
+}

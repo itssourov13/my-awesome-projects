@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "projects.json"
+      - "popular/**"
       - "index.html"
       - "styles.css"
       - "app.js"

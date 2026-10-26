@@ -15,6 +15,10 @@ Private projects are deliberately **not** enumerated by the automatic public-rep
 7. Set liveUrl only when anonymous access and deployment safety are verified. Source visibility and preview visibility are separate decisions.
 8. Regenerate the README, covers, feature panels and catalog docs; run the test suite; then commit and push to main.
 
+## Popular section (separate manual data)
+
+For the manually curated Popular section, use `popular/private/<project-id>/project.json` and keep approved cover/gallery assets in that same project folder. Register it in `popular/index.json` with `visibility` set to `private`. Include only public-facing title, description, stack, local asset paths and the approved live preview. Do not add a private repository URL, repository identifier, `sourceUrl`, or source-access metadata. Public entries live under `popular/public/<project-id>/`; the scheduled repository sync does not populate either Popular subfolder.
+
 ## Safe entry shape
 
 ~~~json

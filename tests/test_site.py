@@ -40,6 +40,18 @@ class SiteContractTests(unittest.TestCase):
             with self.subTest(needle=needle):
                 self.assertIn(needle, footer)
 
+    def test_popular_section_precedes_selected_work_and_is_readme_first(self):
+        self.assertLess(HTML.index('<section id="popular"'), HTML.index('<section id="featured"'))
+        self.assertIn('href="#popular" data-spy="popular"', HTML)
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertLess(readme.index("## Popular"), readme.index("## Selected work"))
+        self.assertIn('fetch("popular/index.json"', JS)
+        popular_markup = readme.split("## Popular", 1)[1].split("## Selected work", 1)[0]
+        self.assertIn("https://github.com/itssourov13/passhunter", popular_markup)
+        self.assertIn("https://scholarhub-test.vercel.app/", popular_markup)
+        scholarhub_cell = popular_markup.split("ScholarHub", 1)[1]
+        self.assertNotIn("github.com/", scholarhub_cell.lower())
+
     def test_nav_and_footer_anchor_targets_exist(self):
         for anchor in ("featured", "project-index", "about-index", "main", "top"):
             with self.subTest(anchor=anchor):

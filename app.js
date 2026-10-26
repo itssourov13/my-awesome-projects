@@ -13,6 +13,8 @@
     heroLive: $("#hero-live"),
     heroShowcase: $("#hero-showcase"),
     navCount: $("#nav-project-count"),
+    popularGrid: $("#popular-grid"),
+    popularError: $("#popular-error"),
     featured: $("#featured-grid"),
     grid: $("#project-grid"),
     search: $("#project-search"),
@@ -266,6 +268,99 @@
   }
 
   /* ---------- Rendering ---------- */
+
+  function createPopularCard(project, visibility, index) {
+    const isPublic = visibility === "public";
+    const id = String(project.id || "");
+    const basePath = "popular/" + visibility + "/" + id + "/";
+    const candidateCover = localAsset(project.cover);
+    const cover = candidateCover && candidateCover.startsWith(basePath) ? candidateCover : "";
+    const live = isSafeHttps(project.liveUrl) ? project.liveUrl : "";
+    const source = isPublic && project.sourceAccess === "public" && isGithubUrl(project.sourceUrl) ? project.sourceUrl : "";
+    const primaryUrl = live || source;
+    const title = esc(project.title || "Untitled project");
+    const image = cover
+      ? '<img src="' + esc(cover) + '" alt="' + esc(project.coverAlt || (project.title + " cover artwork")) + '" loading="eager" decoding="async" width="1200" height="700">'
+      : "";
+    const coverMarkup = primaryUrl
+      ? '<a class="project-cover" href="' + esc(primaryUrl) + '" target="_blank" rel="noopener noreferrer" aria-label="Open ' + title + '">' + image + '</a>'
+      : '<div class="project-cover" aria-hidden="true">' + image + '</div>';
+    const tags = (Array.isArray(project.stack) ? project.stack : []).slice(0, 5)
+      .filter((tag) => typeof tag === "string" && tag.trim())
+      .map((tag) => '<span class="tech-tag">' + esc(tag) + '</span>').join("");
+    const label = isPublic ? "Public project" : "Private project";
+    const status = live
+      ? '<span class="status-pill status-live">Live preview</span>'
+      : '<span class="status-pill ' + statusClass(project) + '">' + esc(project.status || "In development") + '</span>';
+    const actions = (live ? externalLink(live, "Live preview", "card-action live") : "") +
+      (source ? externalLink(source, "Public source", "card-action") : "");
+    const html =
+      '<article class="project-card popular-card" data-popular-card="' + esc(id) + '">' +
+      coverMarkup +
+      '<div class="card-body">' +
+      '<p class="spotlight-eyebrow">' + esc(project.eyebrow || project.category || "Project") + '</p>' +
+      '<div class="card-meta"><span class="source-pill' + (isPublic ? "" : " private") + '">' + label + '</span>' + status + '</div>' +
+      '<div class="card-title-row"><h3 class="card-title">' + title + '</h3><span class="card-category">' + esc(project.category || "") + '</span></div>' +
+      '<p class="card-description">' + esc(project.description || "A project in the Popular collection.") + '</p>' +
+      '<div class="tag-row">' + tags + '</div>' +
+      '<div class="card-footer">' + (actions || '<span class="status-pill">No public link listed</span>') + '</div>' +
+      '</div></article>';
+    const template = document.createElement("template");
+    template.innerHTML = html.trim();
+    const card = template.content.firstElementChild;
+    if (card) card.style.setProperty("--i", String(index));
+    return card;
+  }
+
+  async function initPopular() {
+    if (!els.popularGrid) return;
+    try {
+      const response = await fetch("popular/index.json", { cache: "no-store" });
+      if (!response.ok) throw new Error("Popular index returned HTTP " + response.status);
+      const index = await response.json();
+      if (!index || !Array.isArray(index.projects)) throw new Error("Popular index must contain a projects array.");
+      const entries = index.projects;
+      const loaded = await Promise.all(entries.map(async (entry) => {
+        const visibility = entry && entry.visibility;
+        const file = entry && entry.file;
+        if (!["public", "private"].includes(visibility) ||
+            typeof file !== "string" ||
+            !/^(public|private)\/[a-z0-9-]+\/project\.json$/.test(file) ||
+            !file.startsWith(visibility + "/")) {
+          throw new Error("Popular index contains an invalid project entry.");
+        }
+        const itemResponse = await fetch("popular/" + file, { cache: "no-store" });
+        if (!itemResponse.ok) throw new Error("Popular project returned HTTP " + itemResponse.status);
+        const project = await itemResponse.json();
+        if (!project || typeof project !== "object" || !project.id || !project.title || !project.description) {
+          throw new Error("Popular project metadata is incomplete.");
+        }
+        if (file !== visibility + "/" + project.id + "/project.json") {
+          throw new Error("Popular project path and id do not match.");
+        }
+        if (visibility === "private" && (project.sourceUrl || project.sourceAccess === "public")) {
+          throw new Error("Private Popular entries must not contain source-repository fields.");
+        }
+        if (visibility === "public" && (project.sourceAccess !== "public" || !isGithubUrl(project.sourceUrl))) {
+          throw new Error("Public Popular entries need an approved public GitHub source URL.");
+        }
+        if (project.liveUrl && !isSafeHttps(project.liveUrl)) throw new Error("Popular live URLs must use HTTPS.");
+        const cover = localAsset(project.cover);
+        if (!cover || !cover.startsWith("popular/" + visibility + "/" + project.id + "/")) {
+          throw new Error("Popular cover must stay inside its own project folder.");
+        }
+        return { project, visibility };
+      }));
+      if (!loaded.length) throw new Error("Popular index contains no projects.");
+      els.popularGrid.replaceChildren(...loaded.map((entry, index) => createPopularCard(entry.project, entry.visibility, index)));
+      staggerIn(els.popularGrid);
+      els.popularError.hidden = true;
+    } catch (error) {
+      console.error("Unable to load Popular projects:", error);
+      els.popularGrid.replaceChildren();
+      if (els.popularError) els.popularError.hidden = false;
+    }
+  }
 
   function renderFeatured() {
     const featured = sortItems(state.items.filter(FLAGS.featured.test), "featured").slice(0, FEATURED_LIMIT);
@@ -636,7 +731,7 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => { if (entry.isIntersecting) setActive(entry.target.id); });
     }, { rootMargin: "-35% 0px -60% 0px" });
-    ["featured", "project-index", "about-index"].forEach((id) => {
+    ["popular", "featured", "project-index", "about-index"].forEach((id) => {
       const section = document.getElementById(id);
       if (section) observer.observe(section);
     });
@@ -817,5 +912,6 @@
   initTheme();
   bindEvents();
   initScrollSpy();
+  initPopular();
   init();
 })();

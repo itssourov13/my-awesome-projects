@@ -10,6 +10,28 @@ PROJECTS = json.loads((ROOT / "projects.json").read_text(encoding="utf-8"))
 
 
 class CatalogTests(unittest.TestCase):
+    def test_popular_manifest_has_requested_manual_entries_and_order(self):
+        manifest = json.loads((ROOT / "popular/index.json").read_text(encoding="utf-8"))
+        entries = manifest["projects"]
+        self.assertEqual(
+            [(entry["visibility"], entry["file"]) for entry in entries],
+            [("public", "public/passhunter/project.json"), ("private", "private/scholarhub/project.json")],
+        )
+        public = json.loads((ROOT / "popular/public/passhunter/project.json").read_text(encoding="utf-8"))
+        private = json.loads((ROOT / "popular/private/scholarhub/project.json").read_text(encoding="utf-8"))
+        self.assertEqual(public["sourceUrl"], "https://github.com/itssourov13/passhunter")
+        self.assertEqual(public["cover"], "popular/public/passhunter/assets/cover.webp")
+        self.assertEqual(private["liveUrl"], "https://scholarhub-test.vercel.app/")
+        self.assertEqual(private["cover"], "popular/private/scholarhub/assets/cover.webp")
+        for key in ("sourceUrl", "githubRepo", "sourceAccess"):
+            self.assertNotIn(key, private)
+        for project in (public, private):
+            self.assertTrue((ROOT / project["cover"]).is_file())
+            self.assertGreaterEqual(len(project["gallery"]), 1)
+            for item in project["gallery"]:
+                self.assertTrue((ROOT / item["src"]).is_file())
+                self.assertGreaterEqual(len(item["alt"].strip()), 6)
+
     def test_project_ids_are_unique(self):
         ids = [project["id"] for project in PROJECTS]
         self.assertEqual(len(ids), len(set(ids)))

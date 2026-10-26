@@ -37,6 +37,7 @@
         <span class="brand-copy"><strong>MY AWESOME PROJECTS</strong><small>THE WORK INDEX / PORTFOLIO</small></span>
       </a>
       <nav id="site-nav" class="header-nav" aria-label="Main navigation">
+        <a href="#popular" data-spy="popular">Popular</a>
         <a href="#featured" data-spy="featured">Selected work</a>
         <a href="#project-index" data-spy="project-index">Project index <span id="nav-project-count" class="nav-count">—</span></a>
         <a href="#about-index" data-spy="about-index">About</a>
@@ -76,6 +77,18 @@
         <div class="showcase-skeleton" aria-hidden="true"><span></span><span></span><span></span></div>
       </div>
       <div class="hero-bottom-line" aria-hidden="true"><span>CYBERSECURITY</span><i></i><span>ENGINEERING</span><i></i><span>CREATIVE COMPUTING</span><i></i><span>PRODUCT EXPERIMENTS</span></div>
+    </section>
+
+    <section id="popular" class="popular-section" aria-labelledby="popular-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE WEEKLY SPOTLIGHT</p><h2 id="popular-title">Popular<span class="heading-period">.</span></h2></div>
+        <p class="section-aside">A hand-picked collection of projects, updated manually. Public source links and private-project previews are shown independently.</p>
+      </div>
+      <div id="popular-grid" class="popular-grid" aria-live="polite">
+        <div class="loading-card"><span class="loading-shape"></span><span class="loading-line"></span><span class="loading-line short"></span></div>
+        <div class="loading-card"><span class="loading-shape"></span><span class="loading-line"></span><span class="loading-line short"></span></div>
+      </div>
+      <p id="popular-error" class="popular-error" role="status" hidden>Popular projects could not load. Please refresh the page.</p>
     </section>
 
     <section id="featured" class="featured-section" aria-labelledby="featured-title">
@@ -185,6 +198,7 @@
         <nav class="footer-col" aria-label="Footer: explore">
           <h2>Explore</h2>
           <ul>
+            <li><a href="#popular">Popular</a></li>
             <li><a href="#featured">Selected work</a></li>
             <li><a href="#project-index">Project index</a></li>
             <li><a href="#about-index">About this index</a></li>

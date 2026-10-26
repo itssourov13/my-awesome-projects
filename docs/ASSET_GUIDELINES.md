@@ -14,6 +14,10 @@ The showcase uses high-resolution public-web artwork as a visual starting point,
 - An external public reference is clearly labeled in the generated design; it is used as a visual reference, not presented as a screenshot of the project itself.
 - The files are stored locally in the repository. The website does not need to fetch image assets from third-party hosts at runtime, which avoids extra runtime requests and hotlink dependency.
 
+## Popular artwork copies
+
+Popular has independent copies of selected covers/gallery visuals under `popular/public/<project-id>/assets/` or `popular/private/<project-id>/assets/`. Keep each project's paths local to its own folder. Do not make Popular depend on image paths in the main catalog; later catalog changes must not alter the curated section.
+
 ## Source and quality workflow
 
 1. Run python3 scripts/collect_web_artwork.py to refresh public artwork sources. Use --only id1,id2 for a targeted refresh, or --missing to collect only missing source images. Entries marked user-provided-banner are preserved by the collector and are not silently replaced with page artwork.

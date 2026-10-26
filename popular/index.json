@@ -1,0 +1,13 @@
+{
+  "description": "Manually curated Popular section. Keep this order manual; public sync never rewrites these entries.",
+  "projects": [
+    {
+      "visibility": "public",
+      "file": "public/passhunter/project.json"
+    },
+    {
+      "visibility": "private",
+      "file": "private/scholarhub/project.json"
+    }
+  ]
+}

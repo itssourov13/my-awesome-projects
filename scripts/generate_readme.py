@@ -14,6 +14,7 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "projects.json"
+POPULAR_INDEX = ROOT / "popular" / "index.json"
 README = ROOT / "README.md"
 OWNER = "itssourov13"
 SITE_URL = "https://itssourov13.github.io/my-awesome-projects/"
@@ -60,6 +61,104 @@ def safe_asset(value: object) -> str:
     except ValueError:
         return ""
     return value if full.is_file() else ""
+
+
+def load_popular_projects() -> list[dict]:
+    """Load manually curated Popular entries without syncing or rewriting their source files."""
+    try:
+        index = json.loads(POPULAR_INDEX.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ValueError(f"Could not read popular/index.json: {exc}") from exc
+    entries = index.get("projects") if isinstance(index, dict) else None
+    if not isinstance(entries, list):
+        raise ValueError("popular/index.json must contain a projects array.")
+
+    projects: list[dict] = []
+    seen: set[str] = set()
+    for entry in entries:
+        if not isinstance(entry, dict):
+            raise ValueError("Each Popular manifest entry must be an object.")
+        visibility = entry.get("visibility")
+        file = entry.get("file")
+        match = re.fullmatch(r"(public|private)/([a-z0-9-]+)/project\.json", str(file or ""))
+        if visibility not in {"public", "private"} or not match or match.group(1) != visibility:
+            raise ValueError(f"Invalid Popular manifest entry: {entry!r}")
+        project_path = ROOT / "popular" / str(file)
+        try:
+            project = json.loads(project_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            raise ValueError(f"Could not read Popular project {file}: {exc}") from exc
+        if not isinstance(project, dict):
+            raise ValueError(f"Popular project {file} must be a JSON object.")
+        project_id = project.get("id")
+        if not isinstance(project_id, str) or project_id != match.group(2):
+            raise ValueError(f"Popular project id does not match its path: {file}")
+        if project_id in seen:
+            raise ValueError(f"Duplicate Popular project id: {project_id}")
+        seen.add(project_id)
+        for key in ("title", "description", "category", "cover"):
+            if not isinstance(project.get(key), str) or not str(project[key]).strip():
+                raise ValueError(f"Popular project {project_id} needs a non-empty {key}.")
+        if not safe_asset(project.get("cover")):
+            raise ValueError(f"Popular project {project_id} has a missing or unsafe cover.")
+        live = project.get("liveUrl", "")
+        if live and not safe_https(live):
+            raise ValueError(f"Popular project {project_id} liveUrl must use HTTPS.")
+        gallery = project.get("gallery", [])
+        if not isinstance(gallery, list):
+            raise ValueError(f"Popular project {project_id} gallery must be an array.")
+        for item in gallery:
+            if not isinstance(item, dict) or not safe_asset(item.get("src")):
+                raise ValueError(f"Popular project {project_id} has a missing or unsafe gallery asset.")
+        if visibility == "private":
+            if project.get("sourceUrl") or project.get("githubRepo") or project.get("sourceAccess") == "public":
+                raise ValueError(f"Private Popular project {project_id} must not include source-repository fields.")
+            for key in ("title", "description", "eyebrow", "category"):
+                if "github.com/" in str(project.get(key, "")).lower():
+                    raise ValueError(f"Private Popular project {project_id} contains a repository URL in {key}.")
+        else:
+            if project.get("sourceAccess") != "public" or not safe_source(project):
+                raise ValueError(f"Public Popular project {project_id} needs a public GitHub source URL.")
+        project = dict(project)
+        project["visibility"] = visibility
+        projects.append(project)
+    return projects
+
+
+def popular_actions(project: dict) -> str:
+    links: list[str] = []
+    live = safe_https(project.get("liveUrl"))
+    source = safe_source(project) if project.get("visibility") == "public" else ""
+    if live:
+        links.append(f'<a href="{h(live)}"><strong>Live preview ↗</strong></a>')
+    if source:
+        links.append(f'<a href="{h(source)}">Public source ↗</a>')
+    return " &nbsp;·&nbsp; ".join(links) if links else "<em>No public link listed</em>"
+
+
+def popular_cell(project: dict) -> str:
+    visibility = str(project.get("visibility") or "public")
+    label = "PRIVATE PROJECT" if visibility == "private" else "PUBLIC PROJECT"
+    return (
+        '<td width="50%" valign="top">'
+        f'{cover_markup(project, "100%")}'
+        f'<br><sub><strong>{h(label)}</strong></sub>'
+        f'<h3>{title_markup(project)}</h3>'
+        f'<p>{h(project.get("description") or "A project in the Popular collection.")}</p>'
+        f'<p>{stack_chips(project, 5)}</p>'
+        f'<p>{status_line(project)}<br>{popular_actions(project)}</p>'
+        '</td>'
+    )
+
+
+def popular_grid(projects: list[dict]) -> str:
+    rows: list[str] = []
+    for index in range(0, len(projects), 2):
+        cells = [popular_cell(project) for project in projects[index:index + 2]]
+        if len(cells) == 1:
+            cells.append('<td width="50%"></td>')
+        rows.append("<tr>\n" + "\n".join(cells) + "\n</tr>")
+    return '<table width="100%">\n' + "\n".join(rows) + "\n</table>"
 
 
 def external_actions(project: dict) -> str:
@@ -179,12 +278,15 @@ def stat_cell(value: int, label: str) -> str:
     return f'<td align="center" width="25%"><strong>{value}</strong><br><sub>{label}</sub></td>'
 
 
-def build_readme(projects: list[dict]) -> str:
+def build_readme(projects: list[dict], popular_projects: list[dict] | None = None) -> str:
     if any(not isinstance(p, dict) for p in projects):
         raise ValueError("projects.json must contain only project objects.")
     ids = [p.get("id") for p in projects]
     if len(ids) != len(set(ids)):
         raise ValueError("Project IDs must be unique before README generation.")
+
+    if popular_projects is None:
+        popular_projects = load_popular_projects()
 
     categories: dict[str, list[dict]] = defaultdict(list)
     for project in projects:
@@ -215,7 +317,7 @@ def build_readme(projects: list[dict]) -> str:
         "",
         "<p><strong>A curated archive of software, security tooling, product experiments and creative computing.</strong></p>",
         f'<p><a href="{h(SITE_URL)}"><strong>Interactive showcase ↗</strong></a> &nbsp;·&nbsp; <a href="{h(PROFILE_URL)}">GitHub profile ↗</a></p>',
-        '<p><sub><a href="#selected-work">Selected work</a> &nbsp;·&nbsp; <a href="#the-archive">The archive</a> &nbsp;·&nbsp; <a href="#source-privacy--live-preview-policy">Source &amp; preview policy</a></sub></p>',
+        '<p><sub><a href="#popular">Popular</a> &nbsp;·&nbsp; <a href="#selected-work">Selected work</a> &nbsp;·&nbsp; <a href="#the-archive">The archive</a> &nbsp;·&nbsp; <a href="#source-privacy--live-preview-policy">Source &amp; preview policy</a></sub></p>',
         "",
         "<table>",
         "<tr>",
@@ -231,6 +333,8 @@ def build_readme(projects: list[dict]) -> str:
         "A **live preview** and a **public source** are separate things: each link appears only when it has been approved for public visitors.",
         "",
     ]
+    if popular_projects:
+        lines.extend(["## Popular", "", popular_grid(popular_projects), ""])
     if featured:
         lines.extend(["## Selected work", "", lead_card(featured[0]), ""])
         if len(featured) > 1:
