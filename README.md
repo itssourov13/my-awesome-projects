@@ -11,7 +11,7 @@
 <td align="center" width="25%"><strong>32</strong><br><sub>PROJECTS</sub></td>
 <td align="center" width="25%"><strong>8</strong><br><sub>DISCIPLINES</sub></td>
 <td align="center" width="25%"><strong>31</strong><br><sub>PUBLIC SOURCES</sub></td>
-<td align="center" width="25%"><strong>14</strong><br><sub>LIVE PREVIEWS</sub></td>
+<td align="center" width="25%"><strong>15</strong><br><sub>LIVE PREVIEWS</sub></td>
 </tr>
 </table>
 </div>
@@ -22,8 +22,8 @@
 
 <table width="100%">
 <tr>
-<td width="58%" valign="middle"><a href="https://github.com/itssourov13/personal-website-pentest"><img src="assets/projects/personal-website-pentest/cover.webp" alt="Sourov Works — Pentest Lab — project cover artwork" width="100%"></a></td>
-<td width="42%" valign="middle"><sub><strong>APPLICATION SECURITY · LAB</strong></sub><h3><a href="https://github.com/itssourov13/personal-website-pentest">Sourov Works — Pentest Lab</a></h3><p>A deliberately vulnerable full-stack web application for hands-on penetration testing, vulnerability research, and security-assessment practice.</p><p><code>Next.js</code> <code>TypeScript</code> <code>PostgreSQL / PGlite</code> <code>Playwright</code></p><p><sub>Security lab · isolated use only</sub><br><a href="https://github.com/itssourov13/personal-website-pentest">Public source ↗</a></p></td>
+<td width="58%" valign="middle"><a href="https://sourovworks-itssourov13.vercel.app/"><img src="assets/projects/personal-website-pentest/cover.webp" alt="Sourov Works — Pentest Lab — project cover artwork" width="100%"></a></td>
+<td width="42%" valign="middle"><sub><strong>APPLICATION SECURITY · LAB</strong></sub><h3><a href="https://sourovworks-itssourov13.vercel.app/">Sourov Works — Pentest Lab</a></h3><p>A deliberately vulnerable full-stack web application for hands-on penetration testing, vulnerability research, and security-assessment practice.</p><p><code>Next.js</code> <code>TypeScript</code> <code>PostgreSQL / PGlite</code> <code>Playwright</code></p><p><sub>Security lab · isolated use only</sub><br><a href="https://sourovworks-itssourov13.vercel.app/"><strong>Live preview ↗</strong></a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/personal-website-pentest">Public source ↗</a></p></td>
 </tr>
 </table>
 
@@ -74,8 +74,8 @@
 <td valign="top"><strong><a href="https://github.com/itssourov13/passhunter">PassHunter</a></strong><br><sub>Active development</sub><br>A deterministic password-pattern candidate generator for authorized security assessments, CTFs, and lab research.<br><code>Python</code> <code>CLI</code> <code>Standard library</code><br><a href="https://github.com/itssourov13/passhunter">Public source ↗</a></td>
 </tr>
 <tr>
-<td width="190" valign="top"><a href="https://github.com/itssourov13/personal-website-pentest"><img src="assets/projects/personal-website-pentest/cover.webp" alt="Sourov Works — Pentest Lab — project cover artwork" width="190"></a></td>
-<td valign="top"><strong><a href="https://github.com/itssourov13/personal-website-pentest">Sourov Works — Pentest Lab</a></strong> ★<br><sub>Security lab · isolated use only</sub><br>A deliberately vulnerable full-stack web application for hands-on penetration testing, vulnerability research, and security-assessment practice.<br><code>Next.js</code> <code>TypeScript</code> <code>PostgreSQL / PGlite</code> <code>Playwright</code><br><a href="https://github.com/itssourov13/personal-website-pentest">Public source ↗</a></td>
+<td width="190" valign="top"><a href="https://sourovworks-itssourov13.vercel.app/"><img src="assets/projects/personal-website-pentest/cover.webp" alt="Sourov Works — Pentest Lab — project cover artwork" width="190"></a></td>
+<td valign="top"><strong><a href="https://sourovworks-itssourov13.vercel.app/">Sourov Works — Pentest Lab</a></strong> ★<br><sub>Security lab · isolated use only</sub><br>A deliberately vulnerable full-stack web application for hands-on penetration testing, vulnerability research, and security-assessment practice.<br><code>Next.js</code> <code>TypeScript</code> <code>PostgreSQL / PGlite</code> <code>Playwright</code><br><a href="https://sourovworks-itssourov13.vercel.app/"><strong>Live preview ↗</strong></a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/personal-website-pentest">Public source ↗</a></td>
 </tr>
 <tr>
 <td width="190" valign="top"><a href="https://github.com/itssourov13/VercelStrike"><img src="assets/projects/VercelStrike/cover.webp" alt="VercelStrike — project cover artwork" width="190"></a></td>
@@ -244,7 +244,7 @@ For deliberately vulnerable labs, internal dashboards, or systems containing rea
 <p><a href="https://itssourov13.github.io/my-awesome-projects/"><strong>Explore the full interactive showcase ↗</strong></a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13">GitHub profile ↗</a></p>
 <p><sub><strong>Browse:</strong> <a href="#cybersecurity">Cybersecurity</a>&nbsp;<sub>8</sub> &nbsp;·&nbsp; <a href="#ai--developer-tools">AI &amp; Developer Tools</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#web-apps">Web Apps</a>&nbsp;<sub>5</sub> &nbsp;·&nbsp; <a href="#creative--3d">Creative &amp; 3D</a>&nbsp;<sub>6</sub> &nbsp;·&nbsp; <a href="#mobile-apps">Mobile Apps</a>&nbsp;<sub>1</sub> &nbsp;·&nbsp; <a href="#utilities">Utilities</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#writing--publishing">Writing &amp; Publishing</a>&nbsp;<sub>1</sub> &nbsp;·&nbsp; <a href="#open-source">Open Source</a>&nbsp;<sub>3</sub></sub></p>
 <p><sub><a href="docs/PRIVATE_PROJECTS.md">Private-project policy</a> · <a href="docs/ASSET_GUIDELINES.md">Asset guidelines</a> · <a href="docs/PROJECT_CATALOG.md">Catalog notes</a> · <a href="docs/SITE.md">Website guide</a></sub></p>
-<p><sub>© 2026 itssourov13 · 32 projects · 14 live previews · 31 public sources · Latest catalog update: 2026-10-26</sub></p>
+<p><sub>© 2026 itssourov13 · 32 projects · 15 live previews · 31 public sources · Latest catalog update: 2026-10-26</sub></p>
 <p><sub>Catalog source: projects.json · README generated by scripts/generate_readme.py · Public repository sync never imports private repository metadata.</sub></p>
 </div>
 <!-- GENERATED SHOWCASE:END -->

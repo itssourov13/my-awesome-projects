@@ -79,10 +79,12 @@ class CatalogTests(unittest.TestCase):
         self.assertTrue((ROOT / project["cover"]).is_file())
         self.assertFalse((ROOT / "assets/projects/scholarhub/cover.webp").exists())
 
-    def test_private_vulnerable_lab_has_no_public_preview_link(self):
+    def test_pentest_lab_has_owner_supplied_preview_and_safety_note(self):
         project = next(item for item in PROJECTS if item["id"] == "personal-website-pentest")
-        self.assertEqual(project.get("liveUrl", ""), "")
+        self.assertEqual(project["liveUrl"], "https://sourovworks-itssourov13.vercel.app/")
+        self.assertEqual(project["demoLabel"], "Live preview")
         self.assertIn("deliberately vulnerable", project["description"].lower())
+        self.assertIn("not independently verified", project["demoNote"].lower())
 
     def test_public_artwork_provenance_matches_catalog(self):
         source_path = ROOT / "assets/artwork-sources.json"
