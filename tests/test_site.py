@@ -62,7 +62,7 @@ class SiteContractTests(unittest.TestCase):
         # Button-style SVG badges occupy a shared footer row to keep alignment consistent.
         self.assertEqual(popular_markup.count("<tr>"), 2)
         self.assertIn("https://github.com/itssourov13/passhunter", popular_markup)
-        self.assertIn("https://scholarhub-test.vercel.app/", popular_markup)
+        self.assertIn("https://scholarhub-itssourov13.vercel.app/", popular_markup)
         scholarhub_cell = popular_markup.split("ScholarHub", 1)[1]
         self.assertNotIn("github.com/", scholarhub_cell.lower())
 
