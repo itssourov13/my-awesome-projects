@@ -21,7 +21,7 @@ class CatalogTests(unittest.TestCase):
         private = json.loads((ROOT / "popular/private/scholarhub/project.json").read_text(encoding="utf-8"))
         self.assertEqual(public["sourceUrl"], "https://github.com/itssourov13/passhunter")
         self.assertEqual(public["cover"], "popular/public/passhunter/assets/cover.webp")
-        self.assertEqual(private["liveUrl"], "https://scholarhub-test.vercel.app/")
+        self.assertEqual(private["liveUrl"], "https://scholarhub-itssourov13.vercel.app/")
         self.assertEqual(private["cover"], "popular/private/scholarhub/assets/cover.webp")
         for key in ("sourceUrl", "githubRepo", "sourceAccess"):
             self.assertNotIn(key, private)
@@ -86,7 +86,7 @@ class CatalogTests(unittest.TestCase):
         project = next(item for item in PROJECTS if item["id"] == "scholarhub")
         self.assertEqual(project["sourceAccess"], "hidden")
         self.assertEqual(project.get("sourceUrl", ""), "")
-        self.assertEqual(project["liveUrl"], "https://scholarhub-test.vercel.app/")
+        self.assertEqual(project["liveUrl"], "https://scholarhub-itssourov13.vercel.app/")
 
     def test_scholarhub_cover_uses_owner_banner_and_a_new_asset_path(self):
         sources = json.loads((ROOT / "assets/artwork-sources.json").read_text(encoding="utf-8"))

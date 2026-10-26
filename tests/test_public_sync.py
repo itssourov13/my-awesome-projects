@@ -117,13 +117,13 @@ class PublicSyncTests(unittest.TestCase):
             "title": "ScholarHub",
             "sourceAccess": "hidden",
             "sourceUrl": "",
-            "liveUrl": "https://scholarhub-test.vercel.app/",
+            "liveUrl": "https://scholarhub-itssourov13.vercel.app/",
         }
         projects, stats = sync.sync_catalog([hidden], [repo("scholar-hub")])
         self.assertEqual(len(projects), 1)
         self.assertEqual(projects[0]["sourceAccess"], "hidden")
         self.assertEqual(projects[0]["sourceUrl"], "")
-        self.assertEqual(projects[0]["liveUrl"], "https://scholarhub-test.vercel.app/")
+        self.assertEqual(projects[0]["liveUrl"], "https://scholarhub-itssourov13.vercel.app/")
         self.assertEqual(stats["new_public_entries"], 0)
 
     def test_generated_public_entry_follows_github_description(self):
