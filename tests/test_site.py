@@ -51,11 +51,15 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn('popular/public/visibility-check.svg', JS)
         self.assertIn('popular/private/visibility-lock.svg', JS)
         popular_markup = readme.split("## Popular", 1)[1].split("## Selected work", 1)[0]
-        self.assertIn('src="popular/public/visibility-check.svg"', popular_markup)
-        self.assertIn('src="popular/private/visibility-lock.svg"', popular_markup)
+        self.assertIn('src="popular/public/visibility-button.svg"', popular_markup)
+        self.assertIn('src="popular/private/visibility-button.svg"', popular_markup)
+        self.assertIn('alt="Public project visibility button"', popular_markup)
+        self.assertIn('alt="Private project visibility button"', popular_markup)
         self.assertTrue((ROOT / "popular/public/visibility-check.svg").is_file())
         self.assertTrue((ROOT / "popular/private/visibility-lock.svg").is_file())
-        # The badges occupy their own shared table row, so card copy length cannot offset one badge.
+        self.assertTrue((ROOT / "popular/public/visibility-button.svg").is_file())
+        self.assertTrue((ROOT / "popular/private/visibility-button.svg").is_file())
+        # Button-style SVG badges occupy a shared footer row to keep alignment consistent.
         self.assertEqual(popular_markup.count("<tr>"), 2)
         self.assertIn("https://github.com/itssourov13/passhunter", popular_markup)
         self.assertIn("https://scholarhub-test.vercel.app/", popular_markup)

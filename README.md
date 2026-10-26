@@ -26,8 +26,8 @@
 <td width="50%" valign="top"><a href="https://scholarhub-test.vercel.app/"><img src="popular/private/scholarhub/assets/cover.webp" alt="ScholarHub — project cover artwork" width="100%"></a><h3><a href="https://scholarhub-test.vercel.app/">ScholarHub</a></h3><p>A scholarship discovery and application-management platform designed to help students find opportunities and manage application progress.</p><p><code>TypeScript</code> <code>Web</code></p><p><sub>Live preview listed</sub><br><a href="https://scholarhub-test.vercel.app/"><strong>Live preview ↗</strong></a></p></td>
 </tr>
 <tr>
-<td width="50%" align="right" valign="top"><p><img src="popular/public/visibility-check.svg" alt="" width="14" height="14"> <sub><strong>Public</strong></sub></p></td>
-<td width="50%" align="right" valign="top"><p><img src="popular/private/visibility-lock.svg" alt="" width="14" height="14"> <sub><strong>Private</strong></sub></p></td>
+<td width="50%" align="right" valign="middle"><p><img src="popular/public/visibility-button.svg" alt="Public project visibility button" width="90" height="30"></p></td>
+<td width="50%" align="right" valign="middle"><p><img src="popular/private/visibility-button.svg" alt="Private project visibility button" width="98" height="30"></p></td>
 </tr>
 </table>
 

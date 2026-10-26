@@ -152,14 +152,15 @@ def popular_badge_cell(project: dict) -> str:
     visibility = str(project.get("visibility") or "public")
     if visibility == "private":
         label = "Private"
-        icon = "popular/private/visibility-lock.svg"
+        badge = "popular/private/visibility-button.svg"
+        width = "98"
     else:
         label = "Public"
-        icon = "popular/public/visibility-check.svg"
+        badge = "popular/public/visibility-button.svg"
+        width = "90"
     return (
-        '<td width="50%" align="right" valign="top">'
-        f'<p><img src="{h(icon)}" alt="" width="14" height="14"> '
-        f'<sub><strong>{h(label)}</strong></sub></p>'
+        '<td width="50%" align="right" valign="middle">'
+        f'<p><img src="{h(badge)}" alt="{h(label)} project visibility button" width="{width}" height="30"></p>'
         '</td>'
     )
 
