@@ -137,9 +137,6 @@ def popular_actions(project: dict) -> str:
 
 
 def popular_cell(project: dict) -> str:
-    visibility = str(project.get("visibility") or "public")
-    label = "🟣 Private" if visibility == "private" else "🟢 Public"
-    badge = f'<p align="right"><sub><strong>{h(label)}</strong></sub></p>'
     return (
         '<td width="50%" valign="top">'
         f'{cover_markup(project, "100%")}'
@@ -147,7 +144,22 @@ def popular_cell(project: dict) -> str:
         f'<p>{h(project.get("description") or "A project in the Popular collection.")}</p>'
         f'<p>{stack_chips(project, 5)}</p>'
         f'<p>{status_line(project)}<br>{popular_actions(project)}</p>'
-        f'{badge}'
+        '</td>'
+    )
+
+
+def popular_badge_cell(project: dict) -> str:
+    visibility = str(project.get("visibility") or "public")
+    if visibility == "private":
+        label = "Private"
+        icon = "popular/private/visibility-lock.svg"
+    else:
+        label = "Public"
+        icon = "popular/public/visibility-check.svg"
+    return (
+        '<td width="50%" align="right" valign="top">'
+        f'<p><img src="{h(icon)}" alt="" width="14" height="14"> '
+        f'<sub><strong>{h(label)}</strong></sub></p>'
         '</td>'
     )
 
@@ -155,12 +167,15 @@ def popular_cell(project: dict) -> str:
 def popular_grid(projects: list[dict]) -> str:
     rows: list[str] = []
     for index in range(0, len(projects), 2):
-        cells = [popular_cell(project) for project in projects[index:index + 2]]
+        group = projects[index:index + 2]
+        cells = [popular_cell(project) for project in group]
+        badge_cells = [popular_badge_cell(project) for project in group]
         if len(cells) == 1:
             cells.append('<td width="50%"></td>')
+            badge_cells.append('<td width="50%"></td>')
         rows.append("<tr>\n" + "\n".join(cells) + "\n</tr>")
+        rows.append("<tr>\n" + "\n".join(badge_cells) + "\n</tr>")
     return '<table width="100%">\n' + "\n".join(rows) + "\n</table>"
-
 
 def external_actions(project: dict) -> str:
     links: list[str] = []

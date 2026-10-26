@@ -288,7 +288,8 @@
     const tags = (Array.isArray(project.stack) ? project.stack : []).slice(0, 5)
       .filter((tag) => typeof tag === "string" && tag.trim())
       .map((tag) => '<span class="tech-tag">' + esc(tag) + '</span>').join("");
-    const visibilityTag = '<span class="popular-visibility-tag ' + (isPublic ? "public" : "private") + '" aria-label="' + (isPublic ? "Public project" : "Private project") + '"><span class="popular-visibility-dot" aria-hidden="true"></span>' + (isPublic ? "Public" : "Private") + '</span>';
+    const visibilityIcon = isPublic ? "popular/public/visibility-check.svg" : "popular/private/visibility-lock.svg";
+    const visibilityTag = '<span class="popular-visibility-tag ' + (isPublic ? "public" : "private") + '" aria-label="' + (isPublic ? "Public project" : "Private project") + '"><img class="popular-visibility-icon" src="' + visibilityIcon + '" alt="" width="14" height="14">' + (isPublic ? "Public" : "Private") + '</span>';
     const status = live
       ? '<span class="status-pill status-live">Live preview</span>'
       : '<span class="status-pill ' + statusClass(project) + '">' + esc(project.status || "In development") + '</span>';

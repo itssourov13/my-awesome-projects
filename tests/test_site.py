@@ -48,9 +48,15 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn('fetch("popular/index.json"', JS)
         self.assertIn('popular-visibility-tag ', JS)
         self.assertIn('(isPublic ? "public" : "private")', JS)
+        self.assertIn('popular/public/visibility-check.svg', JS)
+        self.assertIn('popular/private/visibility-lock.svg', JS)
         popular_markup = readme.split("## Popular", 1)[1].split("## Selected work", 1)[0]
-        self.assertIn('<p align="right"><sub><strong>🟢 Public</strong></sub></p>', popular_markup)
-        self.assertIn('<p align="right"><sub><strong>🟣 Private</strong></sub></p>', popular_markup)
+        self.assertIn('src="popular/public/visibility-check.svg"', popular_markup)
+        self.assertIn('src="popular/private/visibility-lock.svg"', popular_markup)
+        self.assertTrue((ROOT / "popular/public/visibility-check.svg").is_file())
+        self.assertTrue((ROOT / "popular/private/visibility-lock.svg").is_file())
+        # The badges occupy their own shared table row, so card copy length cannot offset one badge.
+        self.assertEqual(popular_markup.count("<tr>"), 2)
         self.assertIn("https://github.com/itssourov13/passhunter", popular_markup)
         self.assertIn("https://scholarhub-test.vercel.app/", popular_markup)
         scholarhub_cell = popular_markup.split("ScholarHub", 1)[1]

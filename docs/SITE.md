@@ -21,6 +21,7 @@ The showcase site is a dependency-free static page. The main index and catalog n
 - `popular/index.json` controls order. Edit it to add, remove or reorder Popular items.
 - Store a public project under `popular/public/<project-id>/` and a private project under `popular/private/<project-id>/`; keep `project.json` and all local cover/gallery assets inside that project folder.
 - Public entries may expose only an approved HTTPS GitHub source URL. Private entries omit repository URL/identifier fields entirely; their approved live preview is independent.
+- The bottom visibility badges use the shared icons popular/public/visibility-check.svg and popular/private/visibility-lock.svg; the README renders both badges in a dedicated row to keep their alignment consistent.
 - The public-repository sync never enumerates, copies into, or overwrites Popular files. On a push containing a manual Popular change, the publish workflow may rebuild the README/deploy the static website from that unchanged data, but it does not stage or alter files under Popular.
 
 ## Discovery features

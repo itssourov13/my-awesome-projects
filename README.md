@@ -22,8 +22,12 @@
 
 <table width="100%">
 <tr>
-<td width="50%" valign="top"><a href="https://github.com/itssourov13/passhunter"><img src="popular/public/passhunter/assets/cover.webp" alt="PassHunter — project cover artwork" width="100%"></a><h3><a href="https://github.com/itssourov13/passhunter">PassHunter</a></h3><p>A deterministic password-pattern candidate generator for authorized security assessments, CTFs, and lab research.</p><p><code>Python</code> <code>CLI</code> <code>Standard library</code></p><p><sub>Active development</sub><br><a href="https://github.com/itssourov13/passhunter">Public source ↗</a></p><p align="right"><sub><strong>🟢 Public</strong></sub></p></td>
-<td width="50%" valign="top"><a href="https://scholarhub-test.vercel.app/"><img src="popular/private/scholarhub/assets/cover.webp" alt="ScholarHub — project cover artwork" width="100%"></a><h3><a href="https://scholarhub-test.vercel.app/">ScholarHub</a></h3><p>A scholarship discovery and application-management platform designed to help students find opportunities and manage application progress.</p><p><code>TypeScript</code> <code>Web</code></p><p><sub>Live preview listed</sub><br><a href="https://scholarhub-test.vercel.app/"><strong>Live preview ↗</strong></a></p><p align="right"><sub><strong>🟣 Private</strong></sub></p></td>
+<td width="50%" valign="top"><a href="https://github.com/itssourov13/passhunter"><img src="popular/public/passhunter/assets/cover.webp" alt="PassHunter — project cover artwork" width="100%"></a><h3><a href="https://github.com/itssourov13/passhunter">PassHunter</a></h3><p>A deterministic password-pattern candidate generator for authorized security assessments, CTFs, and lab research.</p><p><code>Python</code> <code>CLI</code> <code>Standard library</code></p><p><sub>Active development</sub><br><a href="https://github.com/itssourov13/passhunter">Public source ↗</a></p></td>
+<td width="50%" valign="top"><a href="https://scholarhub-test.vercel.app/"><img src="popular/private/scholarhub/assets/cover.webp" alt="ScholarHub — project cover artwork" width="100%"></a><h3><a href="https://scholarhub-test.vercel.app/">ScholarHub</a></h3><p>A scholarship discovery and application-management platform designed to help students find opportunities and manage application progress.</p><p><code>TypeScript</code> <code>Web</code></p><p><sub>Live preview listed</sub><br><a href="https://scholarhub-test.vercel.app/"><strong>Live preview ↗</strong></a></p></td>
+</tr>
+<tr>
+<td width="50%" align="right" valign="top"><p><img src="popular/public/visibility-check.svg" alt="" width="14" height="14"> <sub><strong>Public</strong></sub></p></td>
+<td width="50%" align="right" valign="top"><p><img src="popular/private/visibility-lock.svg" alt="" width="14" height="14"> <sub><strong>Private</strong></sub></p></td>
 </tr>
 </table>
 
