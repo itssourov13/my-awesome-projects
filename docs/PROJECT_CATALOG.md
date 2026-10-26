@@ -48,7 +48,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 | CYBEROS | [Public source](https://github.com/itssourov13/cyberos) | Not linked | Go, PostgreSQL, React | In development | 2026-08-30 |
 | Onyx — Onion Web | [Public source](https://github.com/itssourov13/onyx) | [Open preview](https://onyx-xi-three.vercel.app) | TypeScript, Web | Live preview listed | 2026-09-22 |
 | PassHunter | [Public source](https://github.com/itssourov13/passhunter) | Not linked | Python, CLI, Standard library | Active development | 2026-08-13 |
-| Sourov Works — Pentest Lab | [Public source](https://github.com/itssourov13/personal-website-pentest) | [Open preview](https://sourovworks-itssourov13.vercel.app/) | Next.js, TypeScript, PostgreSQL / PGlite, Playwright | Security lab · isolated use only | 2026-10-20 |
+| Sourov Works — Pentest Lab | [Public source](https://github.com/itssourov13/personal-website-pentest) | [Open preview](https://sourovworks-itssourov13.vercel.app/) | Next.js, TypeScript, PostgreSQL / PGlite, Playwright | Security lab · isolated use only | 2026-10-26 |
 | VercelStrike | [Public source](https://github.com/itssourov13/VercelStrike) | Not linked | Python, Security testing | Work in progress | 2026-10-09 |
 | VercStorm | [Public source](https://github.com/itssourov13/VercStorm) | Not linked | Python | Needs documentation | 2026-10-09 |
 
