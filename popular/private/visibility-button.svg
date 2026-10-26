@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="98" height="30" viewBox="0 0 98 30" role="img" aria-labelledby="title">
+  <title id="title">Private</title>
+  <rect x="0.75" y="0.75" width="96.5" height="28.5" rx="8" fill="#17191e" stroke="#6c5b9c" stroke-width="1.5"/>
+  <rect x="10" y="13.5" width="13" height="9.5" rx="2" fill="none" stroke="#b7a2ff" stroke-linejoin="round" stroke-width="1.7"/>
+  <path d="M12.8 13.5v-2.9a3.7 3.7 0 0 1 7.4 0v2.9" fill="none" stroke="#b7a2ff" stroke-linecap="round" stroke-width="1.7"/>
+  <circle cx="16.5" cy="18" r="1" fill="#b7a2ff"/>
+  <text x="31" y="19" fill="#f2f0e9" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="10.5" font-weight="700" letter-spacing="0.65">PRIVATE</text>
+</svg>

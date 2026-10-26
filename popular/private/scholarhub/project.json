@@ -1,0 +1,38 @@
+{
+  "id": "scholarhub",
+  "title": "ScholarHub",
+  "eyebrow": "EDTECH · PRODUCT",
+  "category": "Web Apps",
+  "description": "A scholarship discovery and application-management platform designed to help students find opportunities and manage application progress.",
+  "stack": [
+    "TypeScript",
+    "Web"
+  ],
+  "liveUrl": "https://scholarhub-test.vercel.app/",
+  "status": "Live preview listed",
+  "updated": "2026-10-25",
+  "cover": "popular/private/scholarhub/assets/cover.webp",
+  "coverAlt": "ScholarHub project cover artwork",
+  "gallery": [
+    {
+      "src": "popular/private/scholarhub/assets/gallery/01-scholarship-discovery.png",
+      "alt": "ScholarHub scholarship discovery promotional graphic"
+    },
+    {
+      "src": "popular/private/scholarhub/assets/gallery/02-progress-dashboard.png",
+      "alt": "ScholarHub progress dashboard promotional graphic"
+    },
+    {
+      "src": "popular/private/scholarhub/assets/gallery/03-application-guides.png",
+      "alt": "ScholarHub application guides promotional graphic"
+    },
+    {
+      "src": "popular/private/scholarhub/assets/gallery/04-scholarhub-mentor.png",
+      "alt": "ScholarHub mentor promotional graphic"
+    },
+    {
+      "src": "popular/private/scholarhub/assets/gallery/05-feature-graphic-1024x500.png",
+      "alt": "ScholarHub promotional feature graphic"
+    }
+  ]
+}

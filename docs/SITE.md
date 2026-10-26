@@ -1,18 +1,28 @@
 # Website guide
 
-The showcase site is a dependency-free static page (`index.html`, `styles.css`, `app.js`) that renders `projects.json` in the browser. The README and `docs/PROJECT_CATALOG.md` are generated from the same catalog, so all three stay consistent.
+The showcase site is a dependency-free static page. The main index and catalog notes use `projects.json`; the manually curated Popular section has its own `popular/index.json` manifest and per-project data. The README generator renders both sources without rewriting the Popular data.
 
 ## Files
 
 | File | Role |
 |---|---|
-| `index.html` | Page structure: header, hero, selected work, filterable index, about note, footer, dialogs |
+| `index.html` | Page structure: header, hero, Popular, selected work, filterable index, about note, footer, dialogs |
 | `styles.css` | Design tokens (dark and light themes), layout, components, responsive rules |
-| `app.js` | Loads `projects.json`, renders cards, filters, URL state, dialogs, footer data |
-| `projects.json` | Single source of truth for every entry |
+| `app.js` | Loads the main catalog and separate Popular manifest; renders cards, filters, URL state, dialogs, and footer data |
+| `projects.json` | Main catalog source of truth for the searchable index and Selected work |
+| `popular/index.json` | Manual order and public/private grouping for Popular |
+| `popular/public/`, `popular/private/` | Separate metadata and local artwork for each Popular project |
 | `scripts/generate_readme.py` | README showcase (uses the same category order and featured limit as the site) |
 | `scripts/generate_catalog.py` | `docs/PROJECT_CATALOG.md`, including the technology index |
 | `scripts/validate.py`, `tests/` | Catalog, link-policy and site-contract checks |
+
+## Popular section (manual)
+
+- `popular/index.json` controls order. Edit it to add, remove or reorder Popular items.
+- Store a public project under `popular/public/<project-id>/` and a private project under `popular/private/<project-id>/`; keep `project.json` and all local cover/gallery assets inside that project folder.
+- Public entries may expose only an approved HTTPS GitHub source URL. Private entries omit repository URL/identifier fields entirely; their approved live preview is independent.
+- Website visibility tags use the shared check and lock icons (`popular/public/visibility-check.svg` and `popular/private/visibility-lock.svg`). In the README, matching button-style SVG badges (`visibility-button.svg` in each visibility folder) are shown in a dedicated footer row so the Public and Private labels remain aligned despite different card-copy lengths.
+- The public-repository sync never enumerates, copies into, or overwrites Popular files. On a push containing a manual Popular change, the publish workflow may rebuild the README/deploy the static website from that unchanged data, but it does not stage or alter files under Popular.
 
 ## Discovery features
 

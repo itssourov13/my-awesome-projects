@@ -40,6 +40,32 @@ class SiteContractTests(unittest.TestCase):
             with self.subTest(needle=needle):
                 self.assertIn(needle, footer)
 
+    def test_popular_section_precedes_selected_work_and_is_readme_first(self):
+        self.assertLess(HTML.index('<section id="popular"'), HTML.index('<section id="featured"'))
+        self.assertIn('href="#popular" data-spy="popular"', HTML)
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertLess(readme.index("## Popular"), readme.index("## Selected work"))
+        self.assertIn('fetch("popular/index.json"', JS)
+        self.assertIn('popular-visibility-tag ', JS)
+        self.assertIn('(isPublic ? "public" : "private")', JS)
+        self.assertIn('popular/public/visibility-check.svg', JS)
+        self.assertIn('popular/private/visibility-lock.svg', JS)
+        popular_markup = readme.split("## Popular", 1)[1].split("## Selected work", 1)[0]
+        self.assertIn('src="popular/public/visibility-button.svg"', popular_markup)
+        self.assertIn('src="popular/private/visibility-button.svg"', popular_markup)
+        self.assertIn('alt="Public project visibility button"', popular_markup)
+        self.assertIn('alt="Private project visibility button"', popular_markup)
+        self.assertTrue((ROOT / "popular/public/visibility-check.svg").is_file())
+        self.assertTrue((ROOT / "popular/private/visibility-lock.svg").is_file())
+        self.assertTrue((ROOT / "popular/public/visibility-button.svg").is_file())
+        self.assertTrue((ROOT / "popular/private/visibility-button.svg").is_file())
+        # Button-style SVG badges occupy a shared footer row to keep alignment consistent.
+        self.assertEqual(popular_markup.count("<tr>"), 2)
+        self.assertIn("https://github.com/itssourov13/passhunter", popular_markup)
+        self.assertIn("https://scholarhub-test.vercel.app/", popular_markup)
+        scholarhub_cell = popular_markup.split("ScholarHub", 1)[1]
+        self.assertNotIn("github.com/", scholarhub_cell.lower())
+
     def test_nav_and_footer_anchor_targets_exist(self):
         for anchor in ("featured", "project-index", "about-index", "main", "top"):
             with self.subTest(anchor=anchor):
