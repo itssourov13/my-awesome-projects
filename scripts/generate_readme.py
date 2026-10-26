@@ -138,15 +138,16 @@ def popular_actions(project: dict) -> str:
 
 def popular_cell(project: dict) -> str:
     visibility = str(project.get("visibility") or "public")
-    label = "PRIVATE PROJECT" if visibility == "private" else "PUBLIC PROJECT"
+    label = "🟣 Private" if visibility == "private" else "🟢 Public"
+    badge = f'<p align="right"><sub><strong>{h(label)}</strong></sub></p>'
     return (
         '<td width="50%" valign="top">'
         f'{cover_markup(project, "100%")}'
-        f'<br><sub><strong>{h(label)}</strong></sub>'
         f'<h3>{title_markup(project)}</h3>'
         f'<p>{h(project.get("description") or "A project in the Popular collection.")}</p>'
         f'<p>{stack_chips(project, 5)}</p>'
         f'<p>{status_line(project)}<br>{popular_actions(project)}</p>'
+        f'{badge}'
         '</td>'
     )
 

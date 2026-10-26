@@ -46,7 +46,11 @@ class SiteContractTests(unittest.TestCase):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         self.assertLess(readme.index("## Popular"), readme.index("## Selected work"))
         self.assertIn('fetch("popular/index.json"', JS)
+        self.assertIn('popular-visibility-tag ', JS)
+        self.assertIn('(isPublic ? "public" : "private")', JS)
         popular_markup = readme.split("## Popular", 1)[1].split("## Selected work", 1)[0]
+        self.assertIn('<p align="right"><sub><strong>🟢 Public</strong></sub></p>', popular_markup)
+        self.assertIn('<p align="right"><sub><strong>🟣 Private</strong></sub></p>', popular_markup)
         self.assertIn("https://github.com/itssourov13/passhunter", popular_markup)
         self.assertIn("https://scholarhub-test.vercel.app/", popular_markup)
         scholarhub_cell = popular_markup.split("ScholarHub", 1)[1]

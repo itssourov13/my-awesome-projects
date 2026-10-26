@@ -288,7 +288,7 @@
     const tags = (Array.isArray(project.stack) ? project.stack : []).slice(0, 5)
       .filter((tag) => typeof tag === "string" && tag.trim())
       .map((tag) => '<span class="tech-tag">' + esc(tag) + '</span>').join("");
-    const label = isPublic ? "Public project" : "Private project";
+    const visibilityTag = '<span class="popular-visibility-tag ' + (isPublic ? "public" : "private") + '" aria-label="' + (isPublic ? "Public project" : "Private project") + '"><span class="popular-visibility-dot" aria-hidden="true"></span>' + (isPublic ? "Public" : "Private") + '</span>';
     const status = live
       ? '<span class="status-pill status-live">Live preview</span>'
       : '<span class="status-pill ' + statusClass(project) + '">' + esc(project.status || "In development") + '</span>';
@@ -299,11 +299,11 @@
       coverMarkup +
       '<div class="card-body">' +
       '<p class="spotlight-eyebrow">' + esc(project.eyebrow || project.category || "Project") + '</p>' +
-      '<div class="card-meta"><span class="source-pill' + (isPublic ? "" : " private") + '">' + label + '</span>' + status + '</div>' +
+      '<div class="card-meta">' + status + '</div>' +
       '<div class="card-title-row"><h3 class="card-title">' + title + '</h3><span class="card-category">' + esc(project.category || "") + '</span></div>' +
       '<p class="card-description">' + esc(project.description || "A project in the Popular collection.") + '</p>' +
       '<div class="tag-row">' + tags + '</div>' +
-      '<div class="card-footer">' + (actions || '<span class="status-pill">No public link listed</span>') + '</div>' +
+      '<div class="card-footer">' + (actions || '<span class="status-pill">No public link listed</span>') + visibilityTag + '</div>' +
       '</div></article>';
     const template = document.createElement("template");
     template.innerHTML = html.trim();
