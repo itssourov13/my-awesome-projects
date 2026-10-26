@@ -10,7 +10,7 @@ This file is generated from the same catalog used by README.md and the deployed 
 - **Categories:** 8
 - **Public source links:** 31
 - **Source-hidden entries:** 1
-- **Live preview URLs:** 14
+- **Live preview URLs:** 15
 - **GitHub-metadata-managed entries:** 0
 
 Public repository metadata is refreshed by the scheduled showcase workflow. Existing curated descriptions, private entries, approved live URLs and supplied graphics are preserved. Newly discovered public repositories start with an unlinked live preview and a generated cover until their entry is reviewed.
@@ -48,7 +48,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 | CYBEROS | [Public source](https://github.com/itssourov13/cyberos) | Not linked | Go, PostgreSQL, React | In development | 2026-08-30 |
 | Onyx — Onion Web | [Public source](https://github.com/itssourov13/onyx) | [Open preview](https://onyx-xi-three.vercel.app) | TypeScript, Web | Live preview listed | 2026-09-22 |
 | PassHunter | [Public source](https://github.com/itssourov13/passhunter) | Not linked | Python, CLI, Standard library | Active development | 2026-08-13 |
-| Sourov Works — Pentest Lab | [Public source](https://github.com/itssourov13/personal-website-pentest) | Not linked | Next.js, TypeScript, PostgreSQL / PGlite, Playwright | Security lab · isolated use only | 2026-10-20 |
+| Sourov Works — Pentest Lab | [Public source](https://github.com/itssourov13/personal-website-pentest) | [Open preview](https://sourovworks-itssourov13.vercel.app/) | Next.js, TypeScript, PostgreSQL / PGlite, Playwright | Security lab · isolated use only | 2026-10-20 |
 | VercelStrike | [Public source](https://github.com/itssourov13/VercelStrike) | Not linked | Python, Security testing | Work in progress | 2026-10-09 |
 | VercStorm | [Public source](https://github.com/itssourov13/VercStorm) | Not linked | Python | Needs documentation | 2026-10-09 |
 
