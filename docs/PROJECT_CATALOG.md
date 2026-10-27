@@ -24,7 +24,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 | Project | Source | Live preview | Stack | Status | Last repository update |
 |---|---|---|---|---|---|
 | Hacker gf AI | [Public source](https://github.com/itssourov13/hackergf-ai) | [Open preview](https://hackergf-ai.vercel.app) | JavaScript, React, AI | Demo / concept | 2026-10-19 |
-| HackerAI | [Public source](https://github.com/itssourov13/hackerai-main) | Not linked | TypeScript, Next.js, AI | Live URL needs verification | 2026-10-26 |
+| HackerAI | [Public source](https://github.com/itssourov13/hackerai-main) | Not linked | TypeScript, Next.js, AI | Live URL needs verification | 2026-10-27 |
 | HackerAI Workspace | [Public source](https://github.com/itssourov13/hackerai-base44) | Not linked | TypeScript, React, Next.js | Development / concept | 2026-10-09 |
 | UniversalAIBridge | [Public source](https://github.com/itssourov13/uab) | Not linked | Python, AI agents, API | Active development | 2026-08-20 |
 
