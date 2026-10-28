@@ -448,7 +448,7 @@
     "demoNote": "Known homepage returned 404 during the audit (25 October 2026); provide a working deployment URL before publishing the live button.",
     "status": "Live URL needs verification",
     "featured": false,
-    "updated": "2026-10-27",
+    "updated": "2026-10-28",
     "cover": "assets/projects/hackerai-main/cover.webp",
     "screenshots": [],
     "gallery": [
