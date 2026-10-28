@@ -101,6 +101,14 @@
     "notes": []
   },
   {
+    "id": "bd-admission-app",
+    "title": "Bd Admission App",
+    "status": "failed",
+    "errors": [
+      "No suitable public image source found."
+    ]
+  },
+  {
     "id": "birthday-present-preview",
     "title": "Birthday Present Preview",
     "pageUrl": "https://cinematiccard.com/blog/virtual-birthday-cards",

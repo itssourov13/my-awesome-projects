@@ -8,9 +8,9 @@
 
 <table>
 <tr>
-<td align="center" width="25%"><strong>32</strong><br><sub>PROJECTS</sub></td>
+<td align="center" width="25%"><strong>33</strong><br><sub>PROJECTS</sub></td>
 <td align="center" width="25%"><strong>8</strong><br><sub>DISCIPLINES</sub></td>
-<td align="center" width="25%"><strong>31</strong><br><sub>PUBLIC SOURCES</sub></td>
+<td align="center" width="25%"><strong>32</strong><br><sub>PUBLIC SOURCES</sub></td>
 <td align="center" width="25%"><strong>15</strong><br><sub>LIVE PREVIEWS</sub></td>
 </tr>
 </table>
@@ -57,9 +57,9 @@
 
 ## The archive
 
-<p align="center"><a href="#cybersecurity">Cybersecurity</a>&nbsp;<sub>8</sub> &nbsp;·&nbsp; <a href="#ai--developer-tools">AI &amp; Developer Tools</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#web-apps">Web Apps</a>&nbsp;<sub>5</sub> &nbsp;·&nbsp; <a href="#creative--3d">Creative &amp; 3D</a>&nbsp;<sub>6</sub> &nbsp;·&nbsp; <a href="#mobile-apps">Mobile Apps</a>&nbsp;<sub>1</sub> &nbsp;·&nbsp; <a href="#utilities">Utilities</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#writing--publishing">Writing &amp; Publishing</a>&nbsp;<sub>1</sub> &nbsp;·&nbsp; <a href="#open-source">Open Source</a>&nbsp;<sub>3</sub></p>
+<p align="center"><a href="#cybersecurity">Cybersecurity</a>&nbsp;<sub>8</sub> &nbsp;·&nbsp; <a href="#ai--developer-tools">AI &amp; Developer Tools</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#web-apps">Web Apps</a>&nbsp;<sub>6</sub> &nbsp;·&nbsp; <a href="#creative--3d">Creative &amp; 3D</a>&nbsp;<sub>6</sub> &nbsp;·&nbsp; <a href="#mobile-apps">Mobile Apps</a>&nbsp;<sub>1</sub> &nbsp;·&nbsp; <a href="#utilities">Utilities</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#writing--publishing">Writing &amp; Publishing</a>&nbsp;<sub>1</sub> &nbsp;·&nbsp; <a href="#open-source">Open Source</a>&nbsp;<sub>3</sub></p>
 
-<p align="center"><sub>★ marks a project also shown in Selected work. 32 projects in total, 1 with source hidden. Latest recorded catalog update: 2026-10-27.</sub></p>
+<p align="center"><sub>★ marks a project also shown in Selected work. 33 projects in total, 1 with source hidden. Latest recorded catalog update: 2026-10-28.</sub></p>
 
 ### Cybersecurity
 
@@ -125,9 +125,13 @@
 
 ### Web Apps
 
-<sub>5 projects &nbsp;·&nbsp; <a href="#the-archive">Back to archive index ↑</a></sub>
+<sub>6 projects &nbsp;·&nbsp; <a href="#the-archive">Back to archive index ↑</a></sub>
 
 <table width="100%">
+<tr>
+<td width="190" valign="top"><a href="https://github.com/itssourov13/bd-admission-app"><img src="assets/projects/bd-admission-app/cover.svg" alt="Bd Admission App — project cover artwork" width="190"></a></td>
+<td valign="top"><strong><a href="https://github.com/itssourov13/bd-admission-app">Bd Admission App</a></strong><br><sub>Active development</sub><br>Admission app<br><code>TypeScript</code><br><a href="https://github.com/itssourov13/bd-admission-app">Public source ↗</a></td>
+</tr>
 <tr>
 <td width="190" valign="top"><a href="https://birthday-present-itssourov13.vercel.app/"><img src="assets/projects/birthday-present-preview/cover.webp" alt="Birthday Present Preview — project cover artwork" width="190"></a></td>
 <td valign="top"><strong><a href="https://birthday-present-itssourov13.vercel.app/">Birthday Present Preview</a></strong><br><sub>Live preview listed</sub><br>A self-hostable interactive birthday-gift experience featuring 3D animations, memories, mini-games, and a personal letter.<br><code>JavaScript</code> <code>Web</code> <code>Vercel</code><br><a href="https://birthday-present-itssourov13.vercel.app/"><strong>Live preview ↗</strong></a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/birthday-present-preview">Public source ↗</a></td>
@@ -255,9 +259,9 @@ For deliberately vulnerable labs, internal dashboards, or systems containing rea
 
 <div align="center">
 <p><a href="https://itssourov13.github.io/my-awesome-projects/"><strong>Explore the full interactive showcase ↗</strong></a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13">GitHub profile ↗</a></p>
-<p><sub><strong>Browse:</strong> <a href="#cybersecurity">Cybersecurity</a>&nbsp;<sub>8</sub> &nbsp;·&nbsp; <a href="#ai--developer-tools">AI &amp; Developer Tools</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#web-apps">Web Apps</a>&nbsp;<sub>5</sub> &nbsp;·&nbsp; <a href="#creative--3d">Creative &amp; 3D</a>&nbsp;<sub>6</sub> &nbsp;·&nbsp; <a href="#mobile-apps">Mobile Apps</a>&nbsp;<sub>1</sub> &nbsp;·&nbsp; <a href="#utilities">Utilities</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#writing--publishing">Writing &amp; Publishing</a>&nbsp;<sub>1</sub> &nbsp;·&nbsp; <a href="#open-source">Open Source</a>&nbsp;<sub>3</sub></sub></p>
+<p><sub><strong>Browse:</strong> <a href="#cybersecurity">Cybersecurity</a>&nbsp;<sub>8</sub> &nbsp;·&nbsp; <a href="#ai--developer-tools">AI &amp; Developer Tools</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#web-apps">Web Apps</a>&nbsp;<sub>6</sub> &nbsp;·&nbsp; <a href="#creative--3d">Creative &amp; 3D</a>&nbsp;<sub>6</sub> &nbsp;·&nbsp; <a href="#mobile-apps">Mobile Apps</a>&nbsp;<sub>1</sub> &nbsp;·&nbsp; <a href="#utilities">Utilities</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#writing--publishing">Writing &amp; Publishing</a>&nbsp;<sub>1</sub> &nbsp;·&nbsp; <a href="#open-source">Open Source</a>&nbsp;<sub>3</sub></sub></p>
 <p><sub><a href="docs/PRIVATE_PROJECTS.md">Private-project policy</a> · <a href="docs/ASSET_GUIDELINES.md">Asset guidelines</a> · <a href="docs/PROJECT_CATALOG.md">Catalog notes</a> · <a href="docs/SITE.md">Website guide</a></sub></p>
-<p><sub>© 2026 itssourov13 · 32 projects · 15 live previews · 31 public sources · Latest catalog update: 2026-10-27</sub></p>
+<p><sub>© 2026 itssourov13 · 33 projects · 15 live previews · 32 public sources · Latest catalog update: 2026-10-28</sub></p>
 <p><sub>Catalog source: projects.json · README generated by scripts/generate_readme.py · Public repository sync never imports private repository metadata.</sub></p>
 </div>
 <!-- GENERATED SHOWCASE:END -->

@@ -1399,7 +1399,7 @@
     "demoNote": "GitHub profile README and its Pages URL.",
     "status": "Profile infrastructure",
     "featured": false,
-    "updated": "2026-10-27",
+    "updated": "2026-10-28",
     "cover": "assets/projects/itssourov13/cover.webp",
     "screenshots": [],
     "gallery": [
@@ -1417,5 +1417,46 @@
       }
     ],
     "githubRepo": "itssourov13"
+  },
+  {
+    "id": "bd-admission-app",
+    "title": "Bd Admission App",
+    "eyebrow": "WEB APPS · PUBLIC REPOSITORY",
+    "category": "Web Apps",
+    "description": "Admission app",
+    "story": "Automatically discovered from the owner's public GitHub repository metadata. Curate this summary before adding claims about features or production readiness.",
+    "highlights": [
+      "Public source repository",
+      "Repository metadata synced from GitHub"
+    ],
+    "stack": [
+      "TypeScript"
+    ],
+    "sourceAccess": "public",
+    "sourceUrl": "https://github.com/itssourov13/bd-admission-app",
+    "liveUrl": "",
+    "demoLabel": "",
+    "demoNote": "No live deployment is linked automatically. Add a public HTTPS preview only after verifying anonymous access and safety.",
+    "status": "Active development",
+    "featured": false,
+    "updated": "2026-10-28",
+    "githubRepo": "bd-admission-app",
+    "syncMode": "github",
+    "cover": "assets/projects/bd-admission-app/cover.svg",
+    "screenshots": [],
+    "gallery": [
+      {
+        "src": "assets/projects/bd-admission-app/gallery/01-feature.svg",
+        "alt": "Bd Admission App — Overview visual promotional graphic"
+      },
+      {
+        "src": "assets/projects/bd-admission-app/gallery/02-feature.svg",
+        "alt": "Bd Admission App — Feature highlights promotional graphic"
+      },
+      {
+        "src": "assets/projects/bd-admission-app/gallery/03-feature.svg",
+        "alt": "Bd Admission App — Technology and status promotional graphic"
+      }
+    ]
   }
 ]

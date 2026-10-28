@@ -6,12 +6,12 @@ This file is generated from the same catalog used by README.md and the deployed 
 
 ## Current inventory
 
-- **Project entries:** 32
+- **Project entries:** 33
 - **Categories:** 8
-- **Public source links:** 31
+- **Public source links:** 32
 - **Source-hidden entries:** 1
 - **Live preview URLs:** 15
-- **GitHub-metadata-managed entries:** 0
+- **GitHub-metadata-managed entries:** 1
 
 Public repository metadata is refreshed by the scheduled showcase workflow. Existing curated descriptions, private entries, approved live URLs and supplied graphics are preserved. Newly discovered public repositories start with an unlinked live preview and a generated cover until their entry is reviewed.
 
@@ -63,7 +63,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 | Project | Source | Live preview | Stack | Status | Last repository update |
 |---|---|---|---|---|---|
 | Awesome Lists | [Public source](https://github.com/itssourov13/awesome) | Not linked | Markdown | Curated resources | 2026-06-30 |
-| GitHub Profile & Project Index | [Public source](https://github.com/itssourov13/itssourov13) | [Open preview](https://itssourov13.github.io/itssourov13/) | Markdown, SVG, TypeScript | Profile infrastructure | 2026-10-27 |
+| GitHub Profile & Project Index | [Public source](https://github.com/itssourov13/itssourov13) | [Open preview](https://itssourov13.github.io/itssourov13/) | Markdown, SVG, TypeScript | Profile infrastructure | 2026-10-28 |
 | JS.ORG | [Public source](https://github.com/itssourov13/js.org) | [Open preview](https://js.org) | JavaScript | Community / resource | 2026-08-19 |
 
 ### Utilities
@@ -79,6 +79,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 
 | Project | Source | Live preview | Stack | Status | Last repository update |
 |---|---|---|---|---|---|
+| Bd Admission App | [Public source](https://github.com/itssourov13/bd-admission-app) | Not linked | TypeScript | Active development | 2026-10-28 |
 | Birthday Present Preview | [Public source](https://github.com/itssourov13/birthday-present-preview) | [Open preview](https://birthday-present-itssourov13.vercel.app/) | JavaScript, Web, Vercel | Live preview listed | 2026-10-14 |
 | Create Present | [Public source](https://github.com/itssourov13/create-present-website) | [Open preview](https://cgw-itssourov13.vercel.app) | HTML, JavaScript, Vercel | Static demo | 2026-10-14 |
 | Personal Website Demo | [Public source](https://github.com/itssourov13/personal-website-test) | [Open preview](https://demo-website-itssourov13.vercel.app/) | Next.js, TypeScript, React | Demo | 2026-10-22 |
@@ -97,8 +98,8 @@ Technologies used by two or more projects. These match the website's technology 
 
 | Technology | Projects | Used by |
 |---|---|---|
+| TypeScript | 11 | Bd Admission App, GitHub Profile & Project Index, HackerAI, HackerAI Workspace, Onyx — Onion Web, Personal Website Demo, Personal Website — Design Concept, ScholarHub, Security & Engineering Notes, Sourov Works — Pentest Lab, Study Planner |
 | Python | 10 | APK Sherlock, ARES, Employee Profile Generator, Movie Ticket Booking Calculator, PassHunter, Report Card Printer, Travel & Weather Planner, UniversalAIBridge, VercelStrike, VercStorm |
-| TypeScript | 10 | GitHub Profile & Project Index, HackerAI, HackerAI Workspace, Onyx — Onion Web, Personal Website Demo, Personal Website — Design Concept, ScholarHub, Security & Engineering Notes, Sourov Works — Pentest Lab, Study Planner |
 | JavaScript | 9 | Active Theory V6 Rebuild, ARVEN Residences, Birthday Present Preview, Create Present, Hacker gf AI, JS.ORG, Sketchbook, STELE Residences, The Glass Pavilion |
 | Next.js | 7 | HackerAI, HackerAI Workspace, Personal Website Demo, Personal Website — Design Concept, Rise of AI, Security & Engineering Notes, Sourov Works — Pentest Lab |
 | React | 6 | CYBEROS, Hacker gf AI, HackerAI Workspace, Personal Website Demo, Personal Website — Design Concept, Rise of AI |
