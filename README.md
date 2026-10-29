@@ -129,7 +129,7 @@
 
 <table width="100%">
 <tr>
-<td width="190" valign="top"><a href="https://github.com/itssourov13/bd-admission-app"><img src="assets/projects/bd-admission-app/cover.svg" alt="Bd Admission App — project cover artwork" width="190"></a></td>
+<td width="190" valign="top"><a href="https://github.com/itssourov13/bd-admission-app"><img src="assets/projects/bd-admission-app/cover.webp" alt="Bd Admission App — project cover artwork" width="190"></a></td>
 <td valign="top"><strong><a href="https://github.com/itssourov13/bd-admission-app">Bd Admission App</a></strong><br><sub>Active development</sub><br>Admission app<br><code>TypeScript</code><br><a href="https://github.com/itssourov13/bd-admission-app">Public source ↗</a></td>
 </tr>
 <tr>

@@ -103,10 +103,12 @@
   {
     "id": "bd-admission-app",
     "title": "Bd Admission App",
-    "status": "failed",
-    "errors": [
-      "No suitable public image source found."
-    ]
+    "pageUrl": "https://github.com/itssourov13/bd-admission-app",
+    "imageUrl": "https://github.com/itssourov13/bd-admission-app",
+    "kind": "public-repository-page-screenshot",
+    "imagePath": "assets/projects/bd-admission-app/source/cover.jpg",
+    "status": "screenshot",
+    "notes": []
   },
   {
     "id": "birthday-present-preview",

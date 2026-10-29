@@ -1442,20 +1442,20 @@
     "updated": "2026-10-28",
     "githubRepo": "bd-admission-app",
     "syncMode": "github",
-    "cover": "assets/projects/bd-admission-app/cover.svg",
+    "cover": "assets/projects/bd-admission-app/cover.webp",
     "screenshots": [],
     "gallery": [
       {
-        "src": "assets/projects/bd-admission-app/gallery/01-feature.svg",
-        "alt": "Bd Admission App — Overview visual promotional graphic"
+        "src": "assets/projects/bd-admission-app/gallery/01-feature.webp",
+        "alt": "Bd Admission App — Overview visual artwork panel"
       },
       {
-        "src": "assets/projects/bd-admission-app/gallery/02-feature.svg",
-        "alt": "Bd Admission App — Feature highlights promotional graphic"
+        "src": "assets/projects/bd-admission-app/gallery/02-feature.webp",
+        "alt": "Bd Admission App — Feature highlights artwork panel"
       },
       {
-        "src": "assets/projects/bd-admission-app/gallery/03-feature.svg",
-        "alt": "Bd Admission App — Technology and status promotional graphic"
+        "src": "assets/projects/bd-admission-app/gallery/03-feature.webp",
+        "alt": "Bd Admission App — Technology and status artwork panel"
       }
     ]
   }
