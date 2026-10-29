@@ -63,7 +63,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 | Project | Source | Live preview | Stack | Status | Last repository update |
 |---|---|---|---|---|---|
 | Awesome Lists | [Public source](https://github.com/itssourov13/awesome) | Not linked | Markdown | Curated resources | 2026-06-30 |
-| GitHub Profile & Project Index | [Public source](https://github.com/itssourov13/itssourov13) | [Open preview](https://itssourov13.github.io/itssourov13/) | Markdown, SVG, TypeScript | Profile infrastructure | 2026-10-28 |
+| GitHub Profile & Project Index | [Public source](https://github.com/itssourov13/itssourov13) | [Open preview](https://itssourov13.github.io/itssourov13/) | Markdown, SVG, TypeScript | Profile infrastructure | 2026-10-29 |
 | JS.ORG | [Public source](https://github.com/itssourov13/js.org) | [Open preview](https://js.org) | JavaScript | Community / resource | 2026-08-19 |
 
 ### Utilities
