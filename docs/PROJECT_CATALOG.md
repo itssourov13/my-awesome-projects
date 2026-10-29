@@ -24,7 +24,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 | Project | Source | Live preview | Stack | Status | Last repository update |
 |---|---|---|---|---|---|
 | Hacker gf AI | [Public source](https://github.com/itssourov13/hackergf-ai) | [Open preview](https://hackergf-ai.vercel.app) | JavaScript, React, AI | Demo / concept | 2026-10-19 |
-| HackerAI | [Public source](https://github.com/itssourov13/hackerai-main) | Not linked | TypeScript, Next.js, AI | Live URL needs verification | 2026-10-28 |
+| HackerAI | [Public source](https://github.com/itssourov13/hackerai-main) | Not linked | TypeScript, Next.js, AI | Live URL needs verification | 2026-10-29 |
 | HackerAI Workspace | [Public source](https://github.com/itssourov13/hackerai-base44) | Not linked | TypeScript, React, Next.js | Development / concept | 2026-10-09 |
 | UniversalAIBridge | [Public source](https://github.com/itssourov13/uab) | Not linked | Python, AI agents, API | Active development | 2026-08-20 |
 
@@ -79,7 +79,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 
 | Project | Source | Live preview | Stack | Status | Last repository update |
 |---|---|---|---|---|---|
-| Bd Admission App | [Public source](https://github.com/itssourov13/bd-admission-app) | Not linked | TypeScript | Active development | 2026-10-28 |
+| Bd Admission App | [Public source](https://github.com/itssourov13/bd-admission-app) | Not linked | TypeScript | Active development | 2026-10-29 |
 | Birthday Present Preview | [Public source](https://github.com/itssourov13/birthday-present-preview) | [Open preview](https://birthday-present-itssourov13.vercel.app/) | JavaScript, Web, Vercel | Live preview listed | 2026-10-14 |
 | Create Present | [Public source](https://github.com/itssourov13/create-present-website) | [Open preview](https://cgw-itssourov13.vercel.app) | HTML, JavaScript, Vercel | Static demo | 2026-10-14 |
 | Personal Website Demo | [Public source](https://github.com/itssourov13/personal-website-test) | [Open preview](https://demo-website-itssourov13.vercel.app/) | Next.js, TypeScript, React | Demo | 2026-10-22 |
