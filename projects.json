@@ -1399,7 +1399,7 @@
     "demoNote": "GitHub profile README and its Pages URL.",
     "status": "Profile infrastructure",
     "featured": false,
-    "updated": "2026-10-29",
+    "updated": "2026-10-30",
     "cover": "assets/projects/itssourov13/cover.webp",
     "screenshots": [],
     "gallery": [
@@ -1439,7 +1439,7 @@
     "demoNote": "No live deployment is linked automatically. Add a public HTTPS preview only after verifying anonymous access and safety.",
     "status": "Active development",
     "featured": false,
-    "updated": "2026-10-29",
+    "updated": "2026-10-30",
     "githubRepo": "bd-admission-app",
     "syncMode": "github",
     "cover": "assets/projects/bd-admission-app/cover.webp",

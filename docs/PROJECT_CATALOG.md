@@ -63,7 +63,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 | Project | Source | Live preview | Stack | Status | Last repository update |
 |---|---|---|---|---|---|
 | Awesome Lists | [Public source](https://github.com/itssourov13/awesome) | Not linked | Markdown | Curated resources | 2026-06-30 |
-| GitHub Profile & Project Index | [Public source](https://github.com/itssourov13/itssourov13) | [Open preview](https://itssourov13.github.io/itssourov13/) | Markdown, SVG, TypeScript | Profile infrastructure | 2026-10-29 |
+| GitHub Profile & Project Index | [Public source](https://github.com/itssourov13/itssourov13) | [Open preview](https://itssourov13.github.io/itssourov13/) | Markdown, SVG, TypeScript | Profile infrastructure | 2026-10-30 |
 | JS.ORG | [Public source](https://github.com/itssourov13/js.org) | [Open preview](https://js.org) | JavaScript | Community / resource | 2026-08-19 |
 
 ### Utilities
@@ -79,7 +79,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 
 | Project | Source | Live preview | Stack | Status | Last repository update |
 |---|---|---|---|---|---|
-| Bd Admission App | [Public source](https://github.com/itssourov13/bd-admission-app) | Not linked | TypeScript | Active development | 2026-10-29 |
+| Bd Admission App | [Public source](https://github.com/itssourov13/bd-admission-app) | Not linked | TypeScript | Active development | 2026-10-30 |
 | Birthday Present Preview | [Public source](https://github.com/itssourov13/birthday-present-preview) | [Open preview](https://birthday-present-itssourov13.vercel.app/) | JavaScript, Web, Vercel | Live preview listed | 2026-10-14 |
 | Create Present | [Public source](https://github.com/itssourov13/create-present-website) | [Open preview](https://cgw-itssourov13.vercel.app) | HTML, JavaScript, Vercel | Static demo | 2026-10-14 |
 | Personal Website Demo | [Public source](https://github.com/itssourov13/personal-website-test) | [Open preview](https://demo-website-itssourov13.vercel.app/) | Next.js, TypeScript, React | Demo | 2026-10-22 |
