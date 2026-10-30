@@ -448,7 +448,7 @@
     "demoNote": "Known homepage returned 404 during the audit (25 October 2026); provide a working deployment URL before publishing the live button.",
     "status": "Live URL needs verification",
     "featured": false,
-    "updated": "2026-10-29",
+    "updated": "2026-10-30",
     "cover": "assets/projects/hackerai-main/cover.webp",
     "screenshots": [],
     "gallery": [
@@ -1421,9 +1421,9 @@
   {
     "id": "bd-admission-app",
     "title": "Bd Admission App",
-    "eyebrow": "WEB APPS · PUBLIC REPOSITORY",
-    "category": "Web Apps",
-    "description": "Admission app",
+    "eyebrow": "MOBILE APPS · PUBLIC REPOSITORY",
+    "category": "Mobile Apps",
+    "description": "An offline-first Android app for practicing university admission questions in Bangladesh, organized by university and admission unit.",
     "story": "Automatically discovered from the owner's public GitHub repository metadata. Curate this summary before adding claims about features or production readiness.",
     "highlights": [
       "Public source repository",
