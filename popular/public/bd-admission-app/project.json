@@ -1,0 +1,44 @@
+{
+  "id": "bd-admission-app",
+  "title": "BD Admission",
+  "eyebrow": "EDUCATION · ANDROID APP",
+  "category": "Mobile Apps",
+  "description": "An offline-first Android app for Bangladesh university (Varsity) and Medical admission preparation, with Bangla and English question browsing, timed practice, bookmarks and local progress.",
+  "story": "The first public Android preview, version 0.1.0, is distributed as a GitHub pre-release and was installed and checked on a physical Android device by the owner. This is a preview build, not a Google Play production release. The gallery uses actual runtime captures; the profile identity is anonymized and visible counters are sample local data.",
+  "highlights": [
+    "University-wise Varsity and Medical question catalogues",
+    "Flash Question and Standard Exam practice modes",
+    "Offline-first local question and practice data",
+    "Bangla and English interface"
+  ],
+  "stack": [
+    "React Native",
+    "Expo SDK 57",
+    "TypeScript",
+    "Expo Router",
+    "SQLite"
+  ],
+  "sourceAccess": "public",
+  "sourceUrl": "https://github.com/itssourov13/bd-admission-app",
+  "releaseUrl": "https://github.com/itssourov13/bd-admission-app/releases/tag/v0.1.0-preview.1",
+  "liveUrl": "",
+  "status": "Android preview · v0.1.0 (pre-release)",
+  "updated": "2026-10-31",
+  "cover": "popular/public/bd-admission-app/assets/cover.webp",
+  "coverAlt": "BD Admission Android app cover artwork",
+  "gallery": [
+    {
+      "src": "popular/public/bd-admission-app/assets/gallery/01-home.jpg",
+      "alt": "BD Admission home screen with Varsity, Medical, Flash Question and Standard Exam entry points."
+    },
+    {
+      "src": "popular/public/bd-admission-app/assets/gallery/02-varsity.jpg",
+      "alt": "BD Admission Varsity catalogue showing university question-bank entries and verification labels."
+    },
+    {
+      "src": "popular/public/bd-admission-app/assets/gallery/03-profile.jpg",
+      "alt": "BD Admission profile screen showing language preferences, progress, bookmarks and practice history; sample local data."
+    }
+  ],
+  "sourceCommit": "18e44391fb09c6f9a8adfd67bb700b3609ca378f"
+}

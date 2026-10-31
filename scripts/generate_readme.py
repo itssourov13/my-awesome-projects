@@ -49,6 +49,20 @@ def safe_source(project: dict) -> str:
     return url if parsed.netloc.casefold() in {"github.com", "www.github.com"} else ""
 
 
+def safe_github_release(project: dict) -> str:
+    """Accept only a tagged GitHub release URL under the project's approved public source."""
+    source = safe_source(project)
+    release = safe_https(project.get("releaseUrl"))
+    if not source or not release:
+        return ""
+    source_path = urlparse(source).path.rstrip("/")
+    parsed = urlparse(release)
+    prefix = source_path + "/releases/tag/"
+    if parsed.netloc.casefold() not in {"github.com", "www.github.com"}:
+        return ""
+    return release if parsed.path.startswith(prefix) and len(parsed.path) > len(prefix) else ""
+
+
 def safe_asset(value: object) -> str:
     if not isinstance(value, str) or not value or value.startswith("/") or "\\" in value:
         return ""
@@ -104,6 +118,12 @@ def load_popular_projects() -> list[dict]:
         live = project.get("liveUrl", "")
         if live and not safe_https(live):
             raise ValueError(f"Popular project {project_id} liveUrl must use HTTPS.")
+        release = project.get("releaseUrl", "")
+        if release and not safe_github_release(project):
+            raise ValueError(f"Popular project {project_id} releaseUrl must be a tagged release under its public source repository.")
+        source_commit = project.get("sourceCommit", "")
+        if source_commit and not re.fullmatch(r"[0-9a-fA-F]{7,40}", str(source_commit)):
+            raise ValueError(f"Popular project {project_id} sourceCommit must be a 7-40 character Git commit SHA.")
         gallery = project.get("gallery", [])
         if not isinstance(gallery, list):
             raise ValueError(f"Popular project {project_id} gallery must be an array.")
@@ -111,8 +131,8 @@ def load_popular_projects() -> list[dict]:
             if not isinstance(item, dict) or not safe_asset(item.get("src")):
                 raise ValueError(f"Popular project {project_id} has a missing or unsafe gallery asset.")
         if visibility == "private":
-            if project.get("sourceUrl") or project.get("githubRepo") or project.get("sourceAccess") == "public":
-                raise ValueError(f"Private Popular project {project_id} must not include source-repository fields.")
+            if any(project.get(key) for key in ("sourceUrl", "githubRepo", "sourceAccess", "releaseUrl", "sourceCommit")):
+                raise ValueError(f"Private Popular project {project_id} must not include source-repository or release fields.")
             for key in ("title", "description", "eyebrow", "category"):
                 if "github.com/" in str(project.get(key, "")).lower():
                     raise ValueError(f"Private Popular project {project_id} contains a repository URL in {key}.")
@@ -128,18 +148,40 @@ def load_popular_projects() -> list[dict]:
 def popular_actions(project: dict) -> str:
     links: list[str] = []
     live = safe_https(project.get("liveUrl"))
+    release = safe_github_release(project) if project.get("visibility") == "public" else ""
     source = safe_source(project) if project.get("visibility") == "public" else ""
     if live:
         links.append(f'<a href="{h(live)}"><strong>Live preview ↗</strong></a>')
+    if release:
+        links.append(f'<a href="{h(release)}"><strong>Android preview ↗</strong></a>')
     if source:
         links.append(f'<a href="{h(source)}">Public source ↗</a>')
     return " &nbsp;·&nbsp; ".join(links) if links else "<em>No public link listed</em>"
+
+
+def popular_gallery_markup(project: dict) -> str:
+    """Show up to three supplied Popular gallery images beneath the project cover."""
+    visibility = str(project.get("visibility") or "public")
+    project_id = str(project.get("id") or "")
+    prefix = f"popular/{visibility}/{project_id}/"
+    gallery = project.get("gallery") if isinstance(project.get("gallery"), list) else []
+    images = []
+    for item in gallery[:3]:
+        if not isinstance(item, dict):
+            continue
+        src = safe_asset(item.get("src"))
+        if not src or not src.startswith(prefix):
+            continue
+        alt = item.get("alt") or (str(project.get("title") or "Project") + " screenshot")
+        images.append(f'<img src="{h(src)}" alt="{h(alt)}" width="30%">')
+    return '<p align="center">' + ' &nbsp; '.join(images) + '</p>' if images else ""
 
 
 def popular_cell(project: dict) -> str:
     return (
         '<td width="50%" valign="top">'
         f'{cover_markup(project, "100%")}'
+        f'{popular_gallery_markup(project)}'
         f'<h3>{title_markup(project)}</h3>'
         f'<p>{h(project.get("description") or "A project in the Popular collection.")}</p>'
         f'<p>{stack_chips(project, 5)}</p>'
@@ -211,7 +253,7 @@ def stack_chips(project: dict, limit: int = 5) -> str:
 
 def title_markup(project: dict) -> str:
     title = h(project.get("title", "Untitled project"))
-    target = safe_https(project.get("liveUrl")) or safe_source(project)
+    target = safe_https(project.get("liveUrl")) or safe_github_release(project) or safe_source(project)
     return f'<a href="{h(target)}">{title}</a>' if target else title
 
 
@@ -221,7 +263,7 @@ def cover_markup(project: dict, width: str) -> str:
     if not cover:
         return f"<strong>{title}</strong>"
     image = f'<img src="{h(cover)}" alt="{title} — project cover artwork" width="{width}">'
-    target = safe_https(project.get("liveUrl")) or safe_source(project)
+    target = safe_https(project.get("liveUrl")) or safe_github_release(project) or safe_source(project)
     return f'<a href="{h(target)}">{image}</a>' if target else image
 
 
