@@ -15,17 +15,30 @@ class CatalogTests(unittest.TestCase):
         entries = manifest["projects"]
         self.assertEqual(
             [(entry["visibility"], entry["file"]) for entry in entries],
-            [("public", "public/passhunter/project.json"), ("private", "private/scholarhub/project.json")],
+            [
+                ("public", "public/bd-admission-app/project.json"),
+                ("public", "public/passhunter/project.json"),
+                ("private", "private/scholarhub/project.json"),
+            ],
         )
+        admission = json.loads((ROOT / "popular/public/bd-admission-app/project.json").read_text(encoding="utf-8"))
         public = json.loads((ROOT / "popular/public/passhunter/project.json").read_text(encoding="utf-8"))
         private = json.loads((ROOT / "popular/private/scholarhub/project.json").read_text(encoding="utf-8"))
+        self.assertEqual(admission["sourceUrl"], "https://github.com/itssourov13/bd-admission-app")
+        self.assertEqual(admission["sourceCommit"], "18e44391fb09c6f9a8adfd67bb700b3609ca378f")
+        self.assertEqual(admission["releaseUrl"], "https://github.com/itssourov13/bd-admission-app/releases/tag/v0.1.0-preview.1")
+        self.assertEqual(admission["liveUrl"], "")
+        self.assertEqual(admission["status"], "Android preview · v0.1.0 (pre-release)")
+        self.assertEqual(admission["updated"], "2026-10-31")
+        self.assertEqual(admission["cover"], "popular/public/bd-admission-app/assets/cover.webp")
+        self.assertEqual(len(admission["gallery"]), 3)
         self.assertEqual(public["sourceUrl"], "https://github.com/itssourov13/passhunter")
         self.assertEqual(public["cover"], "popular/public/passhunter/assets/cover.webp")
         self.assertEqual(private["liveUrl"], "https://scholarhub-itssourov13.vercel.app/")
         self.assertEqual(private["cover"], "popular/private/scholarhub/assets/cover.webp")
-        for key in ("sourceUrl", "githubRepo", "sourceAccess"):
+        for key in ("sourceUrl", "githubRepo", "sourceAccess", "releaseUrl"):
             self.assertNotIn(key, private)
-        for project in (public, private):
+        for project in (admission, public, private):
             self.assertTrue((ROOT / project["cover"]).is_file())
             self.assertGreaterEqual(len(project["gallery"]), 1)
             for item in project["gallery"]:

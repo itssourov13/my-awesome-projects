@@ -3,6 +3,10 @@
   "projects": [
     {
       "visibility": "public",
+      "file": "public/bd-admission-app/project.json"
+    },
+    {
+      "visibility": "public",
       "file": "public/passhunter/project.json"
     },
     {

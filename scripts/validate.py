@@ -100,6 +100,16 @@ def validate_popular() -> None:
             if parsed.scheme != "https" or not parsed.netloc:
                 error(f"Popular {project_id} liveUrl must use HTTPS")
 
+        release_url = project.get("releaseUrl", "")
+        if release_url:
+            release = urlparse(str(release_url))
+            source = urlparse(str(project.get("sourceUrl", "")))
+            prefix = source.path.rstrip("/") + "/releases/tag/"
+            if (visibility != "public" or release.scheme != "https" or
+                    release.netloc.lower() not in {"github.com", "www.github.com"} or
+                    not release.path.startswith(prefix) or len(release.path) <= len(prefix)):
+                error(f"Popular {project_id} releaseUrl must be a tagged release under its public source repository")
+
         gallery = project.get("gallery", [])
         if not isinstance(gallery, list):
             error(f"Popular {project_id} gallery must be an array")
@@ -115,9 +125,13 @@ def validate_popular() -> None:
             if not isinstance(item.get("alt"), str) or len(item.get("alt", "").strip()) < 6:
                 error(f"Popular {project_id} gallery item {gallery_index} needs meaningful alt text")
 
+        source_commit = project.get("sourceCommit", "")
+        if source_commit and not re.fullmatch(r"[0-9a-fA-F]{7,40}", str(source_commit)):
+            error(f"Popular {project_id} sourceCommit must be a 7-40 character Git commit SHA")
+
         if visibility == "private":
-            if any(key in project for key in ("sourceUrl", "githubRepo", "sourceAccess")):
-                error(f"Popular {project_id} private metadata must not include repository fields")
+            if any(key in project for key in ("sourceUrl", "githubRepo", "sourceAccess", "releaseUrl", "sourceCommit")):
+                error(f"Popular {project_id} private metadata must not include repository or release fields")
             for key in ("title", "description", "eyebrow", "category"):
                 if "github.com/" in str(project.get(key, "")).lower():
                     error(f"Popular {project_id} contains a GitHub repository URL in {key}")

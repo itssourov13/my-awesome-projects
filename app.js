@@ -101,6 +101,14 @@
   // Only a public entry with a GitHub HTTPS sourceUrl ever yields a source link.
   const sourceUrlOf = (project) =>
     project.sourceAccess === "public" && isGithubUrl(project.sourceUrl) ? project.sourceUrl : "";
+  const githubReleaseUrlOf = (project) => {
+    const source = parseUrl(sourceUrlOf(project));
+    const release = parseUrl(project.releaseUrl);
+    if (!source || !release || release.protocol !== "https:" ||
+        !["github.com", "www.github.com"].includes(release.hostname.toLowerCase())) return "";
+    const prefix = source.pathname.replace(/\/+$/, "") + "/releases/tag/";
+    return release.pathname.startsWith(prefix) && release.pathname.length > prefix.length ? project.releaseUrl : "";
+  };
   const liveUrlOf = (project) => (isSafeHttps(project.liveUrl) ? project.liveUrl : "");
 
   // Local, relative asset paths only.
@@ -277,10 +285,21 @@
     const cover = candidateCover && candidateCover.startsWith(basePath) ? candidateCover : "";
     const live = isSafeHttps(project.liveUrl) ? project.liveUrl : "";
     const source = isPublic && project.sourceAccess === "public" && isGithubUrl(project.sourceUrl) ? project.sourceUrl : "";
-    const primaryUrl = live || source;
+    const release = isPublic ? githubReleaseUrlOf(project) : "";
+    const primaryUrl = live || release || source;
     const title = esc(project.title || "Untitled project");
     const image = cover
       ? '<img src="' + esc(cover) + '" alt="' + esc(project.coverAlt || (project.title + " cover artwork")) + '" loading="eager" decoding="async" width="1200" height="700">'
+      : "";
+    const gallery = (Array.isArray(project.gallery) ? project.gallery : [])
+      .filter((entry) => entry && typeof entry.src === "string")
+      .map((entry) => ({ src: localAsset(entry.src), alt: entry.alt || (project.title + " screenshot") }))
+      .filter((entry) => entry.src && entry.src.startsWith(basePath))
+      .slice(0, 3);
+    const galleryMarkup = gallery.length
+      ? '<div class="popular-gallery-strip" role="group" aria-label="' + esc(project.title || "Project") + ' screenshots">' +
+        gallery.map((entry) => '<img src="' + esc(entry.src) + '" alt="' + esc(entry.alt) + '" loading="lazy" decoding="async" width="120" height="160">').join("") +
+        '</div>'
       : "";
     const coverMarkup = primaryUrl
       ? '<a class="project-cover" href="' + esc(primaryUrl) + '" target="_blank" rel="noopener noreferrer" aria-label="Open ' + title + '">' + image + '</a>'
@@ -294,10 +313,11 @@
       ? '<span class="status-pill status-live">Live preview</span>'
       : '<span class="status-pill ' + statusClass(project) + '">' + esc(project.status || "In development") + '</span>';
     const actions = (live ? externalLink(live, "Live preview", "card-action live") : "") +
+      (release ? externalLink(release, "Android preview", "card-action") : "") +
       (source ? externalLink(source, "Public source", "card-action") : "");
     const html =
       '<article class="project-card popular-card" data-popular-card="' + esc(id) + '">' +
-      coverMarkup +
+      coverMarkup + galleryMarkup +
       '<div class="card-body">' +
       '<p class="spotlight-eyebrow">' + esc(project.eyebrow || project.category || "Project") + '</p>' +
       '<div class="card-meta">' + status + '</div>' +
@@ -346,6 +366,9 @@
           throw new Error("Public Popular entries need an approved public GitHub source URL.");
         }
         if (project.liveUrl && !isSafeHttps(project.liveUrl)) throw new Error("Popular live URLs must use HTTPS.");
+        if (project.releaseUrl && !githubReleaseUrlOf(project)) {
+          throw new Error("Popular release URLs must be GitHub release tags belonging to the public source repository.");
+        }
         const cover = localAsset(project.cover);
         if (!cover || !cover.startsWith("popular/" + visibility + "/" + project.id + "/")) {
           throw new Error("Popular cover must stay inside its own project folder.");

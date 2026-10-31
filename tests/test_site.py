@@ -59,10 +59,20 @@ class SiteContractTests(unittest.TestCase):
         self.assertTrue((ROOT / "popular/private/visibility-lock.svg").is_file())
         self.assertTrue((ROOT / "popular/public/visibility-button.svg").is_file())
         self.assertTrue((ROOT / "popular/private/visibility-button.svg").is_file())
-        # Button-style SVG badges occupy a shared footer row to keep alignment consistent.
-        self.assertEqual(popular_markup.count("<tr>"), 2)
+        # Each pair of project cells has a matching public/private badge row.
+        self.assertEqual(popular_markup.count("<tr>"), 4)
+        self.assertIn("https://github.com/itssourov13/bd-admission-app", popular_markup)
+        self.assertIn("https://github.com/itssourov13/bd-admission-app/releases/tag/v0.1.0-preview.1", popular_markup)
+        self.assertIn("Android preview ↗", popular_markup)
         self.assertIn("https://github.com/itssourov13/passhunter", popular_markup)
         self.assertIn("https://scholarhub-itssourov13.vercel.app/", popular_markup)
+        admission_cell = popular_markup.split("BD Admission", 1)[1].split("</td>", 1)[0]
+        self.assertIn("Android preview ↗", admission_cell)
+        self.assertIn("Public source ↗", admission_cell)
+        self.assertNotIn("Live preview ↗", admission_cell)
+        self.assertIn("popular/public/bd-admission-app/assets/gallery/01-home.jpg", admission_cell)
+        self.assertIn("popular/public/bd-admission-app/assets/gallery/02-varsity.jpg", admission_cell)
+        self.assertIn("popular/public/bd-admission-app/assets/gallery/03-profile.jpg", admission_cell)
         scholarhub_cell = popular_markup.split("ScholarHub", 1)[1]
         self.assertNotIn("github.com/", scholarhub_cell.lower())
 
@@ -98,6 +108,20 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn('sourceAccess === "public"', JS)
         self.assertIn("isGithubUrl", JS)
         self.assertNotIn("githubRepo", JS)
+
+    def test_popular_release_links_are_scoped_to_the_same_public_source_repo(self):
+        self.assertIn("const githubReleaseUrlOf = (project) =>", JS)
+        self.assertIn('externalLink(release, "Android preview", "card-action")', JS)
+        self.assertIn("project.releaseUrl && !githubReleaseUrlOf(project)", JS)
+        self.assertIn('class="popular-gallery-strip"', JS)
+        self.assertIn(".popular-gallery-strip", CSS)
+        generator = load_readme_generator()
+        admission = json.loads((ROOT / "popular/public/bd-admission-app/project.json").read_text(encoding="utf-8"))
+        self.assertEqual(generator.safe_github_release(admission), admission["releaseUrl"])
+        mismatched = dict(admission, releaseUrl="https://github.com/other/repo/releases/tag/v1.0.0")
+        self.assertEqual(generator.safe_github_release(mismatched), "")
+        external = dict(admission, releaseUrl="https://example.com/releases/tag/v1.0.0")
+        self.assertEqual(generator.safe_github_release(external), "")
 
     def test_category_order_and_featured_limit_match_readme_generator(self):
         readme = load_readme_generator()

@@ -20,9 +20,17 @@ The showcase site is a dependency-free static page. The main index and catalog n
 
 - `popular/index.json` controls order. Edit it to add, remove or reorder Popular items.
 - Store a public project under `popular/public/<project-id>/` and a private project under `popular/private/<project-id>/`; keep `project.json` and all local cover/gallery assets inside that project folder.
-- Public entries may expose only an approved HTTPS GitHub source URL. Private entries omit repository URL/identifier fields entirely; their approved live preview is independent.
+- Public entries may expose an approved HTTPS GitHub source URL. Optional `releaseUrl` values are accepted only for a tagged GitHub release under that same public source repository; the site labels this action **Android preview**, never **Live preview**. Private entries omit repository and release URL/identifier fields entirely; their approved live preview is independent.
 - Website visibility tags use the shared check and lock icons (`popular/public/visibility-check.svg` and `popular/private/visibility-lock.svg`). In the README, matching button-style SVG badges (`visibility-button.svg` in each visibility folder) are shown in a dedicated footer row so the Public and Private labels remain aligned despite different card-copy lengths.
 - The public-repository sync never enumerates, copies into, or overwrites Popular files. On a push containing a manual Popular change, the publish workflow may rebuild the README/deploy the static website from that unchanged data, but it does not stage or alter files under Popular.
+
+### Weekly manual update
+
+1. Review the project's public default branch, latest merged changes, README and newest release. Record the full source commit SHA in `sourceCommit` and the release tag URL in `releaseUrl` when one exists.
+2. Refresh only approved public-facing title, description, stack, status and `updated` date in its `project.json`; do not infer production readiness from an APK pre-release.
+3. Copy genuine, approved runtime screenshots into that project's `assets/gallery/` folder, preserve useful portrait/landscape framing, and give every image descriptive alt text. Use generated cover artwork only as the card cover; do not label promotional artwork as a screenshot.
+4. For an Android pre-release, set `releaseUrl` to the tag page in the same public `sourceUrl` repository. Keep `liveUrl` empty unless a separate public web deployment is independently verified.
+5. Add/reorder the project in `popular/index.json`, then regenerate the README and run the validator/tests before committing the weekly update.
 
 ## Discovery features
 
