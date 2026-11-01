@@ -56,7 +56,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 
 | Project | Source | Live preview | Stack | Status | Last repository update |
 |---|---|---|---|---|---|
-| Bd Admission App | [Public source](https://github.com/itssourov13/bd-admission-app) | Not linked | TypeScript | Active development | 2026-10-31 |
+| Bd Admission App | [Public source](https://github.com/itssourov13/bd-admission-app) | Not linked | TypeScript | Active development | 2026-11-01 |
 | Study Planner | [Public source](https://github.com/itssourov13/study-planner-apk) | Not linked | React Native, Expo, TypeScript | Mobile app | 2026-07-16 |
 
 ### Open Source
@@ -64,7 +64,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 | Project | Source | Live preview | Stack | Status | Last repository update |
 |---|---|---|---|---|---|
 | Awesome Lists | [Public source](https://github.com/itssourov13/awesome) | Not linked | Markdown | Curated resources | 2026-06-30 |
-| GitHub Profile & Project Index | [Public source](https://github.com/itssourov13/itssourov13) | [Open preview](https://itssourov13.github.io/itssourov13/) | Markdown, SVG, TypeScript | Profile infrastructure | 2026-10-31 |
+| GitHub Profile & Project Index | [Public source](https://github.com/itssourov13/itssourov13) | [Open preview](https://itssourov13.github.io/itssourov13/) | Markdown, SVG, TypeScript | Profile infrastructure | 2026-11-01 |
 | JS.ORG | [Public source](https://github.com/itssourov13/js.org) | [Open preview](https://js.org) | JavaScript | Community / resource | 2026-08-19 |
 
 ### Utilities
