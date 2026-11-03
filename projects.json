@@ -277,7 +277,7 @@
     "demoNote": "Intentionally vulnerable security lab. The preview URL was supplied by the project owner; deployment isolation and access controls are not independently verified. Use only for authorized security testing.",
     "status": "Security lab · isolated use only",
     "featured": true,
-    "updated": "2026-10-26",
+    "updated": "2026-11-03",
     "cover": "assets/projects/personal-website-pentest/cover.webp",
     "screenshots": [],
     "gallery": [
@@ -935,7 +935,7 @@
     "demoNote": "The live landing page and Open Graph metadata responded during the audit.",
     "status": "Live preview listed",
     "featured": true,
-    "updated": "2026-10-18",
+    "updated": "2026-11-03",
     "cover": "assets/projects/blog/cover.webp",
     "screenshots": [],
     "gallery": [
@@ -1399,7 +1399,7 @@
     "demoNote": "GitHub profile README and its Pages URL.",
     "status": "Profile infrastructure",
     "featured": false,
-    "updated": "2026-11-02",
+    "updated": "2026-11-03",
     "cover": "assets/projects/itssourov13/cover.webp",
     "screenshots": [],
     "gallery": [
