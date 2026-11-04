@@ -24,7 +24,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 | Project | Source | Live preview | Stack | Status | Last repository update |
 |---|---|---|---|---|---|
 | Hacker gf AI | [Public source](https://github.com/itssourov13/hackergf-ai) | [Open preview](https://hackergf-ai.vercel.app) | JavaScript, React, AI | Demo / concept | 2026-10-19 |
-| HackerAI | [Public source](https://github.com/itssourov13/hackerai-main) | Not linked | TypeScript, Next.js, AI | Live URL needs verification | 2026-11-03 |
+| HackerAI | [Public source](https://github.com/itssourov13/hackerai-main) | Not linked | TypeScript, Next.js, AI | Live URL needs verification | 2026-11-04 |
 | HackerAI Workspace | [Public source](https://github.com/itssourov13/hackerai-base44) | Not linked | TypeScript, React, Next.js | Development / concept | 2026-10-09 |
 | UniversalAIBridge | [Public source](https://github.com/itssourov13/uab) | Not linked | Python, AI agents, API | Active development | 2026-08-20 |
 
@@ -64,7 +64,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 | Project | Source | Live preview | Stack | Status | Last repository update |
 |---|---|---|---|---|---|
 | Awesome Lists | [Public source](https://github.com/itssourov13/awesome) | Not linked | Markdown | Curated resources | 2026-06-30 |
-| GitHub Profile & Project Index | [Public source](https://github.com/itssourov13/itssourov13) | [Open preview](https://itssourov13.github.io/itssourov13/) | Markdown, SVG, TypeScript | Profile infrastructure | 2026-11-03 |
+| GitHub Profile & Project Index | [Public source](https://github.com/itssourov13/itssourov13) | [Open preview](https://itssourov13.github.io/itssourov13/) | Markdown, SVG, TypeScript | Profile infrastructure | 2026-11-04 |
 | JS.ORG | [Public source](https://github.com/itssourov13/js.org) | [Open preview](https://js.org) | JavaScript | Community / resource | 2026-08-19 |
 
 ### Utilities
