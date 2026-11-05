@@ -45,7 +45,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 |---|---|---|---|---|---|
 | APK Sherlock | [Public source](https://github.com/itssourov13/apk-sherlock) | Not linked | Python 3.11+, SQLite, CLI | Active · CLI | 2026-09-22 |
 | ARES | [Public source](https://github.com/itssourov13/ares) | Not linked | Python, AI agents, Security automation | Active development | 2026-08-12 |
-| CYBEROS | [Public source](https://github.com/itssourov13/cyberos) | Not linked | Go, PostgreSQL, React | In development | 2026-08-30 |
+| CYBEROS | [Public source](https://github.com/itssourov13/cyberos) | Not linked | Go, PostgreSQL, React | In development | 2026-11-05 |
 | Onyx — Onion Web | [Public source](https://github.com/itssourov13/onyx) | [Open preview](https://onyx-xi-three.vercel.app) | TypeScript, Web | Live preview listed | 2026-09-22 |
 | PassHunter | [Public source](https://github.com/itssourov13/passhunter) | Not linked | Python, CLI, Standard library | Active development | 2026-08-13 |
 | Sourov Works — Pentest Lab | [Public source](https://github.com/itssourov13/personal-website-pentest) | [Open preview](https://sourovworks-itssourov13.vercel.app/) | Next.js, TypeScript, PostgreSQL / PGlite, Playwright | Security lab · isolated use only | 2026-11-03 |
@@ -56,7 +56,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 
 | Project | Source | Live preview | Stack | Status | Last repository update |
 |---|---|---|---|---|---|
-| Bd Admission App | [Public source](https://github.com/itssourov13/bd-admission-app) | Not linked | TypeScript | Active development | 2026-11-01 |
+| Bd Admission App | [Public source](https://github.com/itssourov13/bd-admission-app) | Not linked | TypeScript | Active development | 2026-11-05 |
 | Study Planner | [Public source](https://github.com/itssourov13/study-planner-apk) | Not linked | React Native, Expo, TypeScript | Mobile app | 2026-07-16 |
 
 ### Open Source

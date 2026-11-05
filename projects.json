@@ -186,7 +186,7 @@
     "demoNote": "Development status is partial; no public live demo is currently listed.",
     "status": "In development",
     "featured": true,
-    "updated": "2026-08-30",
+    "updated": "2026-11-05",
     "cover": "assets/projects/cyberos/cover.webp",
     "screenshots": [],
     "gallery": [
@@ -1439,7 +1439,7 @@
     "demoNote": "No live deployment is linked automatically. Add a public HTTPS preview only after verifying anonymous access and safety.",
     "status": "Active development",
     "featured": false,
-    "updated": "2026-11-01",
+    "updated": "2026-11-05",
     "githubRepo": "bd-admission-app",
     "syncMode": "github",
     "cover": "assets/projects/bd-admission-app/cover.webp",
