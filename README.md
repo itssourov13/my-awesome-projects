@@ -43,14 +43,14 @@
 
 <table width="100%">
 <tr>
-<td width="58%" valign="middle"><a href="https://github.com/itssourov13/cyberos"><img src="assets/projects/cyberos/cover.webp" alt="CYBEROS — project cover artwork" width="100%"></a></td>
-<td width="42%" valign="middle"><sub><strong>SECURITY PLATFORM · GO</strong></sub><h3><a href="https://github.com/itssourov13/cyberos">CYBEROS</a></h3><p>A Go-first modular security operations platform and control plane for authorized security work, with grants, brokered execution, workers, and audit-oriented boundaries.</p><p><code>Go</code> <code>PostgreSQL</code> <code>React</code></p><p><sub>In development</sub><br><a href="https://github.com/itssourov13/cyberos">Public source ↗</a></p></td>
+<td width="58%" valign="middle"><a href="https://sourovworks-itssourov13.vercel.app/"><img src="assets/projects/personal-website-pentest/cover.webp" alt="Sourov Works — Pentest Lab — project cover artwork" width="100%"></a></td>
+<td width="42%" valign="middle"><sub><strong>APPLICATION SECURITY · LAB</strong></sub><h3><a href="https://sourovworks-itssourov13.vercel.app/">Sourov Works — Pentest Lab</a></h3><p>A deliberately vulnerable full-stack web application for hands-on penetration testing, vulnerability research, and security-assessment practice.</p><p><code>Next.js</code> <code>TypeScript</code> <code>PostgreSQL / PGlite</code> <code>Playwright</code></p><p><sub>Security lab · isolated use only</sub><br><a href="https://sourovworks-itssourov13.vercel.app/"><strong>Live preview ↗</strong></a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/personal-website-pentest">Public source ↗</a></p></td>
 </tr>
 </table>
 
 <table width="100%">
 <tr>
-<td width="50%" valign="top"><a href="https://sourovworks-itssourov13.vercel.app/"><img src="assets/projects/personal-website-pentest/cover.webp" alt="Sourov Works — Pentest Lab — project cover artwork" width="100%"></a><br><sub><strong>APPLICATION SECURITY · LAB</strong></sub><h3><a href="https://sourovworks-itssourov13.vercel.app/">Sourov Works — Pentest Lab</a></h3><p>A deliberately vulnerable full-stack web application for hands-on penetration testing, vulnerability research, and security-assessment practice.</p><p><code>Next.js</code> <code>TypeScript</code> <code>PostgreSQL / PGlite</code> <code>Playwright</code></p><p><sub>Security lab · isolated use only</sub><br><a href="https://sourovworks-itssourov13.vercel.app/"><strong>Live preview ↗</strong></a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/personal-website-pentest">Public source ↗</a></p></td>
+<td width="50%" valign="top"><a href="https://github.com/itssourov13/cyberos"><img src="assets/projects/cyberos/cover.webp" alt="CYBEROS — project cover artwork" width="100%"></a><br><sub><strong>SECURITY PLATFORM · GO</strong></sub><h3><a href="https://github.com/itssourov13/cyberos">CYBEROS</a></h3><p>A Go-first modular security operations platform and control plane for authorized security work, with grants, brokered execution, workers, and audit-oriented boundaries.</p><p><code>Go</code> <code>PostgreSQL</code> <code>React</code></p><p><sub>In development</sub><br><a href="https://github.com/itssourov13/cyberos">Public source ↗</a></p></td>
 <td width="50%" valign="top"><a href="https://blog-itssourov13.vercel.app"><img src="assets/projects/blog/cover.webp" alt="Security &amp; Engineering Notes — project cover artwork" width="100%"></a><br><sub><strong>PUBLICATION · MDX</strong></sub><h3><a href="https://blog-itssourov13.vercel.app">Security &amp; Engineering Notes</a></h3><p>A technical publication covering security research, engineering experiments, reverse engineering, and lessons learned while building systems.</p><p><code>Next.js</code> <code>TypeScript</code> <code>MDX</code> <code>Tailwind CSS</code></p><p><sub>Live preview listed</sub><br><a href="https://blog-itssourov13.vercel.app"><strong>Live preview ↗</strong></a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/blog">Public source ↗</a></p></td>
 </tr>
 <tr>
@@ -67,7 +67,7 @@
 
 <p align="center"><a href="#cybersecurity">Cybersecurity</a>&nbsp;<sub>8</sub> &nbsp;·&nbsp; <a href="#ai--developer-tools">AI &amp; Developer Tools</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#web-apps">Web Apps</a>&nbsp;<sub>5</sub> &nbsp;·&nbsp; <a href="#creative--3d">Creative &amp; 3D</a>&nbsp;<sub>6</sub> &nbsp;·&nbsp; <a href="#mobile-apps">Mobile Apps</a>&nbsp;<sub>2</sub> &nbsp;·&nbsp; <a href="#utilities">Utilities</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#writing--publishing">Writing &amp; Publishing</a>&nbsp;<sub>1</sub> &nbsp;·&nbsp; <a href="#open-source">Open Source</a>&nbsp;<sub>3</sub></p>
 
-<p align="center"><sub>★ marks a project also shown in Selected work. 33 projects in total, 1 with source hidden. Latest recorded catalog update: 2026-11-05.</sub></p>
+<p align="center"><sub>★ marks a project also shown in Selected work. 33 projects in total, 1 with source hidden. Latest recorded catalog update: 2026-11-06.</sub></p>
 
 ### Cybersecurity
 
@@ -269,7 +269,7 @@ For deliberately vulnerable labs, internal dashboards, or systems containing rea
 <p><a href="https://itssourov13.github.io/my-awesome-projects/"><strong>Explore the full interactive showcase ↗</strong></a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13">GitHub profile ↗</a></p>
 <p><sub><strong>Browse:</strong> <a href="#cybersecurity">Cybersecurity</a>&nbsp;<sub>8</sub> &nbsp;·&nbsp; <a href="#ai--developer-tools">AI &amp; Developer Tools</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#web-apps">Web Apps</a>&nbsp;<sub>5</sub> &nbsp;·&nbsp; <a href="#creative--3d">Creative &amp; 3D</a>&nbsp;<sub>6</sub> &nbsp;·&nbsp; <a href="#mobile-apps">Mobile Apps</a>&nbsp;<sub>2</sub> &nbsp;·&nbsp; <a href="#utilities">Utilities</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#writing--publishing">Writing &amp; Publishing</a>&nbsp;<sub>1</sub> &nbsp;·&nbsp; <a href="#open-source">Open Source</a>&nbsp;<sub>3</sub></sub></p>
 <p><sub><a href="docs/PRIVATE_PROJECTS.md">Private-project policy</a> · <a href="docs/ASSET_GUIDELINES.md">Asset guidelines</a> · <a href="docs/PROJECT_CATALOG.md">Catalog notes</a> · <a href="docs/SITE.md">Website guide</a></sub></p>
-<p><sub>© 2026 itssourov13 · 33 projects · 15 live previews · 32 public sources · Latest catalog update: 2026-11-05</sub></p>
+<p><sub>© 2026 itssourov13 · 33 projects · 15 live previews · 32 public sources · Latest catalog update: 2026-11-06</sub></p>
 <p><sub>Catalog source: projects.json · README generated by scripts/generate_readme.py · Public repository sync never imports private repository metadata.</sub></p>
 </div>
 <!-- GENERATED SHOWCASE:END -->
