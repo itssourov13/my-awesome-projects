@@ -448,7 +448,7 @@
     "demoNote": "Known homepage returned 404 during the audit (25 October 2026); provide a working deployment URL before publishing the live button.",
     "status": "Live URL needs verification",
     "featured": false,
-    "updated": "2026-11-10",
+    "updated": "2026-11-11",
     "cover": "assets/projects/hackerai-main/cover.webp",
     "screenshots": [],
     "gallery": [
@@ -1398,7 +1398,7 @@
     "demoNote": "GitHub profile README and its Pages URL.",
     "status": "Profile infrastructure",
     "featured": false,
-    "updated": "2026-11-10",
+    "updated": "2026-11-11",
     "cover": "assets/projects/itssourov13/cover.webp",
     "screenshots": [],
     "gallery": [
