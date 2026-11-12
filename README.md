@@ -31,11 +31,11 @@
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://scholarhub-itssourov13.vercel.app/"><img src="popular/private/scholarhub/assets/cover.webp" alt="ScholarHub — project cover artwork" width="100%"></a><p align="center"><img src="popular/private/scholarhub/assets/gallery/01-scholarship-discovery.png" alt="ScholarHub scholarship discovery promotional graphic" width="30%"> &nbsp; <img src="popular/private/scholarhub/assets/gallery/02-progress-dashboard.png" alt="ScholarHub progress dashboard promotional graphic" width="30%"> &nbsp; <img src="popular/private/scholarhub/assets/gallery/03-application-guides.png" alt="ScholarHub application guides promotional graphic" width="30%"></p><h3><a href="https://scholarhub-itssourov13.vercel.app/">ScholarHub</a></h3><p>A scholarship discovery and application-management platform designed to help students find opportunities and manage application progress.</p><p><code>TypeScript</code> <code>Web</code></p><p><sub>Live preview listed</sub><br><a href="https://scholarhub-itssourov13.vercel.app/"><strong>Live preview ↗</strong></a></p></td>
-<td width="50%"></td>
+<td width="50%" valign="top"><a href="https://cgw-itssourov13.vercel.app/"><img src="popular/private/create-present/assets/cover.webp" alt="Create Present — project cover artwork" width="100%"></a><p align="center"><img src="popular/private/create-present/assets/gallery/01-home-desktop.webp" alt="Actual Create Present production homepage in a desktop Chromium viewport, showing the hero and occasion section." width="30%"> &nbsp; <img src="popular/private/create-present/assets/gallery/02-occasion-picker.webp" alt="Actual Create Present occasion picker showing Birthday, Anniversary, Proposal, Apology and other gift types." width="30%"> &nbsp; <img src="popular/private/create-present/assets/gallery/03-birthday-builder.webp" alt="Actual Create Present birthday builder with blank recipient fields and a live gift preview." width="30%"></p><h3><a href="https://cgw-itssourov13.vercel.app/">Create Present</a></h3><p>A platform for creating personalized digital gifts for birthdays, anniversaries, proposals and more, with live previews, private media and shareable experiences.</p><p><code>JavaScript</code> <code>Node.js</code> <code>Supabase</code> <code>PostgreSQL</code> <code>Vercel</code></p><p><sub>Live product · free during launch</sub><br><a href="https://cgw-itssourov13.vercel.app/"><strong>Live preview ↗</strong></a></p></td>
 </tr>
 <tr>
 <td width="50%" align="right" valign="middle"><p><img src="popular/private/visibility-button.svg" alt="Private project visibility button" width="98" height="30"></p></td>
-<td width="50%"></td>
+<td width="50%" align="right" valign="middle"><p><img src="popular/private/visibility-button.svg" alt="Private project visibility button" width="98" height="30"></p></td>
 </tr>
 </table>
 
@@ -67,7 +67,7 @@
 
 <p align="center"><a href="#cybersecurity">Cybersecurity</a>&nbsp;<sub>8</sub> &nbsp;·&nbsp; <a href="#ai--developer-tools">AI &amp; Developer Tools</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#web-apps">Web Apps</a>&nbsp;<sub>5</sub> &nbsp;·&nbsp; <a href="#creative--3d">Creative &amp; 3D</a>&nbsp;<sub>6</sub> &nbsp;·&nbsp; <a href="#mobile-apps">Mobile Apps</a>&nbsp;<sub>2</sub> &nbsp;·&nbsp; <a href="#utilities">Utilities</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#writing--publishing">Writing &amp; Publishing</a>&nbsp;<sub>1</sub> &nbsp;·&nbsp; <a href="#open-source">Open Source</a>&nbsp;<sub>3</sub></p>
 
-<p align="center"><sub>★ marks a project also shown in Selected work. 33 projects in total, 2 with source hidden. Latest recorded catalog update: 2026-11-11.</sub></p>
+<p align="center"><sub>★ marks a project also shown in Selected work. 33 projects in total, 2 with source hidden. Latest recorded catalog update: 2026-11-12.</sub></p>
 
 ### Cybersecurity
 
@@ -141,8 +141,8 @@
 <td valign="top"><strong><a href="https://birthday-present-itssourov13.vercel.app/">Birthday Present Preview</a></strong><br><sub>Live preview listed</sub><br>A self-hostable interactive birthday-gift experience featuring 3D animations, memories, mini-games, and a personal letter.<br><code>JavaScript</code> <code>Web</code> <code>Vercel</code><br><a href="https://birthday-present-itssourov13.vercel.app/"><strong>Live preview ↗</strong></a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13/birthday-present-preview">Public source ↗</a></td>
 </tr>
 <tr>
-<td width="190" valign="top"><a href="https://cgw-itssourov13.vercel.app"><img src="assets/projects/create-present-website/cover.webp" alt="Create Present — project cover artwork" width="190"></a></td>
-<td valign="top"><strong><a href="https://cgw-itssourov13.vercel.app">Create Present</a></strong><br><sub>Static demo</sub><br>An open-source static gift-website reconstruction/demo for personalized digital gifts for birthdays, anniversaries, and special moments.<br><code>HTML</code> <code>JavaScript</code> <code>Vercel</code><br><a href="https://cgw-itssourov13.vercel.app"><strong>Live preview ↗</strong></a> &nbsp;·&nbsp; <em>Source hidden</em></td>
+<td width="190" valign="top"><a href="https://cgw-itssourov13.vercel.app/"><img src="assets/projects/create-present-website/cover.webp" alt="Create Present — project cover artwork" width="190"></a></td>
+<td valign="top"><strong><a href="https://cgw-itssourov13.vercel.app/">Create Present</a></strong><br><sub>Live product · free during launch</sub><br>A platform for creating personalized digital gifts for birthdays, anniversaries, proposals and more, with live previews, private media and shareable experiences.<br><code>JavaScript</code> <code>Node.js</code> <code>Supabase</code> <code>PostgreSQL</code><br><a href="https://cgw-itssourov13.vercel.app/"><strong>Live preview ↗</strong></a> &nbsp;·&nbsp; <em>Source hidden</em></td>
 </tr>
 <tr>
 <td width="190" valign="top"><a href="https://demo-website-itssourov13.vercel.app/"><img src="assets/projects/personal-website-test/cover.webp" alt="Personal Website Demo — project cover artwork" width="190"></a></td>
@@ -269,7 +269,7 @@ For deliberately vulnerable labs, internal dashboards, or systems containing rea
 <p><a href="https://itssourov13.github.io/my-awesome-projects/"><strong>Explore the full interactive showcase ↗</strong></a> &nbsp;·&nbsp; <a href="https://github.com/itssourov13">GitHub profile ↗</a></p>
 <p><sub><strong>Browse:</strong> <a href="#cybersecurity">Cybersecurity</a>&nbsp;<sub>8</sub> &nbsp;·&nbsp; <a href="#ai--developer-tools">AI &amp; Developer Tools</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#web-apps">Web Apps</a>&nbsp;<sub>5</sub> &nbsp;·&nbsp; <a href="#creative--3d">Creative &amp; 3D</a>&nbsp;<sub>6</sub> &nbsp;·&nbsp; <a href="#mobile-apps">Mobile Apps</a>&nbsp;<sub>2</sub> &nbsp;·&nbsp; <a href="#utilities">Utilities</a>&nbsp;<sub>4</sub> &nbsp;·&nbsp; <a href="#writing--publishing">Writing &amp; Publishing</a>&nbsp;<sub>1</sub> &nbsp;·&nbsp; <a href="#open-source">Open Source</a>&nbsp;<sub>3</sub></sub></p>
 <p><sub><a href="docs/PRIVATE_PROJECTS.md">Private-project policy</a> · <a href="docs/ASSET_GUIDELINES.md">Asset guidelines</a> · <a href="docs/PROJECT_CATALOG.md">Catalog notes</a> · <a href="docs/SITE.md">Website guide</a></sub></p>
-<p><sub>© 2026 itssourov13 · 33 projects · 15 live previews · 31 public sources · Latest catalog update: 2026-11-11</sub></p>
+<p><sub>© 2026 itssourov13 · 33 projects · 15 live previews · 31 public sources · Latest catalog update: 2026-11-12</sub></p>
 <p><sub>Catalog source: projects.json · README generated by scripts/generate_readme.py · Public repository sync never imports private repository metadata.</sub></p>
 </div>
 <!-- GENERATED SHOWCASE:END -->

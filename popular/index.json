@@ -12,6 +12,10 @@
     {
       "visibility": "private",
       "file": "private/scholarhub/project.json"
+    },
+    {
+      "visibility": "private",
+      "file": "private/create-present/project.json"
     }
   ]
 }

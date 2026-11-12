@@ -1,0 +1,47 @@
+{
+  "id": "create-present",
+  "title": "Create Present",
+  "eyebrow": "DIGITAL GIFTS · WEB PRODUCT",
+  "category": "Web Apps",
+  "description": "A platform for creating personalized digital gifts for birthdays, anniversaries, proposals and more, with live previews, private media and shareable experiences.",
+  "story": "Create Present turns a simple greeting into an interactive surprise. Choose an occasion, personalise the journey, preview the result, then publish and share it through a private link and QR code.",
+  "highlights": [
+    "Six occasion-specific gift builders",
+    "Live recipient preview while editing",
+    "Autosaved drafts and post-publish editing",
+    "Optional 4-digit recipient PIN protection",
+    "Private photo and music uploads with QR sharing"
+  ],
+  "stack": [
+    "JavaScript",
+    "Node.js",
+    "Supabase",
+    "PostgreSQL",
+    "Vercel"
+  ],
+  "liveUrl": "https://cgw-itssourov13.vercel.app/",
+  "demoLabel": "Live preview",
+  "demoNote": "Explore the public homepage, occasion picker and birthday builder. Google sign-in is required to save drafts and publish gifts.",
+  "status": "Live product · free during launch",
+  "updated": "2026-11-12",
+  "cover": "popular/private/create-present/assets/cover.webp",
+  "coverAlt": "Actual Create Present production homepage captured in Chromium",
+  "gallery": [
+    {
+      "src": "popular/private/create-present/assets/gallery/01-home-desktop.webp",
+      "alt": "Actual Create Present production homepage in a desktop Chromium viewport, showing the hero and occasion section."
+    },
+    {
+      "src": "popular/private/create-present/assets/gallery/02-occasion-picker.webp",
+      "alt": "Actual Create Present occasion picker showing Birthday, Anniversary, Proposal, Apology and other gift types."
+    },
+    {
+      "src": "popular/private/create-present/assets/gallery/03-birthday-builder.webp",
+      "alt": "Actual Create Present birthday builder with blank recipient fields and a live gift preview."
+    },
+    {
+      "src": "popular/private/create-present/assets/gallery/04-home-mobile.webp",
+      "alt": "Actual Create Present homepage rendered at a 390-pixel mobile viewport."
+    }
+  ]
+}

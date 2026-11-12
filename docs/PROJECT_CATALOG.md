@@ -81,7 +81,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 | Project | Source | Live preview | Stack | Status | Last repository update |
 |---|---|---|---|---|---|
 | Birthday Present Preview | [Public source](https://github.com/itssourov13/birthday-present-preview) | [Open preview](https://birthday-present-itssourov13.vercel.app/) | JavaScript, Web, Vercel | Live preview listed | 2026-10-14 |
-| Create Present | Source hidden | [Open preview](https://cgw-itssourov13.vercel.app) | HTML, JavaScript, Vercel | Static demo | 2026-11-09 |
+| Create Present | Source hidden | [Open preview](https://cgw-itssourov13.vercel.app/) | JavaScript, Node.js, Supabase, PostgreSQL | Live product · free during launch | 2026-11-12 |
 | Personal Website Demo | [Public source](https://github.com/itssourov13/personal-website-test) | [Open preview](https://demo-website-itssourov13.vercel.app/) | Next.js, TypeScript, React | Demo | 2026-10-22 |
 | Personal Website — Design Concept | [Public source](https://github.com/itssourov13/claude-personal-website) | [Open preview](https://claude-personal-web-itssourov13.vercel.app/) | Next.js, TypeScript, React | Design concept | 2026-10-16 |
 | ScholarHub | Source hidden | [Open preview](https://scholarhub-itssourov13.vercel.app/) | TypeScript, Web | Live preview listed | 2026-10-25 |
@@ -112,6 +112,7 @@ Technologies used by two or more projects. These match the website's technology 
 | CLI | 2 | APK Sherlock, PassHunter |
 | Lenis | 2 | ARVEN Residences, The Glass Pavilion |
 | Markdown | 2 | Awesome Lists, GitHub Profile & Project Index |
+| PostgreSQL | 2 | Create Present, CYBEROS |
 | Vercel | 2 | Birthday Present Preview, Create Present |
 
 ## Trust and verification rules
