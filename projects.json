@@ -1441,7 +1441,7 @@
     "demoNote": "No live deployment is linked automatically. Add a public HTTPS preview only after verifying anonymous access and safety.",
     "status": "Active development",
     "featured": false,
-    "updated": "2026-11-05",
+    "updated": "2026-11-12",
     "githubRepo": "bd-admission-app",
     "syncMode": "github",
     "cover": "assets/projects/bd-admission-app/cover.webp",

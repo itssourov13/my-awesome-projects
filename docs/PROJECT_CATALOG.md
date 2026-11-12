@@ -56,7 +56,7 @@ Private/unpublished projects are added manually. Their source URL must remain em
 
 | Project | Source | Live preview | Stack | Status | Last repository update |
 |---|---|---|---|---|---|
-| Bd Admission App | [Public source](https://github.com/itssourov13/bd-admission-app) | Not linked | TypeScript | Active development | 2026-11-05 |
+| Bd Admission App | [Public source](https://github.com/itssourov13/bd-admission-app) | Not linked | TypeScript | Active development | 2026-11-12 |
 | Study Planner | [Public source](https://github.com/itssourov13/study-planner-apk) | Not linked | React Native, Expo, TypeScript | Mobile app | 2026-07-16 |
 
 ### Open Source
